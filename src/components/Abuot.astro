@@ -1,16 +1,13 @@
 ---
 import ButtonsLinks from './buttons-links.astro';
+import stacionColor from './stacionColors.astro';
 ---
 
-<section id="about" class="pl-5">
+<section id="about" class="px-5">
+    <div class="">
+        <img src="/public/hero.webp" alt="peaple whit background colors" class="h-96 object-cover w-full   rounded">
+    </div>
     <h3 class="font-lato text-xl font-bold">¿Qué es la colorimetría?</h3>
-    <!-- <p class="font-lato w-1/2 mt-2">
-        La <span class="font-semibold">colorometria</span> es una rama de la ciencia
-        que estudia la medicion y cuantificacion del color. <br class="mb-2" /> Se basa en la
-        precepcion humana del color y se utiliza para describir y comparar colores
-        en diversas aplicaciones, como la fotografia, el diseño grafico, la industria
-        textil, la quimica, la biologia, estre otras.
-    </p> -->
     <p class="font-lato m-5">
         La <spna class="font-semibold">colorometria</spna> es una rama de la ciencia
         que estudia la medicion y cuantificacion del color, Pero tambien es el estudio
@@ -27,17 +24,24 @@ import ButtonsLinks from './buttons-links.astro';
             class="font-semibold">teoria de las estaciones</span
         > para obtener una paleta de colores ideal para ti.
     </p>
-    <h3 class="font-lato text-xl font-bold mt-5">
-        ¿Por qué es importante conocer tu colorimetría?
-    </h3>
-    <p class="font-lato  m-5">
-        Los colores pueden influir en como nos sentimos, como nos persiben los
-        demas y como dastacamos nuestra belleza natural. <br class="mb-2" /> Conociendo tu <span
-            class="font-semibold">colorometria</span
-        >, prodras elegir ropa, maquillaje y accesorios que resalten tu tono
-        natural, mejorando tu confianza y estilo.
-    </p>
-    <h3 class="font-lato text-xl font-bold mt-5">
+    <div class="border border-black flex">
+        <div class="border border-red-500 w-1/2">
+            <h3 class="font-lato text-xl font-bold mt-5">
+                ¿Por qué es importante conocer tu colorimetría?
+            </h3>
+            <p class="font-lato  m-5">
+                Los colores pueden influir en como nos sentimos, como nos persiben los
+                demas y como dastacamos nuestra belleza natural. <br class="mb-2" /> Conociendo tu <span
+                class="font-semibold">colorometria</span
+                >, prodras elegir ropa, maquillaje y accesorios que resalten tu tono
+                natural, mejorando tu confianza y estilo.
+            </p>
+        </div>
+        <div class="border border-indigo-500 w-1/2">
+
+        </div>
+    </div>
+        <h3 class="font-lato text-xl font-bold mt-5">
         La teoría de las estaciones: ¿Qué estación es tu perfil de color?
     </h3>
     <p class="font-lato  m-5">
