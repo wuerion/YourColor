@@ -13,144 +13,231 @@
     <form action="" class="m-5 flex flex-col gap-2">
         <fieldset class="font-lato flex flex-col gap-2">
             <legend class="my-2">¿Cual es tu tono de piel?</legend>
-            <label
-                class="border w-32 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="colorPiel"
-                    id="muyclara"
-                    value="Muy clara"
-                />Muy clara
-            </label>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-32"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorPiel"
+                        id="muyclara"
+                        value="Muy clara"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Muy clara
+                </label>
+            </div>
 
-            <label
-                class="border w-32 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="colorPiel"
-                    id="clara"
-                    value="Clara"
-                />Clara
-            </label>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-32"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorPiel"
+                        id="clara"
+                        value="Clara"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Clara
+                </label>
+            </div>
 
-            <label
-                class="border w-32 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="colorPiel"
-                    id="media"
-                    value="
-                Media"
-                />Media
-            </label>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-32"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorPiel"
+                        id="media"
+                        value="
+            Media"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Media
+                </label>
+            </div>
 
-            <label
-                class="border w-32 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="colorPiel"
-                    id="oscura"
-                    value="Oscura"
-                />Oscura
-            </label>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-32"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorPiel"
+                        id="morena"
+                        value="Morena"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Morena
+                </label>
+            </div>
 
-            <label
-                class="border w-32 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="colorPiel"
-                    id="muyoscura"
-                    value="Muy oscura"
-                />Muy oscura
-            </label>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-32"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorPiel"
+                        id="oscura"
+                        value="Oscura"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Oscura
+                </label>
+            </div>
         </fieldset>
         <fieldset class="font-lato flex flex-col gap-2">
             <legend class="my-2">¿Como describiria tu subtono de piel?</legend>
-            <label
-                class="border w-80 px-2 py-1 rounded border-black group"
-            >
-                <input
-                    class="mr-2 group-focus:bg-white/50"
-                    type="radio"
-                    name="subtono"
-                    id="calido"
-                    value="Calido"
-                />
-                Calido (amarillo, dorado, durazno)
-            </label>
-            <label
-                class="border w-80 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="subtono"
-                    id="frio"
-                    value="Frio"
-                />
-                Frio (rosado, rojizo, azul)
-            </label>
-            <label
-                class="border w-80 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="subtono"
-                    id="neutro"
-                    value="Neutro"
-                />
-                Neutro (una mezcla de calido y frio)
-            </label>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-80"
+                >
+                    <input
+                        class="mr-2 group-focus:bg-white/50"
+                        type="radio"
+                        name="subtono"
+                        id="calido"
+                        value="Calido"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Calido (amarillo, dorado, durazno)
+                </label>
+            </div>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-80"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="subtono"
+                        id="frio"
+                        value="Frio"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Frio (rosado, rojizo, azul)
+                </label>
+            </div>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-80"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="subtono"
+                        id="neutro"
+                        value="Neutro"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Neutro (una mezcla de calido y frio)
+                </label>
+            </div>
         </fieldset>
         <fieldset class="font-lato flex flex-col gap-2">
             <legend class="my-2">¿Como reaciona tu piel al sol?</legend>
-            <label
-                class="border w-80 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="sol"
-                    id="quema"
-                    value="Se quema"
-                />
-                Se quema facilmente
-            </label>
-            <label
-                class="border w-80 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="sol"
-                    id="broncea"
-                    value="Se broncea"
-                />
-                Se broncea ligeramente
-            </label>
-            <label
-                class="border w-80 px-2 py-1 rounded hover:bg-white/50 border-black"
-            >
-                <input
-                    class="mr-2"
-                    type="radio"
-                    name="sol"
-                    id="bronceaFacil"
-                    value="Se broncea facil"
-                />
-                Se broncea con facilidad
-            </label>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-80"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="sol"
+                        id="quema"
+                        value="Se quema"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Se quema facilmente
+                </label>
+            </div>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center rounded w-80"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="sol"
+                        id="broncea"
+                        value="Se broncea"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Se broncea ligeramente
+                </label>
+            </div>
+            <div class="custom-radio">
+                <label
+                    class="border border-black hover:bg-white/50 p-2 flex items-center w-80"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="sol"
+                        id="bronceaFacil"
+                        value="Se broncea facil"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Se broncea con facilidad
+                </label>
+            </div>
         </fieldset>
     </form>
 </section>
+
+<style>
+    .custom-radio input[type="radio"] {
+        display: none;
+    }
+
+    /* contenedro personalizado */
+    .custom-radio .custom-radio-button {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #007bff;
+        border-radius: 50%;
+        margin-right: 10px;
+        position: relative;
+        cursor: pointer;
+        transition:
+            backgroun-color 0.3s ease,
+            border-color 0.3s ease;
+    }
+    /* circulo interior para el estado */
+    .custom-radio .custom-radio-button::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #007bff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    /* cambia los estilos cunado esta seleccionado */
+    .custom-radio input[type="radio"]:checked + .custom-radio-button {
+        border-color: #007bff;
+        background-color: #e9f5ff;
+    }
+    .custom-radio input[type="radio"]:checked + .custom-radio-button::after {
+        opacity: 1;
+    }
+
+    /* efecto hover */
+    .custom-radio .custom-radio-button:hover {
+        border-color: #0056b3;
+    }
+</style>
