@@ -1,0 +1,83 @@
+---
+import SubTonoPiel from "./subTonoPiel.astro";
+import TonoPiel from "./TonoPiel.astro";
+import ColorCabello from "./ColorCabello.astro";
+import ColorOjos from "./ColorOjos.astro";
+import RopaAccesorios from "./ropaAccesorios.astro";
+---
+
+<section class="p-5" id="test">
+    <h3 class="font-lato text-xl font-bold mt-5">
+        Descrubre tu paleta perfecta
+    </h3>
+    <p class="tetx-lato m-2">
+        Conoce los tonos que realzan tu belleza natural con nuestro test rapido
+    </p>
+    <p class="font-lato ml-2">
+        Para empezar el test Selecciona las opciones que mejos describan tus
+        caracteristicas, como tono de piel, color de ojos, cabello, etc.
+    </p>
+    <h2 class="m-2 font-semibold font-lato">Tono de piel (Subtono)</h2>
+    <form action="" class="grid md:grid-cols-3 gap-2">
+        <SubTonoPiel />
+        <TonoPiel />
+        <ColorCabello />
+        <ColorOjos />
+        <RopaAccesorios />
+    </form>
+</section>
+
+
+<style is:global>
+    .custom-radio input[type="radio"] {
+        display: none;
+    }
+
+    /* contenedro personalizado */
+    .custom-radio .custom-radio-button {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #007bff;
+        border-radius: 50%;
+        margin-right: 10px;
+        position: relative;
+        cursor: pointer;
+        transition:
+            backgroun-color 0.3s ease,
+            border-color 0.3s ease;
+    }
+    /* circulo interior para el estado */
+    .custom-radio .custom-radio-button::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #007bff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    /* cambia los estilos cunado esta seleccionado */
+    .custom-radio input[type="radio"]:checked + .custom-radio-button {
+        border-color: #007bff;
+        background-color: #e9f5ff;
+    }
+    .custom-radio input[type="radio"]:checked + .custom-radio-button::after {
+        opacity: 1;
+    }
+
+    /* efecto hover */
+    .custom-radio .custom-radio-button:hover {
+        border-color: #0056b3;
+    }
+
+    /* */
+    label:has(input:checked) {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+    }
+</style>
