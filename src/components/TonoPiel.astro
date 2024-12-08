@@ -1,17 +1,19 @@
 <fieldset class="font-lato flex flex-col gap-2">
-    <legend class="my-2">¿De que color parecen tus venas en la muñeca?</legend>
+    <legend class="my-2">¿Cual es tu tono de piel? (Subtono)</legend>
 
     <div class="custom-radio w-full">
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2" 
-            type="radio"
-            name="colorVenas" 
-            id="azulOMorado" />
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorPiel"
+                id="muyClara"
+                value="Muy clara"
+            />
             <span class="custom-radio-button"></span>
-            Azul o Morado (subtono Frio)
+            Muy clara
         </label>
     </div>
 
@@ -19,13 +21,15 @@
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2" 
-            type="radio"
-            name="colorVenas" 
-            id="verde" />
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorPiel"
+                id="clara"
+                value="Clara"
+            />
             <span class="custom-radio-button"></span>
-            Verde (subtono Calido)
+            Clara
         </label>
     </div>
 
@@ -33,13 +37,152 @@
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2" 
-            type="radio"
-            name="colorVenas" 
-            id="neutro" />
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorPiel"
+                id="media"
+                value="
+            Media"
+            />
             <span class="custom-radio-button"></span>
-            No estoy seguro (posiblemente neutro)
+            Media
+        </label>
+    </div>
+
+    <div class="custom-radio w-full">
+        <label
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        >
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorPiel"
+                id="morena"
+                value="Morena"
+            />
+            <span class="custom-radio-button"></span>
+            Morena
+        </label>
+    </div>
+
+    <div class="custom-radio w-full">
+        <label
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        >
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorPiel"
+                id="oscura"
+                value="Oscura"
+            />
+            <span class="custom-radio-button"></span>
+            Oscura
+        </label>
+    </div>
+</fieldset>
+
+<fieldset class="font-lato flex flex-col gap-2">
+    <legend class="my-2">¿Como describiria tu subtono de piel?</legend>
+
+    <div class="custom-radio w-full">
+        <label
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        >
+            <input
+                class="mr-2 group-focus:bg-white/50"
+                type="radio"
+                name="subtono"
+                id="calido"
+                value="Calido"
+            />
+            <span class="custom-radio-button"></span>
+            Calido (amarillo, dorado, durazno)
+        </label>
+    </div>
+
+    <div class="custom-radio w-full">
+        <label
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        >
+            <input
+                class="mr-2"
+                type="radio"
+                name="subtono"
+                id="frio"
+                value="Frio"
+            />
+            <span class="custom-radio-button"></span>
+            Frio (rosado, rojizo, azul)
+        </label>
+    </div>
+
+    <div class="custom-radio w-full">
+        <label
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        >
+            <input
+                class="mr-2"
+                type="radio"
+                name="subtono"
+                id="neutro"
+                value="Neutro"
+            />
+            <span class="custom-radio-button"></span>
+            Neutro (una mezcla de calido y frio)
+        </label>
+    </div>
+</fieldset>
+
+<fieldset class="font-lato flex flex-col gap-2">
+    <legend class="my-2">¿Como reaciona tu piel al sol?</legend>
+
+    <div class="custom-radio w-full">
+        <label
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        >
+            <input
+                class="mr-2"
+                type="radio"
+                name="sol"
+                id="quema"
+                value="Se quema"
+            />
+            <span class="custom-radio-button"></span>
+            Se quema facilmente
+        </label>
+    </div>
+
+    <div class="custom-radio w-full">
+        <label
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        >
+            <input
+                class="mr-2"
+                type="radio"
+                name="sol"
+                id="broncea"
+                value="Se broncea"
+            />
+            <span class="custom-radio-button"></span>
+            Se broncea ligeramente
+        </label>
+    </div>
+
+    <div class="custom-radio w-full">
+        <label
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        >
+            <input
+                class="mr-2"
+                type="radio"
+                name="sol"
+                id="bronceaFacil"
+                value="Se broncea facil"
+            />
+            <span class="custom-radio-button"></span>
+            Se broncea con facilidad
         </label>
     </div>
 </fieldset>
