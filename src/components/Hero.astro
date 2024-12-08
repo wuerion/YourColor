@@ -1,24 +1,33 @@
+<!-- TODO: pedinete la funcion de el nombre  -->
 ---
-
+<!-- let x = ''; -->
 ---
+<!-- <script>
+  // ecucha el evento
+  window.addEventListener('updateX', (event: CustomEvent) => {
+    document.querySelector('#valor').textContent = event.detail;
+    console.log('update val x', event.detail);
+  });
 
-<section class="px-5 py-10 flex justify-center items-center ">
-    <div class=" w-1/2 ">
-        <h1 class="font-lato text-2xl text-start font-bold text-nowrap mr-2">Quieres saber tu Colorometria?</h1>
-        <h2 class="font-lato text-lg mt-2">
-            Conoce que colores complementa mejor tu estiloy como reflejan tu personalidad aqui<a href="#test"
-                class="border mx-2 px-2 text-center">test</a>
-        </h2>
+</script> -->
+<section class="px-5 py-10 flex justify-center items-center">
+  <div class="w-1/2">
+    <h1 class="font-lato text-2xl text-start font-bold text-nowrap mr-2">
+      ¿Quieres saber tu Colorimetría? <span id="valor">{x}</span>
+    </h1>
+    <h2 class="font-lato text-lg mt-2">
+      Conoce qué colores complementan mejor tu estilo y cómo reflejan tu personalidad aquí
+      <a href="#test" class="border mx-2 px-2 text-center">test</a>
+    </h2>
+  </div>
+  <div class="w-1/2 flex justify-center items-center">
+    <div class="w-28 p-3 md:h-full">
+      <img
+        src="color-circle.webp"
+        alt="color palette circle"
+        class="animate-spin-slow"
+      />
     </div>
-    <div class="w-1/2 flex justify-center items-center">
-        <div class="w-28 p-3 md:w-56 md:h-full">
-            <img
-            src="color-circle.webp"
-            alt="color palette circle"
-            class="animate-spin-slow"
-            />
-        </div>
-    </div>
+  </div>
 </section>
 <!-- max-w-56 -->
- <!--! h2 == h1 saber    -->
