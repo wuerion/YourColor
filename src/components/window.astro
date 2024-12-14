@@ -1,3 +1,29 @@
-<div class="">
-
+---
+import StacionColors from "./stacionColors.astro"
+---
+<div class="hidden fixed top-0 left-0 w-full justify-center items-center" id="windowCard">
+    <div class=" bg-gray-500/70 w-1/2 h-1/2 border rounded-lg shadow-black/40 shadow-sm p-5">
+        <button class="fixed right-96 text-lg" id="exit">X</button>
+        <h2 class="text-center font-inconsolata text-2xl font-semibold">YOUR COLOR</h2>
+        <p id="textResult"></p> <!--* asignar el valor de la variables -->
+        <div id="container" class="flex my-2">
+            <div class="w-full">
+                <ul class="border w-1/2 p-2" id="list">
+                    <p class="font-semibold">Datos ingresados</p>
+                    <li id="item-1"></li>
+                    <li id="item-2"></li>
+                    <li id="item-3"></li>
+                    <li id="item-4"></li>
+                    <li id="item-5"></li>
+                    <li id="item-6"></li>
+                    <li id="item-7"></li>
+                    <li id="item-8"></li>
+                    <li id="item-9"></li>
+                </ul>
+            </div>
+            <div class="w-full" id="colorCard">
+                <StacionColors />
+            </div>
+        </div>
+    </div>
 </div>
