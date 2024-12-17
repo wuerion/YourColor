@@ -198,11 +198,6 @@ function visibleCard(x) {
     }
 }
 
-
-function closeCard() {
-    windowCard.classList = 'hidden'
-}
-
 function c() {
     let primavera = null;
     if ((tonoDePiel() === 'Muy clara' || tonoDePiel() === 'Clara' || subTonoPiel() === 'Claido') &&
