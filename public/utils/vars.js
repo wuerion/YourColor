@@ -198,7 +198,10 @@ window.addEventListener('keydown', (e) => {
     }
 })
 
-exit.addEventListener('click', function () { closeCard() })
+exit.addEventListener('click', function () { 
+    windowCard.classList.add('hidden');
+    windowCard.classList.remove('flex')
+ })
 
 window.addEventListener('kewdown', (e) => {
     if (e.key === 'Esc') {
