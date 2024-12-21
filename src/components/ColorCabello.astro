@@ -1,15 +1,15 @@
+---
+import Buttons from "./buttons.astro";
+---
+
 <fieldset class="font-lato flex flex-col gap-2">
     <legend class="my-2">¿Cual es tu color de cabbelo? natural</legend>
-    
+
     <div class="custom-radio w-full">
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="colorCabello"
-            id="negro"/>
+            <input class="mr-2" type="radio" name="colorCabello" id="negro" />
             <span class="custom-radio-button"></span>
             Negro
         </label>
@@ -19,11 +19,12 @@
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="colorCabello"
-            id="castañoOscuro"/>
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorCabello"
+                id="castañoOscuro"
+            />
             <span class="custom-radio-button"></span>
             Castaño Oscuro
         </label>
@@ -33,11 +34,12 @@
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="colorCabello"
-            id="castañoClaro"/>
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorCabello"
+                id="castañoClaro"
+            />
             <span class="custom-radio-button"></span>
             Castaño Claro
         </label>
@@ -47,11 +49,12 @@
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="colorCabello"
-            id="rubioOscuro"/>
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorCabello"
+                id="rubioOscuro"
+            />
             <span class="custom-radio-button"></span>
             Rubio Oscuro
         </label>
@@ -61,11 +64,12 @@
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="colorCabello"
-            id="rubioClaro"/>
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorCabello"
+                id="rubioClaro"
+            />
             <span class="custom-radio-button"></span>
             Rubio Claro
         </label>
@@ -75,14 +79,280 @@
         <label
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="colorCabello"
-            id="pelirojo"/>
+            <input
+                class="mr-2"
+                type="radio"
+                name="colorCabello"
+                id="pelirojo"
+            />
             <span class="custom-radio-button"></span>
             Pelirrojo
         </label>
     </div>
-
+    <Buttons text="Mas matices" addClass="my-2" link="hidden" button="hidden" />
 </fieldset>
+
+    <!--* Mas tonos -->
+    <div id="container" class="hidden col-span-3 grid-cols-4 gap-2 w-full">
+        <fieldset class="font-lato flex flex-col gap-2">
+            <legend class="my-2">Tonos Calidos</legend>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="rubioDorado"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="rubioDorado"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Rubio Dorado
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="rubioMiel"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="rubioMiel"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Rubio Miel
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="castañoDorado"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="castañoDorado"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Castaño Dorado
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="castañoRojizo"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="castañoRojizo"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Castaño Rojizo (cobre)
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="font-lato flex flex-col gap-2">
+            <legend class="my-2">Tono Frios</legend>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="rubioCenizo"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="rubioCenizo"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Rubio Cenizo
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="castañoCenizo"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="castañoCenizo"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Casntaño Cenizo
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="negrpAzulado"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="negroAzulado"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Negro Azulado
+                </label>
+            </div>
+
+            <div class="custom-rad w-full">
+                <label
+                    for="platinoFrio"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="platinoFrio"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Plation Frio
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="font-lato flex flex-col gap-2">
+            <legend class="my-2">Tonos Rojizos</legend>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="rojoIntenso"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="rojoIntenso"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Rojo Intenso
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="rojoCobrizo"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="rojoCobrizo"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Rojo Cobrizo
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="caoba"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="caoba"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Caoba
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="font-lato flex flex-col gap-2">
+            <legend class="my-2">Tonos Neutros</legend>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="rubioBeige"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="rubioBeige"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Rubio Neutro
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="castañoBeige"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="castañoNeutro"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Castaño Neutro
+                </label>
+            </div>
+
+            <div class="custom-radio w-full">
+                <label
+                    for="negroNatural"
+                    class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+                >
+                    <input
+                        class="mr-2"
+                        type="radio"
+                        name="colorCabello"
+                        id="negroNatural"
+                    />
+                    <span class="custom-radio-button"></span>
+                    Negro Natural
+                </label>
+            </div>
+        </fieldset>
+    </div>
+
+<script>
+    let button = document.getElementById("button");
+    let container = document.getElementById("container");
+    let i = false;
+    
+    function visible() {
+        if (i) {
+            button.innerText = 'Mas matices';
+            container.classList.remove('grid');
+            container.classList.add('hidden')
+        } else {
+            
+            container.classList.add('grid');
+            container.classList.remove('hidden')
+            button.innerText = 'Cerrar';
+        }
+        i = !i;
+    }
+
+    button.addEventListener("click", function () { visible() });
+</script>
