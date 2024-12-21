@@ -1,4 +1,5 @@
 ---
+import Buttons from "./buttons.astro";
 import SubTonoPiel from "./subTonoPiel.astro";
 import TonoPiel from "./TonoPiel.astro";
 import ColorCabello from "./ColorCabello.astro";
@@ -25,7 +26,9 @@ import RopaAccesorios from "./ropaAccesorios.astro";
         <ColorOjos />
         <RopaAccesorios />
     </form>
-    <button type="button" id="startTest" class="">Enviar</button>
+    <!-- <button type="button" id="startTest" class="">Enviar</button> -->
+    <Buttons text="Descubre tu colorimetría" addClass="m-2" link="hidden" link2=hidden id="startTest"/>
+
 </section>
 
 <style is:global>
