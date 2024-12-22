@@ -1,15 +1,15 @@
 // sections functions 
 function tonoDePiel() {
     let tonoDePiel;
-    if (muyClaraPiel.checked === true) {
+    if (muyClaraPiel.checked === false) {
         tonoDePiel = 'Muy clara'
-    } else if (claraPiel.checked === true) {
+    } else if (claraPiel.checked === false) {
         tonoDePiel = "Clara"
-    } else if (mediaPiel.checked === true) {
+    } else if (mediaPiel.checked === false) {
         tonoDePiel = 'Media'
-    } else if (morenaPiel.checked === true) {
+    } else if (morenaPiel.checked === false) {
         tonoDePiel = 'Morena'
-    } else if (oscuraPiel.checked === true) {
+    } else if (oscuraPiel.checked === false) {
         tonoDePiel = 'Oscura'
     }
     return tonoDePiel;
@@ -17,11 +17,11 @@ function tonoDePiel() {
 
 function subTonoPiel() {
     let subTonoPiel;
-    if (calidoSubPiel.checked === true) {
+    if (calidoSubPiel.checked === false) {
         subTonoPiel = 'Calido'
-    } else if (frioSubPiel.checked === true) {
+    } else if (frioSubPiel.checked === false) {
         subTonoPiel = 'Frio'
-    } else if (neutroSubPiel.checked === true) {
+    } else if (neutroSubPiel.checked === false) {
         subTonoPiel = 'Neutro'
     }
     return subTonoPiel;
@@ -29,13 +29,13 @@ function subTonoPiel() {
 
 function reactionSun() {
     let reactionSun;
-    if (quema.checked === true) {
+    if (quema.checked === false) {
         reactionSun = 'Se quema'
-    } else if (broncea.checked === true) {
+    } else if (broncea.checked === false) {
         reactionSun = 'Se broncea ligeramente'
-    } else if (bronceaFacil.checked === true) {
+    } else if (bronceaFacil.checked === false) {
         reactionSun = 'Se broncea facil'
-    } else if(quemaLigeramenteYBroncea.checked === true) {
+    } else if (quemaLigeramenteYBroncea.checked === false) {
         reactionSun = 'Se quema ligeramente y broncea'
     }
     return reactionSun
@@ -43,11 +43,11 @@ function reactionSun() {
 
 function colorVeins() {
     let colorVeins;
-    if (azulOMorado.checked === true) {
+    if (azulOMorado.checked === false) {
         colorVeins = 'Azul o Morado'
-    } else if (verde.checked === true) {
+    } else if (verde.checked === false) {
         colorVeins = 'Verde'
-    } else if (neutro.checked === true) {
+    } else if (neutro.checked === false) {
         colorVeins = 'Neutro'
     }
     return colorVeins;
@@ -55,33 +55,64 @@ function colorVeins() {
 
 function colorCabello() {
     let colorCabello;
-    if (negro.checked === true) {
+    if (caoba.checked === false) {
+        colorCabello = 'Caoba'
+    } else if (negro.checked === false) {
         colorCabello = 'Negro'
-    } else if (castañoOscuro.checked === true) {
+    } else if (castañoOscuro.checked === false) {
         colorCabello = 'Castaño Oscuro'
-    } else if (castañoClaro.checked === true) {
+    } else if (castañoClaro.checked === false) {
         colorCabello = 'Castaño Claro'
-    } else if (rubioOscuro.checked === true) {
+    } else if (castañoDorado.checked === false) {
+        colorCabello = 'Castaño Dorado'
+    } else if (castañoRojizo.checked === false) {
+        colorCabello = 'Castañ Rojizo'
+    } else if (castañoCenizo.checked === false) {
+        colorCabello = 'Castaño Cenizo'
+    } else if (castañoNeutro.checked === false) {
+        colorCabello = 'Castaño Neutro'
+    } else if (rubioOscuro.checked === false) {
         colorCabello = 'Rubio Oscuro'
-    } else if (rubioClaro.checked === true) {
+    } else if (rubioClaro.checked === false) {
         colorCabello = 'Rubio Claro'
-    } else if (pelirojo.checked === true) {
+    } else if (rubioCenizo.checked === false) {
+        colorCabello = 'Rubio Cenizo'
+    } else if (rubioMiel.checked === false) {
+        colorCabello = 'Rubio Miel'
+    } else if (rubioNeutro.checked === false) {
+        colorCabello = 'Rubio Neutro'
+    } else if (rubioDorado.checked === false) {
+        colorCabello = 'Rubio Dorado'
+    } else if (plateadoOFrio.checked === false) {
+        colorCabello = 'Plateado o Frio'
+    } else if (rojoIntenso.checked === false) {
+        colorCabello = 'Rojo Intenso'
+    } else if (rojoCobrizo.checked === false) {
+        colorCabello = 'Rojo Cobrizo'
+    } else if (pelirojo.checked === false) {
         colorCabello = 'Pelirojo'
+    } else if (negro.checked === false) {
+        colorCabello = 'Negro'
+    } else if (negroAzulado.checked === false) {
+        colorCabello = 'Negro Azulado'
+    } else if (negroNatural.checked === false) {
+        colorCabello = 'Negro Natural'
     }
+
     return colorCabello;
 }
 
 function colorOjos() {
     let colorOjos;
-    if (marronONegro.checked === true) {
+    if (marronONegro.checked === false) {
         colorOjos = 'Marron o Negro'
-    } else if (marronClaroOAvellana.checked === true) {
+    } else if (marronClaroOAvellana.checked === false) {
         colorOjos = 'Marron o Avellana'
-    } else if (verdeOjos.checked === true) {
+    } else if (verdeOjos.checked === false) {
         colorOjos = 'Verde'
-    } else if (azul.checked === true) {
+    } else if (azul.checked === false) {
         colorOjos = 'Azul'
-    } else if (gris.checked === true) {
+    } else if (gris.checked === false) {
         colorOjos = 'Gris'
     }
     return colorOjos;
@@ -89,9 +120,9 @@ function colorOjos() {
 
 function destellos() {
     let destellos;
-    if (doradoOCalido.checked === true) {
+    if (doradoOCalido.checked === false) {
         destellos = 'Dorados o Calidos'
-    } else if (plateadoOFrio.checked === true) {
+    } else if (plateadoOFrio.checked === false) {
         destellos = 'Plateados o Frios'
     }
     return destellos;
@@ -99,11 +130,11 @@ function destellos() {
 
 function ropa() {
     let ropa;
-    if (coloresCalidos.checked === true) {
+    if (coloresCalidos.checked === false) {
         ropa = 'Colores Calidos'
-    } else if (coloresFrios.checked === true) {
+    } else if (coloresFrios.checked === false) {
         ropa = 'Colores Frios'
-    } else if (coloresNeutros.checked === true) {
+    } else if (coloresNeutros.checked === false) {
         ropa = 'Colores Neutros'
     }
     return ropa;
@@ -111,11 +142,11 @@ function ropa() {
 
 function accesorios() {
     let accesorios;
-    if (dorados.checked === true) {
+    if (dorados.checked === false) {
         accesorios = 'Dorados o Calidos'
-    } else if (plateados.checked === true) {
+    } else if (plateados.checked === false) {
         accesorios = 'Plateados o Frios'
-    } else if (ambos.checked === true) {
+    } else if (ambos.checked === false) {
         accesorios = 'Ambos'
     }
     return accesorios;
@@ -134,7 +165,7 @@ function result() {
     items9.innerText = accesorios();
 
     // Pseudocodigo
-    let estacion;
+    // let estacion;
     // if (subTonoPiel() === 'Calido') {
     //     estacion = (colorCabello() === 'Castaño Claro') ? 'Primavera' : 'Otoño';
 
@@ -151,80 +182,96 @@ function result() {
     //         console.log(colorsStacions.verano)
     //     }
     // }
-    visibleCard(c())
-    textResult.innerText = `con los datos ingresado su colorometria es: ${c()}`;
-    otrosDatos.innerText = x();
-    c()
-    x()
-    console.log(x())
-}
 
+    let estacion = primavera() || verano() || otrosDatos();
 
-function visibleCard(x) {
-    // colorCard
-    switch (x) {
-        case 'Primavera':
-            containerCards.classList.remove('grid')
-            primavera.classList.add('w-full');
-            primavera.classList.add('border-white');
-            primavera.classList.remove('lg:border-gray-400');
-            verano.classList.add('hidden')
-            otoño.classList.add('hidden');
-            invierno.classList.add('hidden');
-            break;
-        case 'Verano':
-            containerCards.classList.remove('grid')
-            primavera.classList.add('hidden');
-            verano.classList.add('w-full')
-            otoño.classList.add('hidden');
-            invierno.classList.add('hidden');
-            break;
-        case 'Otoño':
-            containerCards.classList.remove('grid')
-            primavera.classList.add('hidden');
-            verano.classList.add('hidden')
-            otoño.classList.add('w-full');
-            invierno.classList.add('hidden');
-            break;
-        case 'Invierno':
-            containerCards.classList.remove('grid')
-            primavera.classList.add('hidden');
-            verano.classList.add('hidden')
-            otoño.classList.add('hidden');
-            invierno.classList.add('w-full border-white');
-            break;
-        default:
-            break;
+    if (estacion) {
+        visibleCard(estacion);
+        textResult.innerText = `con los datos ingresado su colorometria es: ${estacion}`;
     }
+
+    console.log(otrosDatos())
 }
 
-function c() {
+function primavera() {
     let primavera = null;
-    if ((tonoDePiel() === 'Muy clara' || tonoDePiel() === 'Clara' || subTonoPiel() === 'Claido') &&
-        (colorCabello() === 'Rubio Claro' || colorCabello() === 'Castaño Claro') &&
+    if ((tonoDePiel() === 'Muy clara' || tonoDePiel() === 'Clara' && subTonoPiel() === 'Calido') &&
+        (colorCabello() === 'Rubio Claro' || colorCabello() === 'Castaño Claro' || colorCabello() === 'Rubio Dorado' || colorCabello() === 'Rubio Miel' || colorCabello() === 'Caoba') &&
         (colorOjos() === 'Azul' || colorOjos() === 'Verde' || colorOjos() === 'Marron o Avellana')
     ) {
         primavera = "Primavera"
-        // console.log(primavera)
     }
     return primavera;
 }
 
-function x() {
-    let x = null;
+function verano() {
+    let verano = null;
+    if ((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio') &&
+        (colorCabello() === 'Rubio Oscuro' || colorCabello() === 'Castaño Claro') &&
+        (colorOjos() === 'Azul' || colorOjos === 'Gris' || colorOjos() === 'Verde' || colorOjos() === 'Marron o Avellana')
+    ) {
+        verano = 'Verano'
+    }
+
+
+    // if ((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio') && (colorCabello() === 'Rubio ')) {}
+
+
+    return verano;
+}
+
+function otrosDatos() {
+    let x = null + 'x';
     let s = null + 's';
-    if (c() === 'Primavera') {
+    let b = null + 'b';
+
+    if (primavera() === 'Primavera') {
         x = (reactionSun() === 'Se quema ligeramente y broncea') ? 'Refuerza la Primavera' : 'Es primavera';
         if (colorVeins() === 'Verde' && accesorios() === 'Dorados o Calidos') {
             s = 'Refuerza la Primavera'
         }
-        
+    } else if (verano() === 'Verano') {
+        x = (reactionSun() === 'Se broncea ligeramente') ? 'Refuerza una tonalidad fria de verano' : 'Indica un subtono frio mas neutro';
+        if (colorVeins() === 'Azul o Morado' && accesorios() === 'Plateados o Frios') {
+            s = 'Refuerza una tonalidad fria de verano'
+        }
+        if (ropa() === 'Colores Frios') {
+            b = 'Indicativo de verano';
+        }
     }
-    return x, s;
+
+    otrosDatosList.innerText = x + ' ' + s + ' ' + b;
+    return x, s, b;
 }
 
+function closeWindow() {
+    windowCard.classList.add('hidden');
+    windowCard.classList.remove('flex');
+    primaveraCard.classList.add('hidden')
+    veranoCard.classList.add('hidden')
+}
 
+function visibleCard(x) {
+    // colorCard 
+    console.log(x)
+    containerCards.classList.remove('grid');
 
+    const cards = {
+        'Primavera': primaveraCard,
+        'Verano': veranoCard,
+    }
+
+    const card = cards[x];
+
+    if (card) {
+        card.classList.add('w-flex');
+        card.classList.add('border-white')
+        card.classList.remove('hidden');
+        colorCard.classList.remove('lg:border-gray-400');
+    } else {
+        console.log('No hay datos');
+    }
+}
 
 //* claido asociado con estaciones calidas (Prmavera y Otoño)
 //* Firo asociado con estaciones frias (Verano e invierno)
