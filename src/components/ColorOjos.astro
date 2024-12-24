@@ -1,9 +1,13 @@
+---
+import Buttons from './buttons.astro'
+---
+
 <fieldset class="font-lato flex flex-col gap-2">
     <legend class="my-2">¿Cual es el color de tus ojos?</legend>
 
     <div class="custom-radio w-full">
         <label
-        for="marronONegro"
+            for="marronONegro"
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
             <input
@@ -19,30 +23,26 @@
 
     <div class="custom-radio w-full">
         <label
-        for="marronClaroOAvellana"
+            for="marronClaro"
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
             <input
                 class="mr-2"
                 type="radio"
                 name="colorOjos"
-                id="marronClaroOAvellana"
+                id="marronClaro"
             />
             <span class="custom-radio-button"></span>
-            Marron claro o Avellana
+            Marron Claro
         </label>
     </div>
 
     <div class="custom-radio">
         <label
-        for="verdeOjos"
+            for="verdeOjos"
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2" 
-            type="radio" 
-            name="colorOjos" 
-            id="verdeOjos" />
+            <input class="mr-2" type="radio" name="colorOjos" id="verdeOjos" />
             <span class="custom-radio-button"></span>
             Verde
         </label>
@@ -50,65 +50,345 @@
 
     <div class="custom-radio">
         <label
-        for="azul"
+            for="azul"
             class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="colorOjos"
-            id="azul"/>
+            <input class="mr-2" type="radio" name="colorOjos" id="azul" />
             <span class="custom-radio-button"></span>
             Azul
         </label>
     </div>
 
     <div class="custom-radio">
-        <label 
-        for="gris"
-        class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        <label
+            for="gris"
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="colorOjos"
-            id="gris">
+            <input class="mr-2" type="radio" name="colorOjos" id="gris" />
             <span class="custom-radio-button"></span>
             Gris
-    </label>
+        </label>
     </div>
+    <Buttons text="Mas Matices" addClass="my-2" link="hidden" link2="hidden" id="buttonOjos" />
 </fieldset>
+
+<!--* Mas tonos -->
+<div id="containerOjos" class="hidden col-span-3 grid-cols-4 gap-2 w-full">
+    <fieldset class="font-lato flex flex-col gap-2">
+        <label class="my-2">Azules</label>
+
+        <div class="custom-radio w-full">
+            <label
+                for="azulClaro"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="azulClaro"
+                />
+                <span class="custom-radio-button"></span>
+                Azul Claro
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="azulBrillante"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="azulBrillante"
+                />
+                <span class="custom-radio-button"></span>
+                Azul Brillante
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="azulGrisaceo"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="azulGrisaceo"
+                />
+                <span class="custom-radio-button"></span>
+                Azul Grisaceo
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="azulTurquesa"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="azulTurquesa"
+                />
+                <span class="custom-radio-button"></span>
+                Azul Turquesa
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset class="font-lato flex flex-col gap-2">
+        <label class="my-2">Verde</label>
+
+        <div class="custom-radio w-full">
+            <label
+                for="verdeBrillante"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="verdeBrillante"
+                />
+                <span class="custom-radio-button"></span>
+                Verde Brillante
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="verdeClaro"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="verdeClaro"
+                />
+                <span class="custom-radio-button"></span>
+                Verde Claro
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="verdeOliva"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="verdeOliva"
+                />
+                <span class="custom-radio-button"></span>
+                Verde Oliva
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="verdeJade"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="verdeJade"
+                />
+                <span class="custom-radio-button"></span>
+                Verde Jade
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset class="font-lato flex flex-col gap-2">
+        <label class="my-2">Marrones</label>
+
+        <div class="custom-radio w-full">
+            <label
+                for="marronDorado"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="marronDorado"
+                />
+                <span class="custom-radio-button"></span>
+                Marron Dorado
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="marronMiel"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="marronMiel"
+                />
+                <span class="custom-radio-button"></span>
+                Marron Miel
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="marronAvellana"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="marronAvellana"
+                />
+                <span class="custom-radio-button"></span>
+                Marron Avellana
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="marronOscuro"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="marronOscuro"
+                />
+                <span class="custom-radio-button"></span>
+                Marron Oscuro
+            </label>
+        </div>
+
+    </fieldset>
+
+    <fieldset class="font-lato flex flex-col gap-2">
+        <label class="my-2">Grises</label>
+
+        <div class="custom-radio w-full">
+            <label
+                for="grisClaro"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="grisClaro"
+                />
+                <span class="custom-radio-button"></span>
+                Gris Claro
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="grisVerde"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="grisVerde"
+                />
+                <span class="custom-radio-button"></span>
+                Gris Verde
+            </label>
+        </div>
+
+        <div class="custom-radio w-full">
+            <label
+                for="grisAcero"
+                class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            >
+                <input
+                    class="mr-2"
+                    type="radio"
+                    name="colorOjos"
+                    id="grisAcero"
+                />
+                <span class="custom-radio-button"></span>
+                Gris Acero
+            </label>
+        </div>
+
+        <div class="custom-radio w-full"></div>
+
+    </fieldset>
+</div>
 
 <fieldset class="font-lato flex flex-col gap-2">
     <legend class="my-2">¿Tienes destellos visibles?</legend>
-    
+
     <div class="custom-radio w-full">
         <label
-        for="doradosOCalidos"
-        class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+            for="doradosOCalidos"
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="destellosOjos"
-            id="doradosOCalidos">
+            <input
+                class="mr-2"
+                type="radio"
+                name="destellosOjos"
+                id="doradosOCalidos"
+            />
             <span class="custom-radio-button"></span>
             Dorados o Calidos
-    </label>
+        </label>
     </div>
 
     <div class="custom-radio w-full">
-        <label 
-        for="plateadosOFrios"
-        class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
+        <label
+            for="plateadosOFrios"
+            class="border border-black hover:bg-white/50 hover:cursor-pointer p-2 flex items-center rounded"
         >
-            <input 
-            class="mr-2"
-            type="radio"
-            name="destellosOjos"
-            id="palteadosOFrios">
+            <input
+                class="mr-2"
+                type="radio"
+                name="destellosOjos"
+                id="palteadosOFrios"
+            />
             <span class="custom-radio-button"></span>
             Plateados o Frios
-    </label>
+        </label>
     </div>
 </fieldset>
+
+<script>
+
+    let button = document.getElementById("buttonOjos");
+    let container = document.getElementById("containerOjos");
+    let i = false;
+
+    function vsisible() {
+        if(i) {
+            button.innerText = "Mas Matices";
+            container.classList.remove("grid");
+            container.classList.add("hidden");
+        } else {
+            container.classList.add("grid");
+            container.classList.remove("hidden");
+            button.innerText = "Cerrar";
+        }
+        i = !i;
+    }
+
+    button.addEventListener("click", function () { vsisible() });
+</script>
