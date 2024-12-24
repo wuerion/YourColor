@@ -89,11 +89,11 @@ import Buttons from "./buttons.astro";
             Pelirrojo
         </label>
     </div>
-    <Buttons text="Mas matices" addClass="my-2" link="hidden" button="hidden" />
+    <Buttons text="Mas matices" addClass="my-2" link="hidden" link2="hidden" id="buttonCabello" />
 </fieldset>
 
     <!--* Mas tonos -->
-    <div id="container" class="hidden col-span-3 grid-cols-4 gap-2 w-full">
+    <div id="containerCabello" class="hidden col-span-3 grid-cols-4 gap-2 w-full">
         
         <fieldset class="font-lato flex flex-col gap-2">
             <legend class="my-2">Tonos Calidos</legend>
@@ -337,8 +337,8 @@ import Buttons from "./buttons.astro";
     </div>
 
 <script>
-    let button = document.getElementById("button");
-    let container = document.getElementById("container");
+    let button = document.getElementById("buttonCabello");
+    let container = document.getElementById("containerCabello");
     let i = false;
     
     function visible() {
