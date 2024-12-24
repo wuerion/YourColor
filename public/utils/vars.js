@@ -82,7 +82,7 @@ const azulGrisaceo = document.getElementById('azulGrisaceo');
 const azulTurqueza = document.getElementById('azulTurqueza');
 
 const verdeOjos = document.getElementById('verdeOjos');
-const verdeBrillante = doocument.getElementById('verdeBrillante');
+const verdeBrillante = document.getElementById('verdeBrillante');
 const verdeClaro = document.getElementById('vredeClaro');
 const verdeOliva = document.getElementById('verdeOliva');
 const verdeJade = document.getElementById('verdeJade');
