@@ -104,16 +104,46 @@ function colorCabello() {
 
 function colorOjos() {
     let colorOjos;
-    if (marronONegro.checked === true) {
-        colorOjos = 'Marron o Negro'
-    } else if (marronClaro.checked === true) {
-        colorOjos = 'Marron claro'
+    if (azul.checked === true) {
+        colorOjos = 'Azul'
+    } else if (azulClaro.checked === true) {
+        colorOjos = 'Azul Claro'
+    } else if (azulBrillante.checked === true) {
+        colorOjos = 'Azul Brillante'
+    } else if (azulGrisaceo.checked === true) {
+        colorOjos = 'Azul Grisaceo'
+    } else if (azulTurquesa.checked === true) {
+        colorOjos = 'Azul Turquesa'
     } else if (verdeOjos.checked === true) {
         colorOjos = 'Verde'
-    } else if (azul.checked === true) {
-        colorOjos = 'Azul'
+    } else if (verdeBrillante.checked === true) {
+        colorOjos = 'Verde Brillante'
+    } else if (verdeClaro.checked === true) {
+        colorOjos = 'Verde Claro'
+    } else if (verdeOliva.checked === true) {
+        colorOjos = 'Verde Oliva'
+    } else if (verdeJade.checked === true) {
+        colorOjos = 'Verde Jade'
+    } else if (marronONegro.checked === true) {
+        colorOjos = 'Marron o Negro'
+    } else if (marronClaro.checked === true) {
+        colorOjos = 'Marron Claro'
+    } else if (marronDorado.checked === true) {
+        colorOjos = 'Marron Dorado'
+    } else if (marronMiel.checked === true) {
+        colorOjos = 'Marron Miel'
+    } else if (marronAvellana.checked === true) {
+        colorOjos = 'Marron Avellana'
+    } else if (marronOscuro.checked === true) {
+        colorOjos = 'Marron Oscuro'
     } else if (gris.checked === true) {
         colorOjos = 'Gris'
+    } else if (grisClaro.checked === true) {
+        colorOjos = 'Gris Claro'
+    } else if (grisVerde.checked === true) {
+        colorOjos = 'Gris Verde'
+    } else if (grisAcero.checked === true) {
+        colorOjos = 'Gris Acero'
     }
     return colorOjos;
 }
@@ -185,7 +215,7 @@ function primavera() {
     // let primaveraText = null;
     let primavera = null;
     // let Primavera
-    if ((tonoDePiel() === 'Muy clara' || (tonoDePiel() === 'Clara' && subTonoPiel() === 'Calido')) &&
+    if ((tonoDePiel() === 'Muy clara' || (tonoDePiel() === 'Clara' && subTonoPiel() === 'Calido' || subTonoPiel() === 'Frio')) &&
         (colorCabello() === 'Rubio Claro' || colorCabello() === 'Castaño Claro' || colorCabello() === 'Rubio Dorado' || colorCabello() === 'Rubio Miel' || colorCabello() === 'Caoba') &&
         (colorOjos() === 'Azul' || colorOjos() === 'Verde' || colorOjos() === 'Marron claro' || colorOjos() === 'Avellana')) { //!
         primavera = "Primavera"
@@ -193,19 +223,19 @@ function primavera() {
     }
 
     //* Primavera Clara (Light Spring)
-    if((tonoDePiel() === 'Clara' && subTonoPiel() === 'Calido') && (colorCabello() === 'Rubio Miel' || colorCabello() === 'Rubio Dorado') && (colorOjos() === 'Azul' || colorOjos() === 'Verde')) {
+    if((tonoDePiel() === 'Clara' && subTonoPiel() === 'Calido') && (colorCabello() === 'Rubio Miel' || colorCabello() === 'Rubio Dorado') && (colorOjos() === 'Azul Brillante' || colorOjos() === 'Verde Claro')) {
         primavera = 'Primavera Clara (Light Spring)';
         // console.log(primavera)
     }
 
     //* Primavera Calida (Warm Spring)
-    if((tonoDePiel() === 'Media' && subTonoPiel() === 'Calido') && (colorCabello() === 'Rubio Dorado' || (colorCabello() === 'Castaño Claro' && destellos() === 'Dorados o Calidos') && (colorOjos() === 'Verde' || colorOjos() === 'Azul'))) {
+    if((tonoDePiel() === 'Media' && subTonoPiel() === 'Calido') && (colorCabello() === 'Rubio Dorado' || (colorCabello() === 'Castaño Claro' && destellos() === 'Dorados o Calidos') && (colorOjos() === 'Marron Dorado' || (colorOjos() === 'Marron Avellana' && destellos() === 'Dorados o Calidos')))) {
         primavera = 'Primavera Calida (Warm Spring)';
         // console.log(primavera)
     }
 
     //* Primavera Brillante (Bright Spring) 
-    if((tonoDePiel() === 'Media' || tonoDePiel() === 'Clara' && subTonoPiel() === 'Calido') && (colorCabello() === 'Rubio Dorado' || colorCabello() === 'Dorado Miel') && (colorOjos() === 'Azul' || colorOjos() === 'Verde' || colorOjos() === 'Marron claro o Avellana')) {
+    if((tonoDePiel() === 'Media' || tonoDePiel() === 'Clara' && subTonoPiel() === 'Calido') && (colorCabello() === 'Rubio Dorado' || colorCabello() === 'Rubio Miel') && (colorOjos() === 'Azul' || colorOjos() === 'Verde' || colorOjos() === 'Marron Claro')) {
         primavera = 'Primavera Brillante (Bright Spring)';
         // console.log(primavera)
     }
