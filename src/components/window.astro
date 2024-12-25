@@ -6,9 +6,9 @@ import StacionColors from "./stacionColors.astro"
         <button class="fixed lg:right-96 text-lg" id="exit">X</button>
         <h2 class="text-center font-inconsolata text-2xl font-semibold">YOUR COLOR</h2>
         <p id="textResult"></p> <!--* asignar el valor de la variables -->
-        <div id="container" class="lg:flex my-2">
+        <div id="container" class="flex flex-col lg:flex-row my-2 gap-2">
             <div class="w-full flex flex-col gap-2">
-                <ul class="border w-1/2 p-2" id="list">
+                <ul class="border w-1/2 p-2 rounded" id="list">
                     <p class="font-semibold">Datos ingresados</p>
                     <li id="item-1"></li>
                     <li id="item-2"></li>
@@ -21,12 +21,12 @@ import StacionColors from "./stacionColors.astro"
                     <li id="item-9"></li>
                     <li id="item-10"></li>
                 </ul>
-                <div class="border w-1/2 p-2 mr-2">
+                <div class="border w-1/2 p-2 mr-2 rounded">
                     <p>Otros datos</p>
                     <p id="otrosDatos"></p>
                 </div>
             </div>
-            <div class="w-full" id="colorCard">
+            <div class="w-full " id="colorCard">
                 <StacionColors />
             </div>
         </div>
