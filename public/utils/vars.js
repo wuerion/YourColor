@@ -79,11 +79,11 @@ const azul = document.getElementById('azul');
 const azulClaro = document.getElementById('azulClaro');
 const azulBrillante = document.getElementById('azulBrillante');
 const azulGrisaceo = document.getElementById('azulGrisaceo');
-const azulTurqueza = document.getElementById('azulTurqueza');
+const azulTurquesa = document.getElementById('azulTurquesa');
 
 const verdeOjos = document.getElementById('verdeOjos');
 const verdeBrillante = document.getElementById('verdeBrillante');
-const verdeClaro = document.getElementById('vredeClaro');
+const verdeClaro = document.getElementById('verdeClaro');
 const verdeOliva = document.getElementById('verdeOliva');
 const verdeJade = document.getElementById('verdeJade');
 
