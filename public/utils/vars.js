@@ -55,6 +55,7 @@ const neutro = document.getElementById('neutro');
 //* Color de Cabello
 const caoba = document.getElementById('caoba');
 const castañoOscuro = document.getElementById('castañoOscuro');
+const castañoMedio = document.getElementById('castañoMedio');
 const castañoClaro = document.getElementById('castañoClaro');
 const castañoDorado = document.getElementById('castañoDorado');
 const castañoRojizo = document.getElementById('castañoRojizo');
@@ -80,6 +81,7 @@ const azulClaro = document.getElementById('azulClaro');
 const azulBrillante = document.getElementById('azulBrillante');
 const azulGrisaceo = document.getElementById('azulGrisaceo');
 const azulTurquesa = document.getElementById('azulTurquesa');
+const azulAcero = document.getElementById('azulAcero');
 
 const verdeOjos = document.getElementById('verdeOjos');
 const verdeBrillante = document.getElementById('verdeBrillante');
@@ -98,6 +100,7 @@ const gris = document.getElementById('gris');
 const grisClaro = document.getElementById('grisClaro');
 const grisVerde = document.getElementById('grisVerde');
 const grisAcero = document.getElementById('grisAcero');
+const grisAzulado = document.getElementById('grisAzulado');
 
 //* Destellos ojos
 const doradoOCalido = document.getElementById('doradosOCalidos');
