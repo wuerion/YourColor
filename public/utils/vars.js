@@ -2,7 +2,7 @@
 //* vars
 
 //* windowCard
-let textresultt = document.getElementById('textresultt');
+let textresult = document.getElementById('textresult');
 let exit = document.getElementById('exit');
 let windowCard = document.getElementById('windowCard');
 
@@ -76,6 +76,8 @@ const negroAzulado = document.getElementById('negroAzulado');
 const negroNatural = document.getElementById('negroNatural');
 
 //* Color de ojos
+const negroOjo = document.getElementById('negroOjo');
+
 const azul = document.getElementById('azul');
 const azulClaro = document.getElementById('azulClaro');
 const azulBrillante = document.getElementById('azulBrillante');
@@ -89,7 +91,7 @@ const verdeClaro = document.getElementById('verdeClaro');
 const verdeOliva = document.getElementById('verdeOliva');
 const verdeJade = document.getElementById('verdeJade');
 
-const marronONegro = document.getElementById('marronONegro');
+const marron = document.getElementById('marron');
 const marronClaro = document.getElementById('marronClaro');
 const marronDorado = document.getElementById('marronDorado');
 const marronMiel = document.getElementById('marronMiel');
