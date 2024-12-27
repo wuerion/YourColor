@@ -5,6 +5,7 @@
 let textresult = document.getElementById('textresult');
 let exit = document.getElementById('exit');
 let windowCard = document.getElementById('windowCard');
+let resetButton = document.getElementById('resetButton');
 
 let items1 = document.getElementById('item-1');
 let items2 = document.getElementById('item-2');
@@ -84,6 +85,8 @@ const azulBrillante = document.getElementById('azulBrillante');
 const azulGrisaceo = document.getElementById('azulGrisaceo');
 const azulTurquesa = document.getElementById('azulTurquesa');
 const azulAcero = document.getElementById('azulAcero');
+const azulHielo = document.getElementById('azulHielo');
+const azulVerdoso = document.getElementById('azulVerdoso');
 
 const verdeOjos = document.getElementById('verdeOjos');
 const verdeBrillante = document.getElementById('verdeBrillante');
@@ -103,6 +106,7 @@ const grisClaro = document.getElementById('grisClaro');
 const grisVerde = document.getElementById('grisVerde');
 const grisAcero = document.getElementById('grisAcero');
 const grisAzulado = document.getElementById('grisAzulado');
+const grisPlateado = document.getElementById('grisPlateado');
 
 //* Destellos ojos
 const doradoOCalido = document.getElementById('doradosOCalidos');
@@ -229,10 +233,14 @@ window.addEventListener('keydown', (e) => {
         result()
         windowCard.classList.add('flex')
         windowCard.classList.remove('hidden')
+        document.body.classList.add('overflow-hidden')
     }
 })
 
-exit.addEventListener('click', function () { closeWindow() })
+exit.addEventListener('click', function () { 
+    closeWindow() 
+    document.body.classList.remove('overflow-hidden')
+})
 
 window.addEventListener('kewdown', (e) => {
     if (e.key === 'Esc') {
@@ -240,3 +248,5 @@ window.addEventListener('kewdown', (e) => {
         windowCard.classList.remove('flex')
     }
 })
+
+resetButton.addEventListener('click', function () { reset() })
