@@ -34,7 +34,6 @@ let colorCard = document.getElementById('colorCard');
 const muyClaraPiel = document.getElementById("muyClara");
 const claraPiel = document.getElementById('clara');
 const mediaPiel = document.getElementById('media');
-const morenaPiel = document.getElementById('morena');
 const oscuraPiel = document.getElementById('oscura');
 
 //* Describir el tono de piel
