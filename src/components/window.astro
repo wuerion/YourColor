@@ -1,10 +1,11 @@
 ---
+import Buttons from "./buttons.astro"
 import StacionColors from "./stacionColors.astro"
 ---
-<div class="text-white hidden fixed top-5 lg:top-12 left-0 w-full justify-center items-center" id="windowCard">
-    <div class=" bg-gray-500/80 lg:w-1/2 lg:h-1/2 border rounded-lg shadow-black/40 shadow-sm p-5">
-        <button class="fixed lg:right-96 text-lg" id="exit">X</button>
-        <h2 class="text-center font-inconsolata text-2xl font-semibold">YOUR COLOR</h2>
+<div class="text-white fixed top-5 lg:top-12 left-0 w-full justify-center items-center flex-col" id="windowCard">
+    <div class="bg-gray-500/80 lg:w-1/2 h-[500px]  border rounded-lg shadow-black/40 shadow-sm p-5 overflow-scroll flex flex-col">
+        <button class="text-end" id="exit">X</button>
+            <h2 class="text-center font-inconsolata text-2xl font-semibold">YOUR COLOR</h2>
         <p id="textResult"></p> <!--* asignar el valor de la variables -->
         <div id="container" class="flex flex-col lg:flex-row my-2 gap-2">
             <div class="w-full flex flex-col gap-2">
@@ -30,5 +31,6 @@ import StacionColors from "./stacionColors.astro"
                 <StacionColors />
             </div>
         </div>
+        <Buttons text="Reiniciar" addClass="my-2" button="border-white text-white" link="hidden" link2="hidden" id="resetButton" />
     </div>
 </div>
