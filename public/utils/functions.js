@@ -7,8 +7,6 @@ function tonoDePiel() {
         tonoDePiel = "Clara"
     } else if (mediaPiel.checked === true) {
         tonoDePiel = 'Media'
-    } else if (morenaPiel.checked === true) {
-        tonoDePiel = 'Morena'
     } else if (oscuraPiel.checked === true) {
         tonoDePiel = 'Oscura'
     }
@@ -444,21 +442,78 @@ function closeWindow() {
 }
 
 function reset() {
-
-    for (let i = 0; i <= 5; i++) {
-        tonoDePiel().checked = false;
-    }
+    muyClaraPiel.checked = false;
+    claraPiel.checked = false;
+    mediaPiel.checked = false;
+    oscuraPiel.checked = false;
+    calidoSubPiel.checked = false;
+    frioSubPiel.checked = false;
+    negroNatural.checked = false;
+    quema.checked = false;
+    broncea.checked = false;
+    bronceaFacil.checked = false;
+    quemaLigeramenteYBroncea.checked = false;
+    azulOMorado.checked = false;
+    verde.checked = false;
+    neutro.checked = false;
+    caoba.checked = false;
+    castañoOscuro.checked = false;
+    castañoMedio.checked = false;
+    castañoClaro.checked = false;
+    castañoDorado.checked = false;
+    castañoRojizo.checked = false;
+    castañoCenizo.checked = false;
+    castañoNeutro.checked = false;
+    rubioOscuro.checked = false;
+    rubioClaro.checked = false;
+    rubioMiel.checked = false;
+    rubioCenizo.checked = false;
+    rubioNeutro.checked = false;
+    rubioDorado.checked = false;
+    pelirojo.checked = false;
+    platinoFrio.checked = false;
+    rojoIntenso.checked = false;
+    rojoCobrizo.checked = false;
+    pelirojo.checked = false;
+    negro.checked = false;
+    negroAzulado.checked = false;
+    negroNatural.checked = false;
+    negroOjo.checked = false;
+    azul.checked = false;
+    azulClaro.checked = false;
+    azulBrillante.checked = false;
+    azulGrisaceo.checked = false;
+    azulAcero.checked = false;
+    azulHielo.checked = false;
+    azulVerdoso.checked = false;
+    azulTurquesa.checked = false;
+    verdeOjos.checked = false;
+    verdeBrillante.checked = false;
+    verdeClaro.checked = false;
+    verdeOliva.checked = false;
+    verdeJade.checked = false;
+    marron.checked = false;
+    marronClaro.checked = false;
+    marronDorado.checked = false;
+    marronMiel.checked = false;
+    marronAvellana.checked = false;
+    marronOscuro.checked = false;
+    gris.checked = false;
+    grisClaro.checked = false;
+    grisVerde.checked = false;
+    grisAcero.checked = false;
+    grisAzulado.checked = false;
+    grisPlateado.checked = false;
+    doradoOCalido.checked = false;
+    plateadoOFrio.checked = false;
+    coloresCalidos.checked = false;
+    coloresFrios.checked = false;
+    coloresNeutros.checked = false;
+    dorados.checked = false;
+    plateados.checked = false;
+    ambos.checked = false;
 
     //* claraPiel.checked = false;
-
-    // subTonoPiel() = false;
-    // reactionSun() = false;
-    // colorVeins() = false;
-    // colorCabello() = false;
-    // colorOjos() = false;
-    // ropa() = false;
-    // destellos() = false;
-    // accesorios() = false;
     console.log('datos reseteados')
 }
 
