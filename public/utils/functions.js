@@ -118,6 +118,10 @@ function colorOjos() {
         colorOjos = 'Azul Grisaceo'
     } else if (azulAcero.checked === true) {
         colorOjos = 'Azul Acero'
+    } else if (azulHielo.checked === true) {
+        colorOjos = 'Azul Hielo'
+    } else if (azulVerdoso.checked === true) {
+        colorOjos = 'Azul Verdoso'
     } else if (azulTurquesa.checked === true) {
         colorOjos = 'Azul Turquesa'
     } else if (verdeOjos.checked === true) {
@@ -152,6 +156,8 @@ function colorOjos() {
         colorOjos = 'Gris Acero'
     } else if (grisAzulado.checked === true) {
         colorOjos = 'Gris Azulado'
+    } else if (grisPlateado.checked === true) {
+        colorOjos = 'Gris Plateado'
     }
     return colorOjos;
 }
@@ -435,6 +441,25 @@ function closeWindow() {
     windowCard.classList.add('hidden');
     windowCard.classList.remove('flex');
     textResult.innerText = ' ';
+}
+
+function reset() {
+
+    for (let i = 0; i <= 5; i++) {
+        tonoDePiel().checked = false;
+    }
+
+    //* claraPiel.checked = false;
+
+    // subTonoPiel() = false;
+    // reactionSun() = false;
+    // colorVeins() = false;
+    // colorCabello() = false;
+    // colorOjos() = false;
+    // ropa() = false;
+    // destellos() = false;
+    // accesorios() = false;
+    console.log('datos reseteados')
 }
 
 // TODO: Agregar la funcionalidad para  un boton de reiniciar los datos.
