@@ -276,7 +276,7 @@ function verano() {
     }
 
     //* Verano Frio (Cool Summer)
-    if((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio') && (colorCabello() === 'Rubio Oscuro' || colorCabello() === 'Castaño Medio') && (colorOjos() === 'Azul Acero' || colorOjos() === 'Gris Azulado' || colorOjos() === 'Verde Jade')) {
+    if((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio') && (colorCabello() === 'Rubio Oscuro' || colorCabello() === 'Castaño Medio') && (colorOjos() === 'Azul Acero' || colorOjos() === 'Azul Hielo' || colorOjos() === 'Verde Jade')) {
         verano = 'Verano Frio (Cool Summer)';
         visibleCard(verano)
     }
@@ -293,7 +293,7 @@ function otoño() {
     }
 
     //* ontoño Claro (Light Autumn)
-    if ((tonoDePiel() === 'Clara' || tonoDePiel() === 'Media' && (subTonoPiel() === 'Calido' || subTonoPiel() === 'Neutro')) && colorCabello() === 'Rubio Oscuro' || colorCabello() === 'Castaño Claro' || colorCabello() === 'Castaño Medio' && (destellos() === 'Dorados o Calidos') && (colorOjos() === 'Verde Oliva' || colorOjos() === 'Marron Claro' || colorOjos() === 'MarronAvellana' || colorOjos() === 'Azul Grisaceo')) {
+    if ((tonoDePiel() === 'Clara' || tonoDePiel() === 'Media' && (subTonoPiel() === 'Calido' || subTonoPiel() === 'Neutro')) && (colorCabello() === 'Rubio Oscuro' || colorCabello() === 'Castaño Claro' || colorCabello() === 'Castaño Medio' && (destellos() === 'Dorados o Calidos')) && (colorOjos() === 'Verde Oliva' || colorOjos() === 'Marron Claro' || colorOjos() === 'MarronAvellana' || colorOjos() === 'Azul Grisaceo')) {
         otoño = 'Otoño Claro (Light Autumn)';
         visibleCard(otoño)
     }
@@ -315,7 +315,7 @@ function otoño() {
 //*fuction para determinar la estacion de Invierno
 function invierno() {
     let invierno = null;
-    if ((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio' || subTonoPiel() === 'Neutro' || tonoDePiel() === 'Media' && (subTonoPiel() === 'Frio' || subTonoPiel() === 'Neutro')) && (colorCabello() === 'Negro' || colorCabello() === 'Castaño Oscuro' || colorCabello() === 'Castaño Medio' ) && (colorOjos() === 'Marron Oscuro' || colorOjos() === 'Gris Azulado' || colorOjos() === 'Verde' || colorOjos() === 'Gris Claro')) {
+    if ((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio' || subTonoPiel() === 'Neutro' || tonoDePiel() === 'Media' && (subTonoPiel() === 'Frio' || subTonoPiel() === 'Neutro')) && (colorCabello() === 'Negro' || colorCabello() === 'Castaño Oscuro' || colorCabello() === 'Castaño Medio' ) && (colorOjos() === 'Marron Oscuro' || colorOjos() === 'Azul Hielo' || colorOjos() === 'Verde' || colorOjos() === 'Gris Plateado')) {
         invierno = 'Invierno';
         visibleCard(invierno)
     }
@@ -327,7 +327,7 @@ function invierno() {
     }
 
     //* Invierno Frio (True Winter)
-    if ((tonoDePiel() === 'Clara'  || tonoDePiel() === 'Media' && (subTonoPiel() === 'Frio')) && (colorCabello() === 'Negro' || colorCabello() === 'Castaño Oscuro' || colorCabello() === 'Gris') && (colorOjos() === 'Azul Claro' || colorOjos() === 'Gris' || colorOjos() === 'Marron' || colorOjos() === 'Verde')) {
+    if ((tonoDePiel() === 'Clara'  || tonoDePiel() === 'Media' && (subTonoPiel() === 'Frio')) && (colorCabello() === 'Negro' || colorCabello() === 'Castaño Oscuro') && (colorOjos() === 'Azul Hielo' || colorOjos() === 'Gris Plateado' || colorOjos() === 'Marron' || colorOjos() === 'Verde')) {
         invierno = 'Invierno Frio (True Winter)';
         visibleCard(invierno);
     }
@@ -517,5 +517,3 @@ function reset() {
     console.log('datos reseteados')
 }
 
-// TODO: Agregar la funcionalidad para  un boton de reiniciar los datos.
-// TODO: Agregar nuevos datos: color de ojos 'azul hielo', 'gris plateado', 'azul verdoso'.
