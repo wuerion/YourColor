@@ -128,27 +128,27 @@ const startTest = document.getElementById('startTest');
 // test
 const colorsStacions = {
     primavera: [
-        "#fdd891",
-        "#fab394",
-        "#fdb8cd",
-        "#fea2a6",
-        "#ceefc7",
-        "#97d3d7",
-        "#c0e6fb",
-        "#e96d75",
-        "#fc8f76",
-        "#feb83e",
-        "#97ab48",
-        "#349951",
-        "#38a6a1",
-        "#1779b8",
-        "#e95182",
-        "#fc3c40",
-        "#f48221",
-        "#ffc734",
-        "#1fa14f",
-        "#77e8dd",
-        "#4159b1"
+        ["#fdd891", 'Miel suave'],
+        ["#fab394", 'Melon Claro'],
+        ["#fdb8cd", 'Rosa pétalo'],
+        ["#fea2a6", 'Coral suave'],
+        ["#ceefc7", 'Verde menta'],
+        ["#97d3d7", ''],
+        ["#c0e6fb", ''],
+        ["#e96d75", ''],
+        ["#fc8f76", ''],
+        ["#feb83e", ''],
+        ["#97ab48", ''],
+        ["#349951", ''],
+        ["#38a6a1", ''],
+        ["#1779b8", ''],
+        ["#e95182", ''],
+        ["#fc3c40", ''],
+        ["#f48221", ''],
+        ["#ffc734", ''],
+        ["#1fa14f", ''],
+        ["#77e8dd", ''],
+        ["#4159b1", ''],
     ],
     verano: [
         "#fdf9ad",
@@ -221,8 +221,9 @@ const colorsStacions = {
     ]
 }
 
+document.get
 startTest.addEventListener('click', function () {
-    result() 
+    result()
     windowCard.classList.add('flex')
     windowCard.classList.remove('hidden')
 })
@@ -233,11 +234,14 @@ window.addEventListener('keydown', (e) => {
         windowCard.classList.add('flex')
         windowCard.classList.remove('hidden')
         document.body.classList.add('overflow-hidden')
+        for (let i = 0; i < colorsStacions.primavera.length; i++) {
+            console.log(colorsStacions.primavera[i])
+        }
     }
 })
 
-exit.addEventListener('click', function () { 
-    closeWindow() 
+exit.addEventListener('click', function () {
+    closeWindow()
     document.body.classList.remove('overflow-hidden')
 })
 
