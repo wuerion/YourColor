@@ -1,3 +1,7 @@
+---
+import Button from './buttons.astro'
+---
+
 <section class="px-5 py-10 flex justify-center items-center">
   <div class="w-1/2">
     <h1 class="font-lato text-2xl text-start font-bold text-nowrap mr-2">
@@ -5,7 +9,7 @@
     </h1>
     <h2 class="font-lato text-lg mt-2">
       Conoce qué colores complementan mejor tu estilo y cómo reflejan tu personalidad aquí
-      <a href="#test" class="border mx-2 px-2 text-center">test</a>
+      <Button text="Iniciar Test" addClass="flex" link1="#test" link="p-2" link2="hidden" button="hidden"/>
     </h2>
   </div>
   <div class="w-1/2 flex justify-center items-center">
