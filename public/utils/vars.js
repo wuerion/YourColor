@@ -18,7 +18,18 @@ let items8 = document.getElementById('item-8');
 let items9 = document.getElementById('item-9');
 let items10 = document.getElementById('item-10');
 
+//*Otros Datos
 let otrosDatosList = document.getElementById('otrosDatos')
+let item1Data = document.getElementById('item-Data-1');
+let item2Data = document.getElementById('item-Data-2');
+let item3Data = document.getElementById('item-Data-3');
+let item4Data = document.getElementById('item-Data-4');
+let item5Data = document.getElementById('item-Data-5');
+let item6Data = document.getElementById('item-Data-6');
+let item7Data = document.getElementById('item-Data-7');
+let item8Data = document.getElementById('item-Data-8');
+let item9Data = document.getElementById('item-Data-9');
+let item10Data = document.getElementById('item-Data-10');
 
 //* stacions crads
 let containerCards = document.querySelector('#colorCard #containerCards')
@@ -234,9 +245,6 @@ window.addEventListener('keydown', (e) => {
         windowCard.classList.add('flex')
         windowCard.classList.remove('hidden')
         document.body.classList.add('overflow-hidden')
-        for (let i = 0; i < colorsStacions.primavera.length; i++) {
-            console.log(colorsStacions.primavera[i])
-        }
     }
 })
 
