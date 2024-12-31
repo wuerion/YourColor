@@ -1,15 +1,24 @@
 ---
-import Buttons from "./buttons.astro"
-import StacionColors from "./stacionColors.astro"
+import Buttons from "./buttons.astro";
+import StacionColors from "./stacionColors.astro";
 ---
-<div class="text-white hidden fixed top-5 lg:top-12 left-0 w-full justify-center items-center flex-col" id="windowCard">
-    <div class="bg-gray-500/80 lg:w-1/2 h-[500px]  border rounded-lg shadow-black/40 shadow-sm p-5 overflow-scroll flex flex-col">
+
+<div
+    class="text-white hidden fixed top-5 lg:top-12 left-0 w-full justify-center items-center flex-col"
+    id="windowCard"
+>
+    <div
+        class="bg-gray-500/80 lg:w-1/2 h-[500px] border rounded-lg shadow-black/40 shadow-sm p-5 overflow-scroll flex flex-col"
+    >
         <button class="text-end" id="exit">X</button>
-            <h2 class="text-center font-inconsolata text-2xl font-semibold">YOUR COLOR</h2>
-        <p id="textResult"></p> <!--* asignar el valor de la variables -->
+        <h2 class="text-center font-inconsolata text-2xl font-semibold">
+            YOUR COLOR
+        </h2>
+        <p id="textResult"></p>
+        <!--* asignar el valor de la variables -->
         <div id="container" class="flex flex-col lg:flex-row my-2 gap-2">
             <div class="w-full flex flex-col gap-2">
-                <ul class="border w-1/2 p-2 rounded" id="list">
+                <ul class="border w-full p-2 rounded" id="list">
                     <p class="font-semibold">Datos ingresados</p>
                     <li id="item-1"></li>
                     <li id="item-2"></li>
@@ -22,15 +31,36 @@ import StacionColors from "./stacionColors.astro"
                     <li id="item-9"></li>
                     <li id="item-10"></li>
                 </ul>
-                <div class="border w-1/2 p-2 mr-2 rounded">
-                    <p>Otros datos</p>
-                    <p id="otrosDatos"></p>
-                </div>
             </div>
-            <div class="w-full " id="colorCard">
+            <div class="w-full" id="colorCard">
                 <StacionColors />
             </div>
+            <div class="border w-full p-2 mr-2 rounded">
+                <p>Otros datos</p>
+                <p id="otrosDatos"></p>
+                <ul class="flex flex-col gap-2">
+                    <li class="border boredr-white p-2">
+                        <p id="itemData-1"></p>
+                    </li>
+                    <li class="border boredr-white p-2">
+                        <p id="itemData-2"></p>
+                    </li>
+                    <li class="border boredr-white p-2">
+                        <p id="itemData-3"></p>
+                    </li>
+                    <li class="border boredr-white p-2">
+                        <p id="itemData-4"></p>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <Buttons text="Reiniciar" addClass="my-2" button="border-white text-white" link="hidden" link2="hidden" id="resetButton" />
+        <Buttons
+            text="Reiniciar"
+            addClass="my-2"
+            button="border-white text-white"
+            link="hidden"
+            link2="hidden"
+            id="resetButton"
+        />
     </div>
 </div>
