@@ -212,7 +212,7 @@ function result() {
 
     // console.log(verano(), otrosDatos())
 
-    let estacion = primavera() || verano() || otoño() || invierno() ;
+    let estacion = primavera() || verano() || otoño() || invierno();
 
     if (estacion) {
         visibleCard(estacion);
@@ -223,9 +223,7 @@ function result() {
 
 //* funcion para determinar la estacion de primavera
 function primavera() {
-    // let primaveraText = null;
     let primavera = null;
-    // let Primavera
     if ((tonoDePiel() === 'Muy Clara' || (tonoDePiel() === 'Clara' && subTonoPiel() === 'Calido' || subTonoPiel() === 'Frio')) &&
         (colorCabello() === 'Rubio Claro' || colorCabello() === 'Castaño Claro' || colorCabello() === 'Rubio Dorado' || colorCabello() === 'Rubio Miel' || colorCabello() === 'Caoba') &&
         (colorOjos() === 'Azul' || colorOjos() === 'Verde' || colorOjos() === 'Marron claro' || colorOjos() === 'Avellana')) {
@@ -276,7 +274,7 @@ function verano() {
     }
 
     //* Verano Frio (Cool Summer)
-    if((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio') && (colorCabello() === 'Rubio Oscuro' || colorCabello() === 'Castaño Medio') && (colorOjos() === 'Azul Acero' || colorOjos() === 'Azul Hielo' || colorOjos() === 'Verde Jade')) {
+    if ((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio') && (colorCabello() === 'Rubio Oscuro' || colorCabello() === 'Castaño Medio') && (colorOjos() === 'Azul Acero' || colorOjos() === 'Azul Hielo' || colorOjos() === 'Verde Jade')) {
         verano = 'Verano Frio (Cool Summer)';
         visibleCard(verano)
     }
@@ -305,7 +303,7 @@ function otoño() {
     }
 
     //* Otoño Oscuro (Dark Autumn)
-    if ((tonoDePiel() === 'Media' || tonoDePiel() === 'Oscura' && subTonoPiel() === 'Calido') && (colorCabello() === 'Castaño Oscuro' && subTonoPiel() === 'Calido' || colorCabello() === 'Marron' || colorCabello() === 'Negro' && destellos() === 'Calido') && (colorOjos() === 'Marron Oscuro' || colorOjos() === 'Verde Brillante' || colorOjos() === 'Marron Avella' || colorOjos() === 'Azul Brillante')) {
+    if ((tonoDePiel() === 'Media' || tonoDePiel() === 'Oscura' && subTonoPiel() === 'Calido') && (colorCabello() === 'Castaño Oscuro' && subTonoPiel() === 'Calido' || colorCabello() === 'Marron' || colorCabello() === 'Negro' && destellos() === 'Dorados o Calidos') && (colorOjos() === 'Marron Oscuro' || colorOjos() === 'Verde Brillante' || colorOjos() === 'Marron Avella' || colorOjos() === 'Azul Brillante')) {
         otoño = 'Otoño Oscuro (Dark Autumn)'
         visibleCard(otoño)
     }
@@ -315,19 +313,19 @@ function otoño() {
 //*fuction para determinar la estacion de Invierno
 function invierno() {
     let invierno = null;
-    if ((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio' || subTonoPiel() === 'Neutro' || tonoDePiel() === 'Media' && (subTonoPiel() === 'Frio' || subTonoPiel() === 'Neutro')) && (colorCabello() === 'Negro' || colorCabello() === 'Castaño Oscuro' || colorCabello() === 'Castaño Medio' ) && (colorOjos() === 'Marron Oscuro' || colorOjos() === 'Azul Hielo' || colorOjos() === 'Verde' || colorOjos() === 'Gris Plateado')) {
+    if ((tonoDePiel() === 'Clara' && subTonoPiel() === 'Frio' || subTonoPiel() === 'Neutro' || tonoDePiel() === 'Media' && (subTonoPiel() === 'Frio' || subTonoPiel() === 'Neutro')) && (colorCabello() === 'Negro' || colorCabello() === 'Castaño Oscuro' || colorCabello() === 'Castaño Medio') && (colorOjos() === 'Marron Oscuro' || colorOjos() === 'Azul Hielo' || colorOjos() === 'Verde' || colorOjos() === 'Gris Plateado')) {
         invierno = 'Invierno';
         visibleCard(invierno)
     }
 
     //* Invierno Profundo (Deep Winter)
-    if((tonoDePiel() === 'Media' || tonoDePiel() === 'Oscura' && (subTonoPiel() === 'Frio')) && (colorCabello() === 'Negro' || colorCabello() === 'Marron Oscuro' || colorCabello() === 'Castaño Medio') && (colorOjos() === 'Marron Oscuro' || colorOjos() === 'Verde' || colorOjos() === 'Azul Brillante')) {
+    if ((tonoDePiel() === 'Media' || tonoDePiel() === 'Oscura' && (subTonoPiel() === 'Frio')) && (colorCabello() === 'Negro' || colorCabello() === 'Marron Oscuro' || colorCabello() === 'Castaño Medio') && (colorOjos() === 'Marron Oscuro' || colorOjos() === 'Verde' || colorOjos() === 'Azul Brillante')) {
         invierno = 'Invierno Profundo (Deep Winter)';
         visibleCard(invierno);
     }
 
     //* Invierno Frio (True Winter)
-    if ((tonoDePiel() === 'Clara'  || tonoDePiel() === 'Media' && (subTonoPiel() === 'Frio')) && (colorCabello() === 'Negro' || colorCabello() === 'Castaño Oscuro') && (colorOjos() === 'Azul Hielo' || colorOjos() === 'Gris Plateado' || colorOjos() === 'Marron' || colorOjos() === 'Verde')) {
+    if ((tonoDePiel() === 'Clara' || tonoDePiel() === 'Media' && (subTonoPiel() === 'Frio')) && (colorCabello() === 'Negro' || colorCabello() === 'Castaño Oscuro') && (colorOjos() === 'Azul Hielo' || colorOjos() === 'Gris Plateado' || colorOjos() === 'Marron' || colorOjos() === 'Verde')) {
         invierno = 'Invierno Frio (True Winter)';
         visibleCard(invierno);
     }
@@ -346,34 +344,102 @@ function otrosDatos() {
     let x = '';
     let s = '';
     let b = '';
-    if (primavera() === 'Primavera') {
-        x = (reactionSun() === 'Se quema ligeramente y broncea') ? 'Refuerza la Primavera' : 'Es primavera';
-        if (colorVeins() === 'Verde' && accesorios() === 'Dorados o Calidos') {
-            s = 'Refuerza la Primavera'
+
+    const item1Data = document.getElementById('itemData-1');
+    const item2Data = document.getElementById('itemData-2');
+    const item3Data = document.getElementById('itemData-3');
+    const item4Data = document.getElementById('itemData-4');
+    const item5Data = document.getElementById('itemData-5');
+    const item6Data = document.getElementById('itemData-6');
+    const item7Data = document.getElementById('itemData-7');
+    const item8Data = document.getElementById('itemData-8');
+    const item9Data = document.getElementById('itemData-9');
+    const item10Data = document.getElementById('itemData-10');
+    const otrosDatosList = document.getElementById('otrosDatos');
+
+    if (primavera() === 'Primavera' || primavera() === 'Primavera Clara (Light Spring)' || primavera() === 'Primavera Calida (Warm Spring)' || primavera() === 'Primavera Brillante (Bright Spring)') {
+        if (reactionSun() === 'Se quema ligeramente y broncea') {
+            x = 'Refuerza la primavera';
         }
-    } else if (verano() === 'Verano') {
-        x = (reactionSun() === 'Se quema facil') ? 'Refuerza una tonalidad fria de verano' : 'Indica un subtono frio mas neutro';
-        console.log(x)
+
+        if (colorVeins() === 'Verde' && accesorios() === 'Dorados o Calidos') {
+            s = 'Refuerza la Primavera';
+        }
+        if (ropa() === 'Colores Calidos') {
+            b = 'Refuerza la tonalidad de Primavera';
+            if (item1Data && item2Data && item3Data && item4Data) {
+                item1Data.innerText = 'Casual: ' + ' ' + 'Jersey de color carnel + Jeans en verde oliva' + ' o ' + 'Vestido coral + sandalias beige claro';
+                item2Data.innerText = 'Formal: ' + ' ' + 'Traje marron + camisa blanca + corbata en tonos calidos' + ' o ' + 'Falda verde lima + camisa blanca + accesorios dorados';
+                item3Data.innerText = 'Elegante: ' + ' ' + 'Traje marron + camisa blanca + corbata en tonos calidos + accesorios dorados' + ' o ' + 'Blusa turquesa + Pantalon crema + Accesorios dorados';
+                item4Data.innerText = 'Colores a evitar: ' + ' ' + 'Tonos frios o apagados como gris carbon, azul marino profundo y negro puro, ya que pueden opacar la luminosidad natural de Primavera' + ' y ' + 'Colores demasiado oscuros o terrosos que no reflejen la frescura de esta estacion';
+            }
+        }
+    } else if (verano() === 'Verano' || verano() === 'Verano Claro (Light Summer)' || verano() === 'Verano Suave (Soft Summer)' || verano() === 'Verano Frio (Cool Summer)') {
+        if (reactionSun() === 'Se quema facil') {
+            x = 'Refuerza una tonalidad fria de verano';
+        }
 
         if (colorVeins() === 'Azul o Morado' && accesorios() === 'Plateados o Frios') {
-            s = 'Refuerza una tonalidad fria de verano'
-            console.log(s)
+            s = 'Refuerza una tonalidad fria de verano';
         }
 
         if (ropa() === 'Colores Frios') {
             b = 'Indicativo de verano';
-            console.log(b)
+            if (item1Data && item2Data && item3Data && item4Data) {
+                item1Data.innerText = 'Casual: ' + ' ' + 'Blusa blanca + Pantalon azul marino' + ' o ' + 'Camisa azul cielo + Jeans gris claro';
+                item2Data.innerText = 'Formal: ' + ' ' + 'Traje gris + camisa blanca + corbata azul marino' + ' o ' + 'Blusa rosa palo + Pantalon gris o gris perla + Accesorios plateados';
+                item3Data.innerText = 'Elegante: ' + ' ' + 'Traje gris + camisa blanca + corbata azul marino + accesorios plateados' + ' o ' + 'Vestido lavanda + accesorios plateados';
+                item4Data.innerText = 'Colores a evitar: ' + ' ' + 'Tonos calidos como naranja, amarillo dorado o carnel, que tienden a apagar tu piel y el brillo natural de Verano y no favorecerte' + ' y ' + 'Colores demasiado saturados o intensos, como rojo brillante o negro puro, que pueden dominar su delicada armonia';
+            }
+        }
+    } else if (otoño() === 'Otoño' || otoño() === 'Otoño Claro (Light Autumn)' || otoño() === 'Otoño Calido (Warm Autumn)' || otoño() === 'Otoño Oscuro (Dark Autumn)') {
+        if (reactionSun() === 'Se broncea facil') {
+            x = 'Refuerza la tonalidad de otoño';
+        }
+
+        if (colorVeins() === 'Verde' && accesorios() === 'Dorados o Calidos') {
+            s = 'Refuerza la tonalidad de otoño';
+        }
+        if (ropa() === 'Colores Calidos') {
+            b = 'Indicativo de otoño';
+            if (item1Data && item2Data && item3Data && item4Data) {
+                item1Data.innerText = 'Casual: ' + ' ' + 'Jersey de color carnel + Jeans en verde oliva';
+                item2Data.innerText = 'Formal: ' + ' ' + 'Traje en color marron + Camisa blanca + Corbata en tonos calidos + Accesorios dorados' + ' o ' + 'Blusa mostaza + Pantalon marron chocolate + Accesorios dorados';
+                item3Data.innerText = 'Elegante: ' + ' ' + 'Traje en color marron + Camisa blanca + Corbata en tonos calidos + Accesorios dorados' + ' o ' + 'Vestido burdeos calido + accesorios dorados';
+                item4Data.innerText = 'Colores a evitar: ' + ' ' + 'Tonos frios y brillantes como fucsia, azul electrico, negro puro o blanco puro, ya que pueden apagar el aspecto calido y armonioso de Otoño' + ' y ' + 'Tonos pastel muy suaves que carezcan de calidez';
+            }
+        }
+    } else if (invierno() === 'Invierno' || invierno() === 'Invierno Profundo (Deep Winter)' || invierno() === 'Invierno Frio (True Winter)' || invierno() === 'Invierno Brillante (Bright Winter)') {
+        if (reactionSun() === 'Se quema facil') {
+            x = 'Refuerza la tonalidad de invierno';
+        }
+
+        if (colorVeins() === 'Azul o Morado' && accesorios() === 'Plateados o Frios') {
+            s = 'Refuerza la tonalidad de invierno';
+        }
+
+        if (ropa() === 'Colores Frios' || ropa() === 'Colores Neutros') {
+            b = 'Indicativo de invierno';
+            if (item1Data && item2Data && item3Data && item4Data) {
+                item1Data.innerText = 'Casual: ' + ' ' + 'Blazer azul marino + camisa blanca + pantalon gris';
+                item2Data.innerText = 'Formal: ' + ' ' + 'Traje gris + camisa blanca + corbata azul marino o azul zafiro';
+                item3Data.innerText = 'Elegante: ' + ' ' + 'Traje + camisa blanca + corbata azul marino o azul zafiro + accesorios plateados' + ' o ' + 'Vestido azul marino + accesorios plateados';
+                item4Data.innerText = 'Colores a evitar: ' + ' ' + 'Tonos calidos y terrosos como marron, camel, mostaza y beige calido, ya que pueden apagar tu piel y el tono natural del invierno y no favorecerte' + ' y ' + 'Tonos pasteles y colores claros, ya que no contrastan con tu piel y pueden hacerte ver palida';
+            }
         }
     }
 
-    if (primavera() === 'Primavera') {
-        otrosDatosList.innerText = x
-    } else if (verano() === 'Verano') {
+    if (primavera() === 'Primavera' || primavera() === 'Primavera Clara (Light Spring)' || primavera() === 'Primavera Calida (Warm Spring)' || primavera() === 'Primavera Brillante (Bright Spring)') {
+        otrosDatosList.innerText = x;
+    } else if (verano() === 'Verano' || verano() === 'Verano Claro (Light Summer)' || verano() === 'Verano Suave (Soft Summer)' || verano() === 'Verano Frio (Cool Summer)') {
         otrosDatosList.innerText = x + ' ' + s + ' ' + b;
-
+    } else if (otoño() === 'Otoño' || otoño() === 'Otoño Claro (Light Autumn)' || otoño() === 'Otoño Calido (Warm Autumn)' || otoño() === 'Otoño Oscuro (Dark Autumn)') {
+        otrosDatosList.innerText = x + ' ' + s + ' ' + b;
+    } else if (invierno() === 'Invierno' || invierno() === 'Invierno Profundo (Deep Winter)' || invierno() === 'Invierno Frio (True Winter)' || invierno() === 'Invierno Brillante (Bright Winter)') {
+        otrosDatosList.innerText = x + ' ' + s + ' ' + b;
     }
-    // return x + ' ' + s + ' ' + b;
 }
+
 //* Interfaz
 
 function visibleCard(x) {
