@@ -88,7 +88,6 @@ const negroAzulado = document.getElementById('negroAzulado');
 const negroNatural = document.getElementById('negroNatural');
 
 //* Color de ojos
-const negroOjo = document.getElementById('negroOjo');
 
 const azul = document.getElementById('azul');
 const azulClaro = document.getElementById('azulClaro');

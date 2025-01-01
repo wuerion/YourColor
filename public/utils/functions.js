@@ -104,9 +104,7 @@ function colorCabello() {
 
 function colorOjos() {
     let colorOjos;
-    if (negroOjo.checked === true) {
-        colorOjos = 'Negro'
-    } else if (azul.checked === true) {
+    if (azul.checked === true) {
         colorOjos = 'Azul'
     } else if (azulClaro.checked === true) {
         colorOjos = 'Azul Claro'
@@ -539,7 +537,6 @@ function reset() {
     negro.checked = false;
     negroAzulado.checked = false;
     negroNatural.checked = false;
-    negroOjo.checked = false;
     azul.checked = false;
     azulClaro.checked = false;
     azulBrillante.checked = false;
