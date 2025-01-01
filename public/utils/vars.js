@@ -231,12 +231,11 @@ const colorsStacions = {
         "#fef940"
     ]
 }
-
-document.get
 startTest.addEventListener('click', function () {
     result()
     windowCard.classList.add('flex')
     windowCard.classList.remove('hidden')
+    document.body.classList.add('overflow-hidden')
 })
 
 window.addEventListener('keydown', (e) => {
@@ -253,11 +252,13 @@ exit.addEventListener('click', function () {
     document.body.classList.remove('overflow-hidden')
 })
 
-window.addEventListener('kewdown', (e) => {
-    if (e.key === 'Esc') {
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
         windowCard.classList.add('hidden');
         windowCard.classList.remove('flex')
     }
 })
+
+
 
 resetButton.addEventListener('click', function () { reset() })
