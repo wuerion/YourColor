@@ -19,7 +19,7 @@ let items9 = document.getElementById('item-9');
 let items10 = document.getElementById('item-10');
 
 //*Otros Datos
-let otrosDatosList = document.getElementById('otrosDatos')
+let otrosDatosList = document.getElementById('otrosDatos');
 let item1Data = document.getElementById('item-Data-1');
 let item2Data = document.getElementById('item-Data-2');
 let item3Data = document.getElementById('item-Data-3');
@@ -32,6 +32,7 @@ let item9Data = document.getElementById('item-Data-9');
 let item10Data = document.getElementById('item-Data-10');
 
 //* stacions crads
+let titlePallet = document.querySelector('#colorCard #titlePallet');
 let containerCards = document.querySelector('#colorCard #colorPalette')
 let primaveraCard = document.querySelector('#colorCard #primavera');
 let veranoCard = document.querySelector('#colorCard #verano');
