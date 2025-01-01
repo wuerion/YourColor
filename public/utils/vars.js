@@ -120,7 +120,7 @@ const grisPlateado = document.getElementById('grisPlateado');
 
 //* Destellos ojos
 const doradoOCalido = document.getElementById('doradosOCalidos');
-const plateadoOFrio = document.getElementById('palteadosOFrios');
+const plateadoOFrio = document.getElementById('plateadosOFrios');
 
 //* Ropa y Accesorios
 //* Ropa
