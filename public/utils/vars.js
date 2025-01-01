@@ -32,13 +32,13 @@ let item9Data = document.getElementById('item-Data-9');
 let item10Data = document.getElementById('item-Data-10');
 
 //* stacions crads
-let containerCards = document.querySelector('#colorCard #containerCards')
+let containerCards = document.querySelector('#colorCard #colorPalette')
 let primaveraCard = document.querySelector('#colorCard #primavera');
 let veranoCard = document.querySelector('#colorCard #verano');
 let otoñoCard = document.querySelector('#colorCard #otoño');
 let inviernoCard = document.querySelector('#colorCard #invierno');
 
-let colorCard = document.getElementById('colorCard');
+let colorCard = document.getElementById('colorCard');  
 
 //* Sub Tono De Piel
 //* Tono de piel
