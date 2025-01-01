@@ -349,12 +349,6 @@ function otrosDatos() {
     const item2Data = document.getElementById('itemData-2');
     const item3Data = document.getElementById('itemData-3');
     const item4Data = document.getElementById('itemData-4');
-    const item5Data = document.getElementById('itemData-5');
-    const item6Data = document.getElementById('itemData-6');
-    const item7Data = document.getElementById('itemData-7');
-    const item8Data = document.getElementById('itemData-8');
-    const item9Data = document.getElementById('itemData-9');
-    const item10Data = document.getElementById('itemData-10');
     const otrosDatosList = document.getElementById('otrosDatos');
 
     if (primavera() === 'Primavera' || primavera() === 'Primavera Clara (Light Spring)' || primavera() === 'Primavera Calida (Warm Spring)' || primavera() === 'Primavera Brillante (Bright Spring)') {
