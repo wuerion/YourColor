@@ -30,4 +30,4 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
 ## Contacto
-Para cualquier consulta, puedes contactarnos en [correo@example.com](mailto:correo@example.com).
+Para cualquier consulta, puedes contactarnos en [correo@example.com](mailto:axvoldesarolloweb@hotmail.com).
