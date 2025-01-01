@@ -217,6 +217,7 @@ function result() {
     if (estacion) {
         visibleCard(estacion);
         textResult.innerText = `Con los datos ingresados tu estacion es ${estacion}`;
+        titlePallet.classList.add('hidden');
     }
     otrosDatos()
 }
