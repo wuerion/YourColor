@@ -1,205 +1,116 @@
 // sections functions 
 function tonoDePiel() {
-    let tonoDePiel;
-    if (muyClaraPiel.checked === true) {
-        tonoDePiel = 'Muy Clara'
-    } else if (claraPiel.checked === true) {
-        tonoDePiel = "Clara"
-    } else if (mediaPiel.checked === true) {
-        tonoDePiel = 'Media'
-    } else if (oscuraPiel.checked === true) {
-        tonoDePiel = 'Oscura'
-    }
-    return tonoDePiel;
+    if (muyClaraPiel.checked) return 'Muy clara';
+    if (claraPiel.checked) return 'Clara';
+    if (mediaPiel.checked) return 'Media';
+    if (oscuraPiel.checked) return 'Oscura'
+    return '';
 }
 
 function subTonoPiel() {
-    let subTonoPiel;
-    if (calidoSubPiel.checked === true) {
-        subTonoPiel = 'Calido'
-    } else if (frioSubPiel.checked === true) {
-        subTonoPiel = 'Frio'
-    } else if (neutroSubPiel.checked === true) {
-        subTonoPiel = 'Neutro'
-    }
-    return subTonoPiel;
+    if(calidoSubPiel.checked) return 'Calido';
+    if(frioSubPiel.checked) return 'Frio';
+    if(neutroSubPiel.checked) return 'Neutro';
+    return '';
 }
 
-function reactionSun() {
-    let reactionSun;
-    if (quema.checked === true) {
-        reactionSun = 'Se quema facil'
-    } else if (broncea.checked === true) {
-        reactionSun = 'Se broncea ligeramente'
-    } else if (bronceaFacil.checked === true) {
-        reactionSun = 'Se broncea facil'
-    } else if (quemaLigeramenteYBroncea.checked === true) {
-        reactionSun = 'Se quema ligeramente y broncea'
-    }
-    return reactionSun
+function reactionOfTheSun() {
+    if(quema.checked) return 'Se quema facil';
+    if(broncea.checked) return 'Se broncea ligeramente';
+    if(bronceaFacil.checked) return 'Se broncea facil';
+    if(quemaLigeramenteYBroncea.checked) return 'Se quema ligeramente y broncea';
+    return '';
 }
 
 function colorVeins() {
-    let colorVeins;
-    if (azulOMorado.checked === true) {
-        colorVeins = 'Azul o Morado'
-    } else if (verde.checked === true) {
-        colorVeins = 'Verde'
-    } else if (neutro.checked === true) {
-        colorVeins = 'Neutro'
-    }
-    return colorVeins;
+    if(azulOMorado.checked) return 'Azul o Morado';
+    if(verde.checked) return 'Verde';
+    if(neutro.checked) return 'Neutro';
+    return '';
 }
 
 function colorCabello() {
-    let colorCabello;
-    if (caoba.checked === true) {
-        colorCabello = 'Caoba'
-    } else if (negro.checked === true) {
-        colorCabello = 'Negro'
-    } else if (castañoOscuro.checked === true) {
-        colorCabello = 'Castaño Oscuro'
-    } else if (castañoMedio.checked === true) {
-        colorCabello = 'Castaño Medio'
-    } else if (castañoClaro.checked === true) {
-        colorCabello = 'Castaño Claro'
-    } else if (castañoDorado.checked === true) {
-        colorCabello = 'Castaño Dorado'
-    } else if (castañoRojizo.checked === true) {
-        colorCabello = 'Castañ Rojizo'
-    } else if (castañoCenizo.checked === true) {
-        colorCabello = 'Castaño Cenizo'
-    } else if (castañoNeutro.checked === true) {
-        colorCabello = 'Castaño Neutro'
-    } else if (rubioOscuro.checked === true) {
-        colorCabello = 'Rubio Oscuro'
-    } else if (rubioClaro.checked === true) {
-        colorCabello = 'Rubio Claro'
-    } else if (rubioCenizo.checked === true) {
-        colorCabello = 'Rubio Cenizo'
-    } else if (rubioMiel.checked === true) {
-        colorCabello = 'Rubio Miel'
-    } else if (rubioNeutro.checked === true) {
-        colorCabello = 'Rubio Neutro'
-    } else if (rubioDorado.checked === true) {
-        colorCabello = 'Rubio Dorado'
-    } else if (plateadoOFrio.checked === true) {
-        colorCabello = 'Plateado o Frio'
-    } else if (rojoIntenso.checked === true) {
-        colorCabello = 'Rojo Intenso'
-    } else if (rojoCobrizo.checked === true) {
-        colorCabello = 'Rojo Cobrizo'
-    } else if (pelirojo.checked === true) {
-        colorCabello = 'Pelirojo'
-    } else if (negro.checked === true) {
-        colorCabello = 'Negro'
-    } else if (negroAzulado.checked === true) {
-        colorCabello = 'Negro Azulado'
-    } else if (negroNatural.checked === true) {
-        colorCabello = 'Negro Natural'
-    }
-
-    return colorCabello;
+    if(caoba.checked) return 'Caoba';
+    if(negro.checked) return 'Negro';
+    if(castañoOscuro.checked) return 'Castaño Oscuro';
+    if(castañoMedio.checked) return 'Castaño Medio';
+    if(castañoClaro.checked) return 'Castaño Claro'
+    if(castañoDorado.checked) return 'Castaño Dorado';
+    if(castañoRojizo.checked) return 'Castaño Rojizo';
+    if(castañoCenizo.checked) return 'Castaño Cenizo';
+    if(castañoNeutro.checked) return 'Castaño Neutro';
+    if(rubioOscuro.checked) return 'Rubio Oscuro';
+    if(rubioClaro.checked) return 'Rubio Claro';
+    if(rubioCenizo.checked) return 'Rubio Cenizo';
+    if(rubioMiel.checked) return 'Rubio Miel';
+    if(rubioNeutro.checked) return 'Rubio Neutro';
+    if(rubioDorado.checked) return 'Rubio Dorado';
+    if(rojoIntenso.checked) return 'Rojo Intenso';
+    if(rojoCobrizo.checked) return 'Rojo Cobrizo';
+    if(pelirojo.checked) return 'Pelirojo';
+    if(negro.checked) return 'Negro';
+    if(negroAzulado.checked) return 'Negro Azulado';
+    if(negroNatural.checked) return 'Negro Natural';
+    return '';
 }
 
 function colorOjos() {
-    let colorOjos;
-    if (azul.checked === true) {
-        colorOjos = 'Azul'
-    } else if (azulClaro.checked === true) {
-        colorOjos = 'Azul Claro'
-    } else if (azulBrillante.checked === true) {
-        colorOjos = 'Azul Brillante'
-    } else if (azulGrisaceo.checked === true) {
-        colorOjos = 'Azul Grisaceo'
-    } else if (azulAcero.checked === true) {
-        colorOjos = 'Azul Acero'
-    } else if (azulHielo.checked === true) {
-        colorOjos = 'Azul Hielo'
-    } else if (azulVerdoso.checked === true) {
-        colorOjos = 'Azul Verdoso'
-    } else if (azulTurquesa.checked === true) {
-        colorOjos = 'Azul Turquesa'
-    } else if (verdeOjos.checked === true) {
-        colorOjos = 'Verde'
-    } else if (verdeBrillante.checked === true) {
-        colorOjos = 'Verde Brillante'
-    } else if (verdeClaro.checked === true) {
-        colorOjos = 'Verde Claro'
-    } else if (verdeOliva.checked === true) {
-        colorOjos = 'Verde Oliva'
-    } else if (verdeJade.checked === true) {
-        colorOjos = 'Verde Jade'
-    } else if (marron.checked === true) {
-        colorOjos = 'Marron'
-    } else if (marronClaro.checked === true) {
-        colorOjos = 'Marron Claro'
-    } else if (marronDorado.checked === true) {
-        colorOjos = 'Marron Dorado'
-    } else if (marronMiel.checked === true) {
-        colorOjos = 'Marron Miel'
-    } else if (marronAvellana.checked === true) {
-        colorOjos = 'Marron Avellana'
-    } else if (marronOscuro.checked === true) {
-        colorOjos = 'Marron Oscuro'
-    } else if (gris.checked === true) {
-        colorOjos = 'Gris'
-    } else if (grisClaro.checked === true) {
-        colorOjos = 'Gris Claro'
-    } else if (grisVerde.checked === true) {
-        colorOjos = 'Gris Verde'
-    } else if (grisAcero.checked === true) {
-        colorOjos = 'Gris Acero'
-    } else if (grisAzulado.checked === true) {
-        colorOjos = 'Gris Azulado'
-    } else if (grisPlateado.checked === true) {
-        colorOjos = 'Gris Plateado'
-    }
-    return colorOjos;
+    if(azul.checked) return 'Azul';
+    if(azulClaro.checked) return 'Azul Claro';
+    if(azulBrillante.checked) return 'Azul Brillante';
+    if(azulGrisaceo.checked) return 'Azul Grisaceo';
+    if(azulAcero.checked) return 'Azul Acero';
+    if(azulHielo.checked) return 'Azul Hielo';
+    if(azulVerdoso.checked) return 'Azul Verdoso';
+    if(azulTurquesa.checked) return 'Azul Turquesa';
+    if(verdeOjos.checked) return 'Verde';
+    if(verdeBrillante.checked) return 'Verde Brillante';
+    if(verdeClaro.checked) return 'Verde Claro';
+    if(verdeOliva.checked) return 'Verde Oliva';
+    if(verdeJade.checked) return 'Verde Jade';
+    if(marron.checked) return 'Marron';
+    if(marronClaro.checked) return 'Marron Claro';
+    if(marronDorado.checked) return 'Marron Dorado';
+    if(marronMiel.checked) return 'Marron Miel';
+    if(marronAvellana.checked) return 'Marron Avellana';
+    if(marronOscuro.checked) return 'Marron Oscuro';
+    if(gris.checked) return 'Gris';
+    if(grisClaro.checked) return 'Gris Claro';
+    if(grisVerde.checked) return 'Gris Verde';
+    if(grisAcero.checked) return 'Gris Acero';
+    if(grisAzulado.checked) return 'Gris Azulado';
+    if(grisPlateado.checked) return 'Gris Plateado';
+    return '';
 }
 
 function destellos() {
-    let destellos;
-    if (doradoOCalido.checked === true) {
-        destellos = 'Dorados o Calidos'
-    } else if (plateadoOFrio.checked === true) {
-        destellos = 'Plateados o Frios'
-    }
-    return destellos;
+    if(doradoOCalido.checked) return 'Dorados o Calidos';
+    if(plateadoOFrio.checked) return 'Plateados o Frios';
+    return '';
 }
 
 function ropa() {
-    let ropa;
-    if (coloresCalidos.checked === true) {
-        ropa = 'Colores Calidos'
-    } else if (coloresFrios.checked === true) {
-        ropa = 'Colores Frios'
-    } else if (coloresNeutros.checked === true) {
-        ropa = 'Colores Neutros'
-    }
-    return ropa;
+    if(coloresCalidos.checked) return 'Colores Calidos';
+    if(coloresFrios.checked) return 'Colores Frios';
+    if(coloresNeutros.checked) return 'Colores Neutros';
+    return '';
 }
 
 function accesorios() {
-    let accesorios;
-    if (dorados.checked === true) {
-        accesorios = 'Dorados o Calidos'
-    } else if (plateados.checked === true) {
-        accesorios = 'Plateados o Frios'
-    } else if (ambos.checked === true) {
-        accesorios = 'Ambos'
-    }
-    return accesorios;
+    if(dorados.checked) return 'Dorados o Calidos';
+    if(plateados.checked) return 'Plateados o Frios';
+    if(ambos.checked) return 'Ambos';
+    return '';
 }
 
 //* Funciones de logica de negocio
 
 //* funcion de resultado
 function result() {
-    subTonoPiel()
+    
     items1.innerText = tonoDePiel();
     items2.innerText = subTonoPiel();
-    items3.innerText = reactionSun();
+    items3.innerText = reactionOfTheSun();
     items4.innerText = colorVeins();
     items5.innerText = colorCabello();
     items6.innerText = colorOjos();
@@ -351,7 +262,7 @@ function otrosDatos() {
     const otrosDatosList = document.getElementById('otrosDatos');
 
     if (primavera() === 'Primavera' || primavera() === 'Primavera Clara (Light Spring)' || primavera() === 'Primavera Calida (Warm Spring)' || primavera() === 'Primavera Brillante (Bright Spring)') {
-        if (reactionSun() === 'Se quema ligeramente y broncea') {
+        if (reactionOfTheSun() === 'Se quema ligeramente y broncea') {
             x = 'Refuerza la primavera';
         }
 
@@ -368,7 +279,7 @@ function otrosDatos() {
             }
         }
     } else if (verano() === 'Verano' || verano() === 'Verano Claro (Light Summer)' || verano() === 'Verano Suave (Soft Summer)' || verano() === 'Verano Frio (Cool Summer)') {
-        if (reactionSun() === 'Se quema facil') {
+        if (reactionOfTheSun() === 'Se quema facil') {
             x = 'Refuerza una tonalidad fria de verano';
         }
 
@@ -386,7 +297,7 @@ function otrosDatos() {
             }
         }
     } else if (otoño() === 'Otoño' || otoño() === 'Otoño Claro (Light Autumn)' || otoño() === 'Otoño Calido (Warm Autumn)' || otoño() === 'Otoño Oscuro (Dark Autumn)') {
-        if (reactionSun() === 'Se broncea facil') {
+        if (reactionOfTheSun() === 'Se broncea facil') {
             x = 'Refuerza la tonalidad de otoño';
         }
 
@@ -403,7 +314,7 @@ function otrosDatos() {
             }
         }
     } else if (invierno() === 'Invierno' || invierno() === 'Invierno Profundo (Deep Winter)' || invierno() === 'Invierno Frio (True Winter)' || invierno() === 'Invierno Brillante (Bright Winter)') {
-        if (reactionSun() === 'Se quema facil') {
+        if (reactionOfTheSun() === 'Se quema facil') {
             x = 'Refuerza la tonalidad de invierno';
         }
 
