@@ -1,5 +1,8 @@
 ---
 import Button from './buttons.astro'
+import Images from './images.astro'
+import mobileImage from '/public/color-circle.webp'
+import desktopImage from '/public/color-circle.webp'
 ---
 
 <section class="px-5 py-10 flex justify-center items-center">
@@ -14,10 +17,11 @@ import Button from './buttons.astro'
   </div>
   <div class="w-1/2 flex justify-center items-center">
     <div class="w-28 lg:w-48 p-3 md:h-full">
-      <img
-        src="color-circle.webp"
-        alt="color palette circle"
-        class="animate-spin-slow"
+      <Images
+      mobileImgUrl={mobileImage}
+      desktopImgUrl={desktopImage}
+      alt='color palette circle'
+      addClass='animate-spin-slow'
       />
     </div>
   </div>
