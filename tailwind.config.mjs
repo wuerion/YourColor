@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'lato': ['Lato'],
-				'inconsolata': ['Inconsolata'],
+				'lato': ['Lato', 'sans-serif'],
+				'inconsolata': ['Inconsolata', 'monospace'],
 			},
 			animation: {
 				'spin-slow': 'spin 4s linear infinite'
