@@ -1,6 +1,8 @@
 ---
 import Buttons from "./buttons.astro";
 import StacionColors from "./stacionColors.astro";
+import Images from "./images.astro";
+import exit from '/public/exit-icon.svg';
 ---
 
 <div
@@ -10,7 +12,15 @@ import StacionColors from "./stacionColors.astro";
     <div
         class="bg-gray-400 w-full h-full lg:w-1/2 border rounded-lg shadow-black/40 shadow-sm p-5 overflow-scroll flex flex-col"
     >
-        <button class="flex justify-end " id="exit"><img src="exit_out_close_icon.ico" alt="Exit" class="w-6 h-6"></button>
+        <button class="flex justify-end " id="exit">
+            <!-- <img src="exit_out_close_icon.ico" alt="Exit" class="w-6 h-6"> -->
+            <Images 
+            mobileImgUrl={exit}
+            desktopImgUrl={exit}
+            alt="Exit"
+            addClass="text-black"
+            />
+        </button>
         <h2 class="text-center font-inconsolata text-2xl font-semibold">
             YOUR COLOR
         </h2>
