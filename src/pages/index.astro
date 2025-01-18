@@ -6,6 +6,13 @@ import About from "../components/About.astro";
 import Test from "../components/Test.astro";
 import Function from "../components/funcionamiento.astro";
 import Window from "../components/window.astro";
+import Images from "../components/images.astro";
+import instagramMobile from '/public/instagramMobile.svg';
+import instagramDesktop from '/public/instagramDesktop.svg';
+import linkedinMobile from '/public/linkedinMobile.svg'
+import linkedinDesktop from '/public/linkedinDesktop.svg'
+import xDesktop from '/public/twitterDesktop.svg';
+import xMobile from '/public/twitterMobile.svg';
 ---
 
 <Layout title="Your Color | wuerion">
@@ -21,15 +28,30 @@ import Window from "../components/window.astro";
             <p class="lg:w-1/2">Gracias por visitar <span class="font-semibold">Your Color</span>. Esperamos que te haya servido para encontrar tus colores ideales.</p>
             <div class="lg:w-1/2 my-2 text-center">
                 <p class="text-center">Síguenos en nuestras redes sociales</p>
-                <div class="flex justify-evenly items-center w-full">
+                <div class="flex justify-evenly items-center w-full border border-balck">
                     <a href="https://www.instagram.com/wuerion47/" class="text-black text-center hover:text-white" target="_blank" rel="noopener noreferrer">
-                        <img src="instagram_logo_icon.ico" alt="instagram" class="w-8 h-8 text-center" />
+                        <Images
+                        mobileImgUrl={instagramMobile}
+                        desktopImgUrl={instagramDesktop}
+                        alt="Instagram"
+                        addClass="text-black"
+                        />
                     </a>
                     <a href="https://www.linkedin.com/in/wuerion/" class="text-black text-center hover:text-white" target="_blank" rel="noopener noreferrer">
-                        <img src="/linkedin_logo_icon.ico" alt="Linkedin" class="w-8 h-8 text-center" />
+                        <Images 
+                        mobileImgUrl={linkedinMobile}
+                        desktopImgUrl={linkedinDesktop}
+                        alt="Linkedin"
+                        addClass="text-black "
+                        />
                     </a>
                     <a href="https://twitter.com/WUERION_47" class="text-black text-center hover:text-white" target="_blank" rel="noopener noreferrer">
-                        <img src="/twitter_logo_icon.ico" alt="twitter" class="w-8 h-8 text-center" />
+                        <Images 
+                        mobileImgUrl={xMobile}
+                        desktopImgUrl={xDesktop}
+                        alt="twutter"
+                        addClass=" text-black"
+                        />
                     </a> 
                 </div>
             </div>
