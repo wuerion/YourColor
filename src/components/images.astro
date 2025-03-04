@@ -3,32 +3,23 @@ import type { ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
 
 interface Props {
-    mobileImgUrl: string | ImageMetadata;
-    desktopImgUrl: string | ImageMetadata;
+    ImgUrl: string | ImageMetadata;
     alt: string;
-    addClass: string;
+    addClass?: string;
+    contClass?: string;
 }
 
-const { mobileImgUrl, desktopImgUrl, alt, addClass} = Astro.props;
+const {ImgUrl, alt, addClass, contClass = "" } = Astro.props;
 
-const mobileImg = await getImage ({
-    src: mobileImgUrl,
+const Img = await getImage({
+    src: ImgUrl,
     format: "webp",
     width: 200,
     height: 200,
 });
-
-const desktopImg = await getImage ({
-    src: desktopImgUrl,
-    format: "webp",
-    width: 800,
-    height: 200,
-})
-
 ---
 
-<picture>
-    <source media="(max-width: 799px)" srcset={mobileImg.src}>
-    <source media="(min-width: 800px)" srcset={desktopImg.src}>
-    <img src={desktopImg.src} alt={alt} class=`${addClass}`>
+<picture class={contClass}>
+    <source media="(max-width: 799px)" srcset={Img.src} />
+    <img src={Img.src} alt={alt} class={addClass} loading="lazy" />
 </picture>

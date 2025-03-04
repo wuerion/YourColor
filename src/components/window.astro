@@ -1,7 +1,7 @@
 ---
 import Buttons from "./buttons.astro";
 import StacionColors from "./stacionColors.astro";
-import Images from "./images.astro";
+import Images from "../components/images.astro";
 import exit from '/public/exit-icon.svg';
 ---
 
@@ -14,11 +14,16 @@ import exit from '/public/exit-icon.svg';
     >
         <button class="flex justify-end " id="exit">
             <!-- <img src="exit_out_close_icon.ico" alt="Exit" class="w-6 h-6"> -->
-            <Images 
+            <!-- <Images 
             mobileImgUrl={exit}
             desktopImgUrl={exit}
             alt="Exit"
             addClass="text-black"
+            /> -->
+            <Images 
+            ImgUrl={exit}
+            alt="exit"
+            addClass=""
             />
         </button>
         <h2 class="text-center font-inconsolata text-2xl font-semibold">
