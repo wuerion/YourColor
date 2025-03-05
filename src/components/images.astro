@@ -11,7 +11,7 @@ interface Props {
 
 const { ImgUrl, alt, addClass, contClass = "" } = Astro.props;
 
-const sizes = [100, 400, 800, 1200]; // Tamaños de imagen que deseas generar
+const sizes = [100, 400, 800]; // Tamaños de imagen que deseas generar
 
 const images = await Promise.all(
     sizes.map(async (size) => {
@@ -30,12 +30,23 @@ const srcset = images.map((image) => `${image.src} ${image.attributes.width}w`).
     <img
         src={images[0].src}
         srcset={srcset}
-        sizes="(max-width: 799px) 100vw, 800px"
+        sizes="(max-width: 200px) 100vw, 700px"
         alt={alt}
         class={addClass}
-        loading="lazy"
+        loading="eager"
     />
 </picture>
+
+<script>
+    // Precarga de la imagen LCP (en el head)
+    const head = document.querySelector('head');
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'preload';
+    preloadLink.href = Astro.props.images[0].src;
+    preloadLink.as = 'image';
+    preloadLink.type = 'image/webp';
+    head.appendChild(preloadLink);
+</script>
 
 <!-- ---
 import type { ImageMetadata } from "astro";
