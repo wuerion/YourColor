@@ -11,7 +11,7 @@ interface Props {
 
 const { ImgUrl, alt, addClass, contClass = "" } = Astro.props;
 
-const sizes = [200, 400, 800, 1200]; // Tamaños de imagen que deseas generar
+const sizes = [100, 400, 800, 1200]; // Tamaños de imagen que deseas generar
 
 const images = await Promise.all(
     sizes.map(async (size) => {
