@@ -1,3 +1,5 @@
+// Doc for the  year seasons
+
 export const primavera = [
   { nombre: "Miel suave", hexa: "#fdd891" },
   { nombre: "Melon Claro", hexa: "#fab394" },
