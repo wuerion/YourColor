@@ -24,7 +24,7 @@ export const spring = [
   { nombre: "Azul profundo", hexa: "#4159b1" },
 ];
 
-export const ummer = [
+export const summer = [
   { nombre: "Amarillo palido", hexa: "#fdf9ad" },
   { nombre: "Rosa claro", hexa: "#fec8d8" },
   { nombre: "Rosa orquidea", hexa: "#fab7e2" },
