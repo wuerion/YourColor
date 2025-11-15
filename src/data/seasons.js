@@ -1,6 +1,6 @@
 // Doc for the  year seasons
 
-export const primavera = [
+export const spring = [
   { nombre: "Miel suave", hexa: "#fdd891" },
   { nombre: "Melon Claro", hexa: "#fab394" },
   { nombre: "Rosa pétalo", hexa: "#fdb8cd" },
@@ -24,7 +24,7 @@ export const primavera = [
   { nombre: "Azul profundo", hexa: "#4159b1" },
 ];
 
-export const verano = [
+export const ummer = [
   { nombre: "Amarillo palido", hexa: "#fdf9ad" },
   { nombre: "Rosa claro", hexa: "#fec8d8" },
   { nombre: "Rosa orquidea", hexa: "#fab7e2" },
@@ -48,7 +48,7 @@ export const verano = [
   { nombre: "Azul pizarra", hexa: "#476e93" },
 ];
 
-export const otoño = [
+export const autumn = [
   { nombre: "Naranja Otoñal", hexa: "#d4822f" },
   { nombre: "Terracota", hexa: "#c06f52" },
   { nombre: "Rojo Vino", hexa: "#971a20" },
@@ -72,7 +72,7 @@ export const otoño = [
   { nombre: "Azul Cielo", hexa: "#79acd1" },
 ];
 
-export const invierno = [
+export const winter = [
   { nombre: "Rosa Magenta", hexa: "#c3337f" },
   { nombre: "Rojo Frambuesa", hexa: "#c01b43" },
   { nombre: "Rosa Vino", hexa: "#922650" },
