@@ -1,3 +1,5 @@
+import calculateResult from "./colorimetryEngie.js";
+
 function skinTone() {
   if (muyClaraPiel.checked) return "Muy clara";
   if (claraPiel.checked) return "Clara";
@@ -21,7 +23,7 @@ function reactionOfTheSun() {
   return "";
 }
 
-function colorVeins() {
+function veonsColor() {
   if (azulOMorado.checked) return "Azul o Morado";
   if (verde.checked) return "Verde";
   if (neutro.checked) return "Neutro";
@@ -101,3 +103,18 @@ function accesorios() {
   if (ambos.checked) return "Ambos";
   return "";
 }
+
+startTest.addEventListener("click", (e) => {
+  e.preventDefault();
+  const answer = {
+    tono_piel: skinTone(),
+    subTono_piel: subTonoPiel(),
+    reaction_sun: reactionOfTheSun(),
+    vein_color: veonsColor(),
+    color_cabello: colorCabello(),
+    color_ojos: colorOjos(),
+  };
+  const endResult = calculateResult(answer);
+
+  console.log("tu temporada es: ", endResult);
+});
