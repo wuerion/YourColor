@@ -218,6 +218,7 @@ const RULES = [
       ].includes(r.color_ojos),
     result: winter,
   },
+  //* End Winter
 ];
 
 export default RULES;
