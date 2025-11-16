@@ -113,6 +113,9 @@ startTest.addEventListener("click", (e) => {
     vein_color: veonsColor(),
     color_cabello: colorCabello(),
     color_ojos: colorOjos(),
+    destellos: destellos(),
+    ropa: ropa(),
+    accesorios: accesorios(),
   };
   const endResult = calculateResult(answer);
 
