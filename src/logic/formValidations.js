@@ -1,4 +1,5 @@
 import calculateResult from "./colorimetryEngie.js";
+import result from "./functionsUi.js";
 
 function skinTone() {
   if (muyClaraPiel.checked) return "Muy clara";
@@ -118,6 +119,9 @@ startTest.addEventListener("click", (e) => {
     accesorios: accesorios(),
   };
   const endResult = calculateResult(answer);
-
+  result(endResult);
+  windowCard.classList.add("flex");
+  windowCard.classList.remove("hidden");
+  document.body.classList.add("overflow-hidden");
   console.log("tu temporada es: ", endResult);
 });
