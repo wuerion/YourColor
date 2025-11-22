@@ -1,5 +1,7 @@
+import { findDOMNode } from "react-dom";
 import calculateResult from "./colorimetryEngie.js";
 import result from "./functionsUi.js";
+import { swapFunctions } from "astro:transitions/client";
 
 function skinTone() {
   if (muyClaraPiel.checked) return "Muy clara";
@@ -9,12 +11,12 @@ function skinTone() {
   return "";
 }
 
-function subTonoPiel() {
-  if (calidoSubPiel.checked) return "Calido";
-  if (frioSubPiel.checked) return "Frio";
-  if (neutroSubPiel.checked) return "Neutro";
-  return "";
-}
+// function subToneSkin() {
+//   if (calidoSubPiel.checked) return "Calido";
+//   if (frioSubPiel.checked) return "Frio";
+//   if (neutroSubPiel.checked) return "Neutro";
+//   return "";
+// }
 
 function reactionOfTheSun() {
   if (quema.checked) return "Se quema facil";
@@ -24,14 +26,14 @@ function reactionOfTheSun() {
   return "";
 }
 
-function veonsColor() {
+function colorVeins() {
   if (azulOMorado.checked) return "Azul o Morado";
   if (verde.checked) return "Verde";
   if (neutro.checked) return "Neutro";
   return "";
 }
 
-function colorCabello() {
+function hairColor() {
   if (caoba.checked) return "Caoba";
   if (negro.checked) return "Negro";
   if (castañoOscuro.checked) return "Castaño Oscuro";
@@ -56,7 +58,7 @@ function colorCabello() {
   return "";
 }
 
-function colorOjos() {
+function eyeColor() {
   if (azul.checked) return "Azul";
   if (azulClaro.checked) return "Azul Claro";
   if (azulBrillante.checked) return "Azul Brillante";
@@ -85,20 +87,20 @@ function colorOjos() {
   return "";
 }
 
-function destellos() {
+function sparkles() {
   if (doradoOCalido.checked) return "Dorados o Calidos";
   if (plateadoOFrio.checked) return "Plateados o Frios";
   return "";
 }
 
-function ropa() {
+function clothes() {
   if (coloresCalidos.checked) return "Colores Calidos";
   if (coloresFrios.checked) return "Colores Frios";
   if (coloresNeutros.checked) return "Colores Neutros";
   return "";
 }
 
-function accesorios() {
+function accessories() {
   if (dorados.checked) return "Dorados o Calidos";
   if (plateados.checked) return "Plateados o Frios";
   if (ambos.checked) return "Ambos";
@@ -107,17 +109,68 @@ function accesorios() {
 
 startTest.addEventListener("click", (e) => {
   e.preventDefault();
+
+  function determineTheSubTone(dataForm) {
+    let subTono;
+
+    let calido = 0;
+    let frio = 0;
+
+    if (colorVeins() === "Verde") {
+      calido++;
+    }
+    if (colorVeins() === "Azul o Morado") {
+      frio++;
+    }
+
+    if (
+      ["Se broncea facil", "Se broncea ligeramente"].includes(
+        reactionOfTheSun()
+      )
+    ) {
+      calido++;
+    }
+    if (
+      ["Se quema facil", "Se quema ligeramente y broncea"].includes(
+        reactionOfTheSun
+      )
+    ) {
+      frio++;
+    }
+
+    if (accessories() === "Dorados o Calidos") {
+      calido++;
+    }
+    if (accessories() === "Plateados o Frios") {
+      frio++;
+    }
+    if (accessories() === "Ambos") {
+      calido++;
+      frio++;
+    }
+
+    if (calido > frio) {
+      subTono = "Calido";
+    } else if (frio > calido) {
+      subTono = "Frio";
+    } else {
+      subTono = "Neutro";
+    }
+    return subTono;
+  }
+
   const answer = {
     tono_piel: skinTone(),
-    subTono_piel: subTonoPiel(),
+    subTono_piel: determineTheSubTone(),
     reaction_sun: reactionOfTheSun(),
-    vein_color: veonsColor(),
-    color_cabello: colorCabello(),
-    color_ojos: colorOjos(),
-    destellos: destellos(),
-    ropa: ropa(),
-    accesorios: accesorios(),
+    vein_color: colorVeins(),
+    color_cabello: hairColor(),
+    color_ojos: eyeColor(),
+    destellos: sparkles(),
+    ropa: clothes(),
+    accesorios: accessories(),
   };
+  console.log(determineTheSubTone());
   const endResult = calculateResult(answer);
   result(endResult);
   windowCard.classList.add("flex");
