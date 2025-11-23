@@ -1,9 +1,11 @@
 //* Funciones para determiar la estacion
 
 import { spring, summer, autumn, winter } from "../data/seasons.js";
+import result from "./functionsUi.js";
 
 const RULES = [
   //* Start Spring
+  // Light Spring
   {
     name: "Primavera Clara (Light Spring)",
     match: (r) =>
@@ -13,6 +15,18 @@ const RULES = [
       (r.color_ojos === "Azul Brillante" || r.color_ojos === "Verde Claro"),
     result: spring,
   },
+  // Light Spring - Eterea
+  {
+    name: "Primavera Clara (Light Spring) - Eterea",
+    match: (r) =>
+      ["Muy Clara", "Clara"].includes(r.tono_piel) &&
+      ["Neutro", "Calido"].includes(r.subTono_piel) &&
+      ["Verde Claro", "Verde Claro", "Azul Hielo", "Gris Clarp"].includes(
+        r.color_ojos
+      ),
+    result: spring,
+  },
+  // Warm Spring
   {
     name: "Primavera Calida (Warm Spring)",
     match: (r) =>
@@ -26,6 +40,21 @@ const RULES = [
         r.destellos === "Dorados o Calidos"),
     result: spring,
   },
+  // Warm Spring - Golden
+  {
+    name: "Primavera Calida (Warm Spring) - Dorada",
+    macth: (r) =>
+      ["Clara", "Media"].includes(r.tono_piel) &&
+      r.subTono_piel === "Calido" &&
+      ["Rubio Dorado", "Rubio Miel", "Castaño Dorado", "Rojo Cobrizo"].includes(
+        r.color_cabello
+      ) &&
+      ["Verde Claro", "Azul Turquesa", "Marron Dorado", "Marron Miel"].includes(
+        r.color_ojos
+      ),
+    result: spring,
+  },
+  // Bright Spring
   {
     name: "Primavera Brillante (Bright Spring)",
     match: (r) =>
@@ -37,12 +66,28 @@ const RULES = [
       ["Azul", "Verde", "Marron Claro"].includes(r.color_ojos),
     result: spring,
   },
+  // Bright Spring - Constrast
+  {
+    name: "Primavera Brillante (Bright Spring) - Contrastada",
+    macth: (r) =>
+      ["Clara", "Media"].includes(r.tono_piel) &&
+      ["Neutro", "Calido"].includes(r.subTono_piel) &&
+      ["Castaño Oscuro", "Negro", "Castaño Medio"].includes(r.color_cabello) &&
+      [
+        "Azul Brillante",
+        "Verde Brillante",
+        "Azul Turqueza",
+        "Azul Verdoso",
+      ].includes(r.color_ojos),
+    result: spring,
+  },
+  // Default Spring
   {
     name: "Primavera (Spring)",
     match: (r) =>
       r.tono_piel === "Muy Clara" ||
-      (((r.tono_piel === "Clara" && r.subTono_piel === "Calido") ||
-        r.subTono_piel === "Frio") &&
+      (r.tono_piel === "Clara" &&
+        r.subTono_piel === "Calido" &&
         [
           "Rubio Claro",
           "Castaño Claro",
@@ -57,6 +102,7 @@ const RULES = [
   },
   //* End Spring
   //* Start Summer
+  // Light Summer
   {
     name: "Verano Claro (Light Summer)",
     match: (r) =>
@@ -69,19 +115,54 @@ const RULES = [
       ),
     result: summer,
   },
+  // Light Summer but sub tone cool
   {
-    name: "Verano Suave (Soft Summer)",
-    match: (r) =>
-      r.tono_piel === "Clara" &&
-      ["Frio", "Neutro"].includes(r.subTono_piel) &&
-      ["Rubio Oscuro", "Castaño Claro", "Castaño Medio"].includes(
-        r.color_cabello
-      ) &&
-      ["Azul Grisaceo", "Verde Oliva", "Marron Claro", "Gris Verde"].includes(
+    name: "Verano Claro (Light Summer)",
+    macth: (r) =>
+      ["Muy Clara", "Clara"].includes(r.tono_piel) &&
+      ["Neutro", "Frio"].includes(r.subTono_piel) &&
+      ["Rubio Claro", "Rubio Cenizo"].includes(r.color_cabello) &&
+      ["Azul Claro", "Azul Hielo", "Gris Claro", "Verde Claro"].includes(
         r.color_ojos
       ),
     result: summer,
   },
+  // Soft Summer
+  {
+    name: "Verano Suave (Soft Summer)",
+    match: (r) =>
+      ["Clara", "Media"].includes(r.tono_piel) &&
+      ["Neutro", "Frio"].includes(r.subTono_piel) &&
+      ["Rubio Cenizo", "Castaño Cenizo", "Castaño Claro"].includes(
+        r.color_cabello
+      ) &&
+      [
+        "Azul Grisaceo",
+        "Gris Verde",
+        " Azul Verdoso",
+        "Marron Avellana",
+      ].includes(r.color_ojos) &&
+      r.destellos === "Plateados o Frios",
+    result: summer,
+  },
+  // Soft Summer - Mistery
+  {
+    name: "Verano Suave (Soft Summer) - Misterioso",
+    match: (r) =>
+      ["CLara", "Media"].includes(r.tono_piel) &&
+      ["Neutro", "Frio"].includes(r.subTono_piel) &&
+      [
+        "Castaño Claro",
+        "Castaño Medio",
+        "Rubio Oscuro",
+        "Castaño Neutro",
+      ].includes(r.color_cabello) &&
+      ["Gris Verde", "Azul Grisaceo", "Marron Claro", "Verde Oliva"].includes(
+        r.color_ojos
+      ),
+    result: summer,
+  },
+  // Cool Summer
   {
     name: "Verano Frio (Cool Summer)",
     match: (r) =>
@@ -91,6 +172,22 @@ const RULES = [
       ["Azul Acero", "Azul hielo", "Verde Jade"].includes(r.color_ojos),
     result: summer,
   },
+  // Cool Summer - pure
+  //? Rubio Medio no esta en el form
+  {
+    name: "Verano Frio (Cool Summer) - Puro",
+    macth: (r) =>
+      ["Clara", "Media"].includes(r.tono_piel) &&
+      r.subTono_piel === "Frio" &&
+      ["Castaño Cenizo", "Rubio Cenizo", "Rubio Medio"].includes(
+        r.color_cabello
+      ) &&
+      ["Azul Acero", "Gris Azulado", "Azul Grisaceo", "Gris Plateado"].includes(
+        r.color_ojos
+      ),
+    result: summer,
+  },
+  // Summer
   {
     name: "Verano (Summer)",
     match: (r) =>
@@ -106,6 +203,28 @@ const RULES = [
   },
   //* End Summer
   //* Start Autumn
+  // Soft Autumn
+  {
+    name: "Otoño Suave (Soft Autumn)",
+    macth: (r) =>
+      ["Clara", "Media"].includes(r.tono_piel) &&
+      ["Neutro", "Calido"].includes(r.subTono_piel) &&
+      [
+        "Castaño Dorado",
+        "Castaño Neutro",
+        "Rubio Oscuro",
+        "Castaño Claro",
+      ].includes(r.color_cabello) &&
+      [
+        "Verde Oliva",
+        "Marron Claro",
+        "Azul Verdoso",
+        "Marron Avellan",
+      ].includes(r.color_ojos) &&
+      r.destellos === "Dorados o Calidos",
+    result: autumn,
+  },
+  // Light Autumn
   {
     name: "Otoño Claro (Light Autumn)",
     match: (r) =>
@@ -123,6 +242,23 @@ const RULES = [
         ].includes(r.color_ojos)),
     result: autumn,
   },
+  // Warm Autumn Intense
+  {
+    name: "Otoño Calido Intenso (Warm Autumn) - Intense",
+    macth: (r) =>
+      ["Clara", "Media"].includes(r.tono_piel) &&
+      r.subTono_piel === "Calido" &&
+      ["Rojo Cobrizo", "Rojo Intenso", "Pelirojo"].includes(r.color_cabello) &&
+      [
+        "Verde Brillante",
+        "Verde Oliva",
+        "Marron Miel",
+        "Marron Dorado",
+        "Azul Turqueza",
+      ].includes(r.color_ojos),
+    result: autumn,
+  },
+  // Warm Autumn
   {
     name: "Otoño Calido (Warm Autumn)",
     match: (r) =>
@@ -138,6 +274,7 @@ const RULES = [
         ].includes(r.color_ojos)),
     result: autumn,
   },
+  // Dark Autumn
   {
     name: "Otoño Oscuro (Dark Autumn)",
     match: (r) =>
@@ -156,6 +293,17 @@ const RULES = [
         ].includes(r.color_ojos)),
     result: autumn,
   },
+  // Dark Autumn Neutro
+  {
+    name: "Otoño Oscuro Neutro",
+    macth: (r) =>
+      ["Media", "Oscura"].includes(r.tono_piel) &&
+      ["Calido", "Neutro"].includes(r.subTono_piel) &&
+      ["Negro", "Marron Avellana", "Verde Oliva"].includes(r.color_ojos) &&
+      r.destellos === "Dorados o Calidos",
+    result: autumn,
+  },
+  // Autumn
   {
     name: "Otoño",
     match: (r) =>
@@ -173,6 +321,7 @@ const RULES = [
   },
   //* End Autumn
   //* Start Winter
+  // Deep Winter
   {
     name: "Invierno Profundo (Deep Winter)",
     match: (r) =>
@@ -182,6 +331,7 @@ const RULES = [
       ["Marron Oscuro", "Verde", "Azul Brillante"].includes(r.color_ojos),
     result: winter,
   },
+  // True Winter
   {
     name: "Invierno Frio (True Winter)",
     match: (r) =>
@@ -191,8 +341,21 @@ const RULES = [
       ["Azul Hielo", "Gris Plateado", "Marron", "Verde"].includes(r.color_ojos),
     result: winter,
   },
+  // True Winter Pure
   {
-    name: "Invierno Brillante",
+    name: "Invierno Frio Puro (True/Cool Winter)",
+    macth: (r) =>
+      ["Clara", "Media"].includes(r.tono_piel) &&
+      r.subTono_piel === "Frio" &&
+      ["Castaño Cenizo", "Negro Azulado"].includes(r.color_cabello) &&
+      ["Azul Acero", "Gris Acero", "Marron Oscuro", "Gris Plateado"].includes(
+        r.color_ojos
+      ),
+    result: winter,
+  },
+  // Bright Winter
+  {
+    name: "Invierno Brillante (Bright Winter)",
     match: (r) =>
       (r.tono_piel === "Clara" ||
         (r.tono_piel === "Media" && r.subTono_piel === "Frio")) &&
@@ -205,6 +368,22 @@ const RULES = [
       ].includes(r.color_ojos),
     result: winter,
   },
+  // Bright Winter High Constrast
+  {
+    name: "Invierno Brillante Contraste Alto (Bright Winter High Constrast)",
+    macth: (r) =>
+      r.tono_piel === "Clara" &&
+      r.subTono_piel === "Frio" &&
+      ["Negro Azulado", "Negro", "Castañ Oscuro"].includes(r.color_cabello) &&
+      [
+        "Azul Brillante",
+        "Gris Acero",
+        "Marron Oscuro",
+        "Gris Plateado",
+      ].includes(r.color_ojos),
+    result: winter,
+  },
+  // Winter
   {
     name: "Invierno (Winter)",
     match: (r) =>
