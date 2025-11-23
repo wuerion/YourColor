@@ -421,21 +421,6 @@ const RULES = [
       ["Azul Hielo", "Gris Plateado", "Marron", "Verde"].includes(r.color_ojos),
     result: winter,
   },
-  // Bright Winter
-  {
-    name: "Invierno Brillante (Bright Winter)",
-    match: (r) =>
-      (r.tono_piel === "Clara" ||
-        (r.tono_piel === "Media" && r.subTono_piel === "Frio")) &&
-      ["Negro", "Castaño Oscuro"].includes(r.color_cabello) &&
-      [
-        "Azul Brillante",
-        "Verde Claro",
-        "Gris Claro",
-        "Marron Avellana",
-      ].includes(r.color_ojos),
-    result: winter,
-  },
   // Bright Winter High Constrast
   {
     name: "Invierno Brillante Contraste Alto (Bright Winter High Constrast)",
@@ -448,6 +433,21 @@ const RULES = [
         "Gris Acero",
         "Marron Oscuro",
         "Gris Plateado",
+      ].includes(r.color_ojos),
+    result: winter,
+  },
+  // Bright Winter
+  {
+    name: "Invierno Brillante (Bright Winter)",
+    match: (r) =>
+      (r.tono_piel === "Clara" ||
+        (r.tono_piel === "Media" && r.subTono_piel === "Frio")) &&
+      ["Negro", "Castaño Oscuro"].includes(r.color_cabello) &&
+      [
+        "Azul Brillante",
+        "Verde Claro",
+        "Gris Claro",
+        "Marron Avellana",
       ].includes(r.color_ojos),
     result: winter,
   },
