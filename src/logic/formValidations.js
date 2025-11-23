@@ -1,7 +1,5 @@
-import { findDOMNode } from "react-dom";
 import calculateResult from "./colorimetryEngie.js";
 import result from "./functionsUi.js";
-import { swapFunctions } from "astro:transitions/client";
 
 function skinTone() {
   if (muyClaraPiel.checked) return "Muy clara";
@@ -10,13 +8,6 @@ function skinTone() {
   if (oscuraPiel.checked) return "Oscura";
   return "";
 }
-
-// function subToneSkin() {
-//   if (calidoSubPiel.checked) return "Calido";
-//   if (frioSubPiel.checked) return "Frio";
-//   if (neutroSubPiel.checked) return "Neutro";
-//   return "";
-// }
 
 function reactionOfTheSun() {
   if (quema.checked) return "Se quema facil";
