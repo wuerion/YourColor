@@ -65,7 +65,7 @@ function visibleCard(x) {
     case "Otoño":
     case "Otoño Claro (Light Autumn)":
     case "Otoño Calido (Wram Autumn)":
-    case "Otoño Oscuro (Dark Autumn)":
+    case "Otoño Oscuro (Deep Autumn)":
       primaveraCard.classList.add("hidden");
       veranoCard.classList.add("hidden");
       otoñoCard.classList.remove("hidden");
@@ -77,7 +77,7 @@ function visibleCard(x) {
       break;
     case "Invierno":
     case "Invierno Profundo (Deep Winter)":
-    case "Invierno Frio (True Winter)":
+    case "Invierno Frio (Cool Winter)":
     case "Invierno Brillante (Bright Winter)":
       primaveraCard.classList.add("hidden");
       veranoCard.classList.add("hidden");

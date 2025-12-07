@@ -6,7 +6,7 @@ import result from "./functionsUi.js";
 const RULES = [
   //* SPRING - 3 subestaciones
   {
-    name: "Light Spring",
+    name: "Primavera Clara (Light Spring)",
     match: (r) =>
       ["Muy Clara", "Clara"].includes(r.tono_piel) &&
       ["Neutro", "Calido"].includes(r.subTono_piel) &&
@@ -20,7 +20,7 @@ const RULES = [
     result: spring,
   },
   {
-    name: "Warm Spring",
+    name: "Primavera Calida (Warm Spring)",
     match: (r) =>
       ["Clara", "Media"].includes(r.tono_piel) &&
       r.subTono_piel === "Calido" &&
@@ -33,7 +33,7 @@ const RULES = [
     result: spring,
   },
   {
-    name: "Bright Spring",
+    name: "Primavera Brillante Bright Spring",
     match: (r) =>
       ["Clara", "Media"].includes(r.tono_piel) &&
       ["Neutro", "Calido"].includes(r.subTono_piel) &&
@@ -49,7 +49,7 @@ const RULES = [
 
   //* SUMMER - 3 subestaciones
   {
-    name: "Light Summer",
+    name: "Verano Claro (Light Summer)",
     match: (r) =>
       ["Muy Clara", "Clara"].includes(r.tono_piel) &&
       ["Neutro", "Frio"].includes(r.subTono_piel) &&
@@ -60,7 +60,7 @@ const RULES = [
     result: summer,
   },
   {
-    name: "Soft Summer",
+    name: "Verano Suave (Soft Summer)",
     match: (r) =>
       ["Clara", "Media"].includes(r.tono_piel) &&
       ["Neutro", "Frio"].includes(r.subTono_piel) &&
@@ -77,7 +77,7 @@ const RULES = [
     result: summer,
   },
   {
-    name: "Cool Summer",
+    name: "Verano Frio (Cool Summer)",
     match: (r) =>
       ["Clara", "Media"].includes(r.tono_piel) &&
       r.subTono_piel === "Frio" &&
@@ -99,7 +99,7 @@ const RULES = [
 
   //* AUTUMN - 3 subestaciones
   {
-    name: "Soft Autumn",
+    name: "Otoño Claro(Soft Autumn)",
     match: (r) =>
       ["Clara", "Media"].includes(r.tono_piel) &&
       ["Neutro", "Calido"].includes(r.subTono_piel) &&
@@ -121,7 +121,7 @@ const RULES = [
     result: autumn,
   },
   {
-    name: "Warm Autumn",
+    name: "Otoño Calido (Warm Autumn)",
     match: (r) =>
       (r.tono_piel === "Clara" ||
         (r.tono_piel === "Media" && r.subTono_piel === "Calido")) &&
@@ -143,7 +143,7 @@ const RULES = [
     result: autumn,
   },
   {
-    name: "Deep Autumn",
+    name: "Otoño Profundo (Deep Autumn)",
     match: (r) =>
       ["Media", "Oscura"].includes(r.tono_piel) &&
       ["Negro", "Castaño Oscuro", "Marron Oscuro"].includes(r.color_cabello) &&
@@ -159,7 +159,7 @@ const RULES = [
 
   //* WINTER - 3 subestaciones
   {
-    name: "Deep Winter",
+    name: "Invierno Profundo (Deep Winter)",
     match: (r) =>
       ["Media", "Oscura"].includes(r.tono_piel) &&
       r.subTono_piel !== "Calido" &&
@@ -173,7 +173,7 @@ const RULES = [
     result: winter,
   },
   {
-    name: "Cool Winter",
+    name: "Invierno Frio (Cool Winter)",
     match: (r) =>
       ["Clara", "Media"].includes(r.tono_piel) &&
       r.subTono_piel === "Frio" &&
@@ -184,7 +184,7 @@ const RULES = [
     result: winter,
   },
   {
-    name: "Bright Winter",
+    name: "Invierno Brillante (Bright Winter)",
     match: (r) =>
       (r.tono_piel === "Clara" ||
         (r.tono_piel === "Media" && r.subTono_piel === "Frio")) &&
