@@ -1,45 +1,83 @@
 ---
-import Image from "../components/images.astro";
-import Spring from "../images/spring.webp";
-import Summer from "../images/summer.webp";
-import Autumn from "../images/autumn.webp";
-import Winter from "../images/winter.webp";
+import StacionColors from "./stacionColors.astro";
+import Images from "../components/images.astro";
+import ImageAbout from "../images/image-hero-1.webp";
 ---
 
-<section
-  class="w-full h-screen flex flex-col justify-center items-center gap-16"
->
-  <h2 class="text-xl">
-    <strong>La teoria de las estaciones</strong>
-  </h2>
+<section id="about" class="px-5 text-lg">
+    <h3 class="text-xl text-center font-bold">¿Qué es la colorimetría?</h3>
+    <div class="mt-5 flex justify-center w-full">
+        <Images 
+        ImgUrl={ImageAbout}
+        alt="people with background colors"
+        addClass="object-center rounded-md"
+        />
+    </div>
 
-  <p class="max-w-[700px] min-w-[500px]">
-    Las 12 estaciones es una evolucion del sitema tradicional de 4 estaciones en
-    colorimetria, que permite una clasificasion mas precisa de los perfiles
-    cromaticos
-  </p>
-  <p class="max-w-[700px] min-w-[500px]">
-    Cada estacion principal <strong>(Primavera, Verano, Otoño, Invierno)</strong
-    > se divide en 3 substaciones segun combinaciones de <strong
-      >temperatura (calida/fria), intensidad (brillante/suave)</strong
-    > y <strong>valor (claro/oscuro)</strong>
-  </p>
-  <div class="flex justify-around items-center w-full px-16">
+    <p class="m-5">
+        La <spna class="font-semibold">colorometria</spna> es una rama de la ciencia
+        que estudia la medicion y cuantificacion del color, Pero tambien es el estudio
+        de como los colores interactuan con nuestra caracteristicas fisicas, como
+        el tono de piel, color de ojos y cabello.
+    </p>
+
+    <p class="mx-5">
+        Se basa en
+        la precepcion humana de color y se utiliza para describir y compara
+        colores en diversas areas, como la fotografia, el diseño grafico, la
+        industria textil, la quimica, la biologia, estre otras.
+    </p>
+    
+    <p class="m-5">
+        Al conocer tu perfil colometrico, prodras elegir colores que resalten
+        tu belleza natural, mejoren tu estilo y te hagna sentir mas seguro/a.
+    </p>
+
+    <p>
+        En nuestra herramienta, no solo descubriras tu perfil de colorometria,
+        sino tambien como puedes aplicar la <span class="font-semibold"
+            >teoria de las estaciones</span
+        > para obtener una paleta de colores ideal para ti.
+    </p>
+
+    <h3 class="text-xl font-bold mt-5 text-center">
+        ¿Por qué es importante conocer tu colorimetría?
+    </h3>
+    
+    <p class="m-5">
+        Los colores pueden influir en como nos sentimos, como nos persiben los
+        demas y como dastacamos nuestra belleza natural. <br class="mb-2" /> Conociendo
+        tu
+        <span class="font-semibold">colorometria</span>, prodras elegir ropa,
+        maquillaje y accesorios que resalten tu tono natural, mejorando tu
+        confianza y estilo.
+    </p>
+
     <div>
-      <p class="font-julius text-center text-lg mb-8">Primavera</p>
-      <Image ImgUrl={Spring} alt="" addClass="w-[300px] h-[300px] rounded-lg" />
+        <div>
+            <h3 class="text-xl font-bold mt-5 text-center">
+                La teoría de las estaciones <br class="md:hidden"/> ¿Qué estación es tu perfil de
+                color?
+            </h3>
+            <p class="m-5">
+                La <span class="font-semibold">teoria de las estaciones</span> es
+                un sistema que clasifica los colores que mejor complementan tu apariencia
+                fisica en cuatro categorias, cada una relacionada con una estacion
+                de año: <span class="font-semibold"
+                    >Primevera, Verano, Otoño e Invierno.
+                </span>Cada estacion tiene una paleta de colores especifica que
+                armoniza con diferentes tonos de piel, ojos y cabello.
+            </p>
+        </div>
+        <StacionColors />
     </div>
-    <div>
-      <p class="font-julius text-center text-lg mb-8">Verano</p>
-      <Image ImgUrl={Summer} alt="" addClass="w-[300px] h-[300px] rounded-lg" />
-    </div>
-    <div>
-      <p class="font-julius text-center text-lg mb-8">Otoño</p>
-      <Image ImgUrl={Autumn} alt="" addClass="w-[300px] h-[300px] rounded-lg" />
-    </div>
-    <div>
-      <p class="font-julius text-center text-lg mb-8">Invierno</p>
-      <Image ImgUrl={Winter} alt="" addClass="w-[300px] h-[300px] rounded-lg" />
-    </div>
-  </div>
 </section>
+
+<p class="m-5 text-lg">
+    Conocer tu colorometria es una herramienta poderosa para mejorar tu estilo
+    personal y sentirte mas comodo/a con lo que usas. Los colores no solo son
+    una custion de estetica, sino una forma de reseltar lo mejor de ti. <span
+        class="font-semibold text-blue-400"
+        >¡Empezar ahora es fácil y rápido!</span
+    >
+</p>
