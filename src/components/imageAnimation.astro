@@ -1,0 +1,90 @@
+---
+import Images from "./images.astro";
+import img1 from "../images/imgsHero/1.webp";
+import img2 from "../images/imgsHero/2.webp";
+import img3 from "../images/imgsHero/3.webp";
+import img4 from "../images/imgsHero/4.webp";
+import img5 from "../images/imgsHero/5.webp";
+import img6 from "../images/imgsHero/6.webp";
+import img7 from "../images/imgsHero/7.webp";
+import img8 from "../images/imgsHero/8.webp";
+---
+
+<div class="w-[360px] h-[460px] rounded-lg relative overflow-hidden">
+  <Images
+    ImgUrl={img1}
+    alt="img1"
+    addClass="slide"
+    addStyle="animation-delay: -0s;"
+  />
+  <Images
+    ImgUrl={img2}
+    alt="img2"
+    addClass="slide"
+    addStyle="animation-delay: -2.5s;"
+  />
+  <Images
+    ImgUrl={img3}
+    alt="img3"
+    addClass="slide"
+    addStyle="animation-delay: -5s;"
+  />
+  <Images
+    ImgUrl={img4}
+    alt="img4"
+    addClass="slide"
+    addStyle="animation-delay: -7.5s;"
+  />
+  <Images
+    ImgUrl={img5}
+    alt="img5"
+    addClass="slide"
+    addStyle="animation-delay: -10s;"
+  />
+  <Images
+    ImgUrl={img6}
+    alt="img6"
+    addClass="slide"
+    addStyle="animation-delay: -12.5s;"
+  />
+  <Images
+    ImgUrl={img7}
+    alt="img7"
+    addClass="slide"
+    addStyle="animation-delay: -15s;"
+  />
+  <Images
+    ImgUrl={img8}
+    alt="img8"
+    addClass="slide"
+    addStyle="animation-delay: -17.5s;"
+  />
+</div>
+
+<style is:global>
+  .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideShow 20s linear infinite;
+    transition: opacity 1ms ease;
+  }
+
+  @keyframes slideShow {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 1;
+    }
+    15% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
