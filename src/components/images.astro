@@ -3,110 +3,51 @@ import type { ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
 
 interface Props {
-    ImgUrl: string | ImageMetadata;
-    alt: string;
-    addClass?: string;
-    contClass?: string;
+  ImgUrl: string | ImageMetadata;
+  alt: string;
+  addClass?: string;
+  contClass?: string;
+  addStyle?: string;
 }
 
-const { ImgUrl, alt, addClass, contClass = "" } = Astro.props;
+const { ImgUrl, alt, addClass, contClass = "", addStyle = "" } = Astro.props;
 
 const sizes = [100, 400, 800]; // Tamaños de imagen que deseas generar
 
 const images = await Promise.all(
-    sizes.map(async (size) => {
-        return await getImage({
-            src: ImgUrl,
-            format: "webp",
-            width: size,
-        });
-    })
+  sizes.map(async (size) => {
+    return await getImage({
+      src: ImgUrl,
+      format: "webp",
+      width: size,
+    });
+  })
 );
 
-const srcset = images.map((image) => `${image.src} ${image.attributes.width}w`).join(", ");
+const srcset = images
+  .map((image) => `${image.src} ${image.attributes.width}w`)
+  .join(", ");
 ---
 
 <picture class={contClass}>
-    <img
-        src={images[0].src}
-        srcset={srcset}
-        sizes="(max-width: 200px) 100vw, 700px"
-        alt={alt}
-        class={addClass}
-        loading="eager"
-    />
+  <img
+    src={images[0].src}
+    srcset={srcset}
+    sizes="(max-width: 200px) 100vw, 700px"
+    alt={alt}
+    class={addClass}
+    style={addStyle}
+    loading="eager"
+  />
 </picture>
 
 <script>
-    // Precarga de la imagen LCP (en el head)
-    const head = document.querySelector('head');
-    const preloadLink = document.createElement('link');
-    preloadLink.rel = 'preload';
-    preloadLink.href = Astro.props.images[0].src;
-    preloadLink.as = 'image';
-    preloadLink.type = 'image/webp';
-    head.appendChild(preloadLink);
+  // Precarga de la imagen LCP (en el head)
+  const head = document.querySelector("head");
+  const preloadLink = document.createElement("link");
+  preloadLink.rel = "preload";
+  preloadLink.href = Astro.props.images[0].src;
+  preloadLink.as = "image";
+  preloadLink.type = "image/webp";
+  head.appendChild(preloadLink);
 </script>
-
-<!-- ---
-import type { ImageMetadata } from "astro";
-import { getImage } from "astro:assets";
-
-interface Props {
-    ImgUrl: string | ImageMetadata;
-    alt: string;
-    addClass?: string;
-    contClass?: string;
-}
-
-const {ImgUrl, alt, addClass, contClass = "" } = Astro.props;
-
-const sizes = [200, 400, 800, 1200]; //size for images
-
-const images = await Promise.all(
-    sizes.map(async (size) => {
-        return await getImage({
-            src: ImgUrl,
-            format: "webp",
-            width: size,
-        });
-    })
-); 
-
-// const images = await Promise.all(
-//     sizes.map(async (size) => {
-//         return await getImage({
-//             src: ImgUrl,
-//             format: "webp",
-//             width: size,
-//         });
-//     })
-// );
-
-// const srcset = images.map((image) => `${image.src} ${image.width}w`).join(", ");
-
-// const srcset = images.map((image) => `${image.src} ${image.width}w`).join(", ");
-
-// const Img = await getImage({
-//     src: ImgUrl,
-//     format: "webp",
-//     width: 200,
-//     height: 200,
-// });
----
-<!-- <picture class="conClass">
-    <img 
-    src={images[0].src}
-    srcset={srcset}
-    sizes="(max-width(799px) 100vw, 800px)"
-    alt={alt}
-    class={addClass}
-    loading="lazy"
-    >
-</picture> -->
-
-<!-- 
-<picture class={contClass}>
-    <source media="(max-width: 799px)" srcset={Img.src} />
-    <img src={Img.src} alt={alt} class={addClass} loading="lazy" />
-</picture> -->
