@@ -2,8 +2,22 @@
 const { text, addClass, link, link1, link2, linkL2, button, id } = Astro.props;
 ---
 
-<div class=`${addClass} font-lato `>
-    <a href=`${link1}` class=`text-black rounded-md p-2 hover:bg-white/50 border border-black ${link}` id="link"> {text}</a>
-    <a href=`${linkL2}` class=`text-black rounded-md p-2 hover:bg-white/50 border border-black ${link2}` id="button">{text}</a>
-    <button class=`text-black rounded-md p-2 hover:bg-white/50 border border-black ${button}` id=`${id}` type="button">{text}</button>
+<div class=`${addClass}`>
+  <a
+    href=`${link1}`
+    class=`text-black rounded-md p-2 hover:bg-[#F0A5BC]/20 border border-black ${link}`
+    id="link"
+  >
+    {text}</a
+  >
+  <a
+    href=`${linkL2}`
+    class=`text-black rounded-md p-2 hover:bg-white/50 border border-black ${link2}`
+    id="button">{text}</a
+  >
+  <button
+    class=`text-black rounded-md p-2 hover:bg-white/50 border border-black ${button}`
+    id=`${id}`
+    type="button">{text}</button
+  >
 </div>
