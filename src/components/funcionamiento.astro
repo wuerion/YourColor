@@ -1,28 +1,59 @@
-<section id="funcionamiento" class="font-lato text-black p-5">
-    <h3 class="text-center text-xl font-bold">Funcionamiento de la web</h3>
+---
+import Image from "../components/images.astro";
+import eye from "../images/eyeColor.webp";
+import sktinTone from "../images/skinTone.webp";
+import hairColor from "../images/hairColor.webp";
+---
 
-    <ul class="felx flex-col gap-5 text-lg">
+<section class="h-screen p-8">
+  <h2 class="text-center text-lg font-bold">¿Como funciona?</h2>
+  <div class="flex justify-center items-center h-full">
+    <div class="w-1/2 h-1/2">
+      <ul class="flex flex-col max-w-[700px] h-full justify-evenly">
         <li>
-            <p>Entarda de datos</p>
-            <p>- El usuario seleccina varias caracteristicas fisicas a traves de una serie de opciones en la interfaze. Estas caracteristicas incluyen el tono de piel, subtono de piel, reacion al sol, color de venas, color de cabello, color de ojos, destellos, preferencia de ropa y accesorios.</p>
-            </p>
+          El test de colorimetría se basa en analizar tres características: <strong
+            >tono de piel, color de cabello y ojos,</strong
+          > evaluando tiente, valor y croma.
         </li>
         <li>
-            <p>Funciones de calculo</p>
-            <p>- Cada caracteristicas seleccionada se evalua mediante funciones especificas. Estas funciones determiana los valores de las caracteristicas basadas en las opciones seleccionadas por el usuario.</p>
+          <strong>El sistema de puntaje:</strong> La piel es el factor determinante
+          <strong>(3 puntos)</strong>, seguido del cabello <strong
+            >(2 puntos)</strong
+          > y los ojos <strong>(1 punto)</strong>. La suma ubica a la persona en
+          una estacion: <strong>Primavera, Verano, Otoño o Invierno</strong>.
         </li>
         <li>
-            <p>Dterminacion de la estacion</p>
-            <p>- Basa en las caracteristicas evaluadas, se utilizan funciones logicas para determinar la estacion de color del usuario. Las estaciones posibles son, Primavera, Verano, Otoño e Invierno, cada una con sus subcategorías especificas. <br> Las funciones de calculo comparan las caracteristicas del usuario con los criterios predefinidos para cada estacion y subcategoría.</p>
+          <strong>El resultado:</strong> Un informe personalizado con tu paleta de
+          colores ideal para identificar decisiones en moda y maquillaje.
         </li>
         <li>
-            <p>Visualización del resultado</p>
-            <p>- Una ves calculado el, se mostrara en pantalla con los datos ingresados y con la paleta de colores de la estacion correspondiente.</p>
+          Este enfoque no solo mejora la apariencia, sino que tambien ayuda a
+          reducir el numero de prendas no usadas al hacer compras mas acertadas.
         </li>
-        <li>
-            <p>Otras Consideraciones</p>
-            <p>- La web tambien ofrece recomendaciones adicionales basadas en los datso ingresados, como la mejor paleta de colores para ropa y accesorios.</p>
-        </li>
-    </ul>
-    <p>Este proceso asegura que el usuario reciba una  evaluación precisa y personalizada de su estacion de color, ayudandole a tamar decisiones informadas sobre apariencia y estilo personal. </p>
+      </ul>
+    </div>
+    <div
+      class="w-1/2 max-w-[700px] h-1/2 relative grid grid-cols-3 grid-rows-2 justify-center"
+    >
+      <div class="col-span-3 row-end-1 flex justify-center gap-8">
+        <Image
+          ImgUrl={eye}
+          alt="eye macrop"
+          addClass="w-[200px] h-[300px] rounded-lg"
+        />
+        <Image
+          ImgUrl={hairColor}
+          alt="hair"
+          addClass="w-[200px] h-[300px] rounded-lg"
+        />
+      </div>
+      <div class="col-start-2 row-span-2 row-start-1 flex relative">
+        <Image
+          ImgUrl={sktinTone}
+          alt="women "
+          addClass="w-[200px] h-[300px] absolute -top-16 rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
 </section>
