@@ -1,0 +1,72 @@
+---
+import Buttons from "../../buttons.astro";
+---
+
+<section class="h-screen p-8 flex flex-col justify-evenly">
+  <div class="flex w-full justify-between">
+    <p>Paso 5 - 10</p>
+    <div class="flex gap-4">
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text="<"
+      />
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text=">"
+      />
+    </div>
+  </div>
+  <p class="text-xl text-center">¿Cual es tu tono de castaño oscuro?</p>
+  <div class="h-[516px] grid grid-cols-2 gap-5 justify-around">
+    <div class="flex flex-col gap-4 items-center">
+      <p>Cafe Cenizo / Puro (Frio)</p>
+      <label
+        class="h-full w-full rounded-lg overflow-hidden flex items-center justify-evenly group hover:cursor-pointer"
+        title="Cafe Cenizo/Puro"
+      >
+        <input
+          type="radio"
+          name="tonoDeCastañoOscuro"
+          id="castañoCenizo"
+          value="Castaño Cenizo"
+          class="hidden"
+        />
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-gradient-to-r from-[#3B3330] from-50% to-[#595450] to-50% rotate-45 shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear border border-[#D1C7B7]"
+        >
+        </div>
+      </label>
+      <p class="text-lg max-w-[300px]">
+        Descripción: Un tono café mate, como el café molido. No tiene reflejos
+        rojos ni dorados, se ve neutro o apagado.
+      </p>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Chocolate / Caoba (Calido)</p>
+      <label
+        class="h-full w-full rounded-lg overflow-hidden flex items-center justify-evenly group hover:cursor-pointer"
+        title="Cocolate / Coba "
+      >
+        <input
+          type="radio"
+          name="tonoDeCastañoOscuro"
+          id="castañoChocolate"
+          value="Castaño Chocolate / Caoba"
+          class="hidden"
+        />
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-gradient-to-r from-[#4A2F26] from-50% to-[#703923] to-50% rotate-45 shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear border border-[#D1C7B7]"
+        >
+        </div>
+      </label>
+      <p class="text-lg max-w-[300px]">
+        Descripción: Marrón rico y brillante. Bajo la luz tiene destellos
+        rojizos, madera o color chocolate con leche.
+      </p>
+    </div>
+  </div>
+</section>

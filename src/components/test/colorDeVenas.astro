@@ -1,0 +1,89 @@
+---
+import Buttons from "../buttons.astro";
+---
+
+<section class="h-screen p-8 flex flex-col justify-evenly">
+  <div class="flex w-full justify-between">
+    <p>Paso 3 - 10</p>
+    <div class="flex gap-4">
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text="<"
+      />
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text=">"
+      />
+    </div>
+  </div>
+  <p class="text-2xl text-center">
+    ¿De que color parecen tus venas en la muñeca?
+  </p>
+  <div class="h-[516px] grid grid-cols-3 w-full gap-5 justify-around">
+    <div class="flex flex-col gap-4 items-center">
+      <p>Azul o Morado (Subtono frio)</p>
+      <label
+        class="h-full w-full rounded-lg overflow-hidden flex items-center justify-evenly group hover:cursor-pointer"
+        title="Azul o Morado"
+      >
+        <input
+          type="radio"
+          name="colorVenas"
+          id="azulOMorado"
+          value="Azul o Modaro"
+          class="hidden"
+        />
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-[#285EFF] shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear"
+        >
+        </div>
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-[#C928FF] shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear"
+        >
+        </div>
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Verde (Subtono calido)</p>
+      <label
+        class="h-full w-full rounded-lg overflow-hidden flex items-center justify-evenly group hover:cursor-pointer"
+        title="Verde"
+      >
+        <input
+          type="radio"
+          name="colorVenas"
+          id="azulOMorado"
+          value="Azul o Modaro"
+          class="hidden"
+        />
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-[#4BF04B] shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear"
+        >
+        </div>
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>No estoy seguro/a (Posiblemente neutro)</p>
+      <label
+        class="h-full w-full rounded-lg overflow-hidden flex items-center justify-evenly group hover:cursor-pointer"
+        title="Neutro"
+      >
+        <input
+          type="radio"
+          name="colorVenas"
+          id="azulOMorado"
+          value="Azul o Modaro"
+          class="hidden"
+        />
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-gradient-to-r from-[#285EFF] from-50% to-[#C928FF] to-50% rotate-45 shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear"
+        >
+        </div>
+      </label>
+    </div>
+  </div>
+</section>

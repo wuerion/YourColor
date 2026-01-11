@@ -1,0 +1,160 @@
+---
+import Buttons from "../buttons.astro";
+import Image from "astro/components/Image.astro";
+import AzulClaro from "../../images/colorDeOjos/azulClaro.webp";
+import AzulBrillante from "../../images/colorDeOjos/azulBrillante.webp";
+import MarronesAvellana from "../../images/colorDeOjos/marronAvellana.webp";
+import MarronesOscuro from "../../images/colorDeOjos/marronOscuro.webp";
+import Verde from "../../images/colorDeOjos/verde.webp";
+import Gris from "../../images/colorDeOjos/gris.webp";
+---
+
+<section class="h-screen p-8 flex flex-col justify-evenly">
+  <div class="flex w-full justify-between">
+    <p>Paso 6 - 10</p>
+    <div class="flex gap-4">
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text="<"
+      />
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text=">"
+      />
+    </div>
+  </div>
+  <div class="flex flex-col gap-2">
+    <p class="text-xl text-center">¿Cual es tu color de ojos?</p>
+    <p class="text-lg text-center">
+      Selecciona el color que más se aproxime al tono dominante de tu iris.
+    </p>
+  </div>
+  <div class="h-[200px] grid grid-cols-6 w-full gap-5 justify-around">
+    <div class="flex flex-col gap-4 items-center">
+      <p>Azul Brillante</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Azul Brillante"
+      >
+        <input
+          type="radio"
+          name="ColorDeOjos"
+          id="azulBrillante"
+          value="Azul Brillante"
+          class="hidden"
+        />
+        <Image
+          src={AzulBrillante}
+          alt="Ojo de color Azul Brillante"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Azul Claro</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Azul Claro"
+      >
+        <input
+          type="radio"
+          name="ColorDeOjos"
+          id="azulClaro"
+          value="Azul Claro"
+          class="hidden"
+        />
+        <Image
+          src={AzulClaro}
+          alt="Ojo de color Azul Claro"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Marron Avellana</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Marron Avellana"
+      >
+        <input
+          type="radio"
+          name="ColorDeOjos"
+          id="marronAvellana"
+          value="Marron Avellana"
+          class="hidden"
+        />
+        <Image
+          src={MarronesAvellana}
+          alt="Ojo de color Marron Avellana"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Marron Oscuro</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Marron Oscuro"
+      >
+        <input
+          type="radio"
+          name="ColorDeOjos"
+          id="marronOscuro"
+          value="Marron Oscuro"
+          class="hidden"
+        />
+        <Image
+          src={MarronesOscuro}
+          alt="Ojo de color Marron Oscuro"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Verde</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Verde"
+      >
+        <input
+          type="radio"
+          name="ColorDeOjos"
+          id="verde"
+          value="Verde"
+          class="hidden"
+        />
+        <Image
+          src={Verde}
+          alt="Ojo de color Verde"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Gris</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Gris"
+      >
+        <input
+          type="radio"
+          name="ColorDeOjos"
+          id="gris"
+          value="Gris"
+          class="hidden"
+        />
+        <Image
+          src={Gris}
+          alt="Ojo de color Gris"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+  </div>
+</section>
+
+<!-- 473 -->

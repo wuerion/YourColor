@@ -1,0 +1,95 @@
+---
+import Buttons from "../../buttons.astro";
+---
+
+<section class="h-screen p-8 flex flex-col justify-evenly">
+  <div class="flex w-full justify-between">
+    <p>Paso 5 - 10</p>
+    <div class="flex gap-4">
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text="<"
+      />
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text=">"
+      />
+    </div>
+  </div>
+  <p class="text-xl text-center">¿Cual es tu tono de castaño claro/medio?</p>
+  <div class="h-[516px] grid grid-cols-3 gap-5 justify-around">
+    <div class="flex flex-col gap-4 items-center">
+      <p>Cenizo / 'Raton' (Frio)</p>
+      <label
+        class="h-full w-full rounded-lg overflow-hidden flex items-center justify-evenly group hover:cursor-pointer"
+        title="Cenizo / 'Raton'"
+      >
+        <input
+          type="radio"
+          name="tonoDeCastañoClaro"
+          id="castañoCenizo"
+          value="Cenizo"
+          class="hidden"
+        />
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-gradient-to-r from-[#948D85] from-50% to-[#6D6158] to-50% rotate-45 shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear border border-[#D1C7B7]"
+        >
+        </div>
+      </label>
+      <p class="text-lg max-w-[300px]">
+        Descripción visual: Un castaño apagado, sin mucho brillo. A veces parece
+        grisáceo bajo luz artificial
+      </p>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Miel / Dorado (Calido)</p>
+      <label
+        class="h-full w-full rounded-lg overflow-hidden flex items-center justify-evenly group hover:cursor-pointer"
+        title="Miel / Dorado "
+      >
+        <input
+          type="radio"
+          name="tonoDeCastañoClaro"
+          id="castañoMiel"
+          value="Rubio Miel/Dorado"
+          class="hidden"
+        />
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-gradient-to-r from-[#825E3E] from-50% to-[#B58B57] to-50% rotate-45 shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear border border-[#D1C7B7]"
+        >
+        </div>
+      </label>
+      <p class="text-lg max-w-[300px]">
+        Descripción visual: Tiene destellos amarillos o dorados obvios. Parece
+        que brilla.
+      </p>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Cobrizo / Caramelo (Muy Calido)</p>
+      <label
+        class="h-full w-full rounded-lg overflow-hidden flex items-center justify-evenly group hover:cursor-pointer"
+        title="Cobrizo / Caramelo "
+      >
+        <input
+          type="radio"
+          name="tonoDeCastañoClaro"
+          id="castañoCobrizo"
+          value="Rubio Cobrizo/Caramelo"
+          class="hidden"
+        />
+        <div
+          class="h-[130px] w-[130px] rounded-full bg-gradient-to-r from-[#8B5E4B] from-50% to-[#B06E45] to-50% rotate-45 shadow-inner shadow-black/40 group-hover:scale-105 delay-200 transition-all ease-linear border border-[#D1C7B7]"
+        >
+        </div>
+      </label>
+      <p class="text-lg max-w-[300px]">
+        Descripción visual: Un castaño apagado, sin mucho brillo. A veces parece
+        grisáceo bajo luz artificial
+      </p>
+    </div>
+  </div>
+</section>

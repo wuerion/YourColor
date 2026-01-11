@@ -1,0 +1,69 @@
+---
+import Buttons from "../buttons.astro";
+import Image from "astro/components/Image.astro";
+import Dorados from "../../images/destellos/dorados.webp";
+import Plateados from "../../images/destellos/plateados.webp";
+---
+
+<section class="h-screen p-8 flex flex-col justify-evenly">
+  <div class="flex w-full justify-between">
+    <p>Paso 7 - 10</p>
+    <div class="flex gap-4">
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text="<"
+      />
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text=">"
+      />
+    </div>
+  </div>
+  <p class="text-xl text-center">¿Que tipos de destellos tienes?</p>
+  <div class="h-[515px] grid grid-cols-2 w-full gap-5 justify-items-center">
+    <div class="flex flex-col gap-8 items-center max-w-[730px] w-full h-full">
+      <p>Dorados / Calido</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Dorados"
+      >
+        <input
+          type="radio"
+          name="destellos"
+          id="doradosOCalidos"
+          value="Dorados"
+          class="hidden"
+        />
+        <Image
+          src={Dorados}
+          alt="Mujer con destellos dorados"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-8 items-center max-w-[730px] w-full h-full">
+      <p>Plateados / Frios</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Plateados"
+      >
+        <input
+          type="radio"
+          name="destellos"
+          id="plateadosOFrios"
+          value="Plateados"
+          class="hidden"
+        />
+        <Image
+          src={Plateados}
+          alt="Mujer con destellos plateados"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+  </div>
+</section>

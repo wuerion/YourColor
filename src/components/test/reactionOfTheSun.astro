@@ -1,0 +1,106 @@
+---
+import Buttons from "../buttons.astro";
+import QuemaFacil from "/src/images/seQuema.svg";
+import SeBroncea from "/src/images/seBroncea.svg";
+import SeBronceaFacil from "/src/images/seBronceaFacil.svg";
+import SeQuemaYBroncea from "/src/images/seQuemaYBroncea.svg";
+---
+
+<section class="h-screen p-8 flex flex-col justify-evenly border">
+  <div class="flex w-full justify-between">
+    <p>Paso 2 - 10</p>
+    <div class="flex gap-4">
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text="<"
+      />
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text=">"
+      />
+    </div>
+  </div>
+  <p class="text-xl text-center">¿Como reaciona tu piel al Sol?</p>
+  <div class="h-1/2 grid grid-cols-4 gap-5 justify-around">
+    <div class="flex flex-col gap-4 items-center">
+      <p>Se quema facilmente</p>
+      <label
+        class="max-h-[200px] h-full max-w-[355px] w-full hover:cursor-pointer group"
+        title="Se quema facilmente"
+      >
+        <input
+          type="radio"
+          name="reacionAlSol"
+          id="quema"
+          value="Se quema facilmente"
+          class="hidden"
+        />
+
+        <QuemaFacil
+          class="w-full h-full group-hover:scale-105 delay-200 ease-linear transition-all"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Se broncea ligeramente</p>
+      <label
+        class="max-h-[200px] h-full max-w-[355px] w-full hover:cursor-pointer group"
+        title="Se broncea ligeramente"
+      >
+        <input
+          type="radio"
+          name="reacionAlSol"
+          id="boncea"
+          value="Se broncea ligeramente"
+          class="hidden"
+        />
+
+        <SeBroncea
+          class="w-full h-full group-hover:scale-105 delay-200 ease-linear transition-all"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Se broncea con facilidad</p>
+      <label
+        class="max-h-[200px] h-full max-w-[355px] w-full hover:cursor-pointer group"
+        title="Se boncea con facilidad"
+      >
+        <input
+          type="radio"
+          name="reacionAlSol"
+          id="bronceaFacil"
+          value="Se boncea con facilidad"
+          class="hidden"
+        />
+
+        <SeBronceaFacil
+          class="w-full h-full group-hover:scale-105 delay-200 ease-linear transition-all"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Se broncea quema ligeramente y broncea</p>
+      <label
+        class="max-h-[200px] h-full max-w-[355px] w-full hover:cursor-pointer group"
+        title="Se broncea quema ligeramente y broncea"
+      >
+        <input
+          type="radio"
+          name="reacionAlSol"
+          id="quemaLigeramenteYBroncea"
+          value="Se broncea quema ligeramente y broncea"
+          class="hidden"
+        />
+
+        <SeQuemaYBroncea
+          class="w-full h-full group-hover:scale-105 delay-200 ease-linear transition-all"
+        />
+      </label>
+    </div>
+  </div>
+</section>

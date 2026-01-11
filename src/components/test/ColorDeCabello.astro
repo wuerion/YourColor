@@ -1,0 +1,155 @@
+---
+import React from "react";
+import Buttons from "../buttons.astro";
+import Image from "astro/components/Image.astro";
+import Negro from "/src/images/colorDeCabello/negro.jpg";
+import CastañoClaro from "/src/images/colorDeCabello/castañoClaro.jpg";
+import CastañoOscuro from "/src/images/colorDeCabello/castañoOscuro.jpg";
+import Rubio from "/src/images/colorDeCabello/rubio.jpg";
+import Pelirojo from "/src/images/colorDeCabello/pelirojo.jpg";
+import Blanco from "/src/images/colorDeCabello/gris-blanco.jpg";
+---
+
+<!-- cambiar a jsx o dejar en astro? -->
+<section class="h-screen p-8 flex flex-col justify-evenly">
+  <div class="flex w-full justify-between">
+    <p>Paso 4 - 10</p>
+    <div class="flex gap-4">
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text="<"
+      />
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text=">"
+      />
+    </div>
+  </div>
+  <p class="text-2xl text-center">Cual es el color de to cabello (natural)</p>
+  <div class="h-[516px] grid grid-cols-6 w-full gap-5 justify-around">
+    <div class="flex flex-col gap-4 items-center">
+      <p>Negro</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Negro"
+      >
+        <input
+          type="radio"
+          name="ColorDeCabello"
+          id="negro"
+          value="Negro"
+          class="hidden"
+        />
+        <Image
+          src={Negro}
+          alt="Mujer con pelo negro"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Castaño Oscuro</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Castaño Oscuro"
+      >
+        <input
+          type="radio"
+          name="ColorDeCabello"
+          id="castañoOscuro"
+          value="Castaño Oscuro"
+          class="hidden"
+        />
+        <Image
+          src={CastañoOscuro}
+          alt="Mujer con pelo Castaño Oscuro"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Castaño Claro / Medio</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Castaño Claro / Medio"
+      >
+        <input
+          type="radio"
+          name="ColorDeCabello"
+          id="castañoClaro"
+          value="Castaño Claro / Medio"
+          class="hidden"
+        />
+        <Image
+          src={CastañoClaro}
+          alt="Mujer con pelo Castaño Claro"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Rubio</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Rubio"
+      >
+        <input
+          type="radio"
+          name="ColorDeCabello"
+          id="rubio"
+          value="Rubio"
+          class="hidden"
+        />
+        <Image
+          src={Rubio}
+          alt="Mujer con pelo Rubio"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Pelirojo</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Pelirojo"
+      >
+        <input
+          type="radio"
+          name="ColorDeCabello"
+          id="pelirojo"
+          value="Pelirojo"
+          class="hidden"
+        />
+        <Image
+          src={Pelirojo}
+          alt="Mujer con pelo Pelirojo"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Blanco o Gris</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group shadow-[inset_0_0_24px_8px_rgba(0,0,0,40%)]"
+        title="Blanco o Gris"
+      >
+        <input
+          type="radio"
+          name="ColorDeCabello"
+          id="blanco/gris"
+          value="Blanco o Gris"
+          class="hidden"
+        />
+        <Image
+          src={Blanco}
+          alt="Mujer con pelo blanco o gris"
+          class="absolute -z-10 group-hover:scale-105 delay-200 transition-all ease-linear w-full h-full"
+        />
+      </label>
+    </div>
+  </div>
+</section>

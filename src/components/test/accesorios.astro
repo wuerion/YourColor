@@ -1,0 +1,93 @@
+---
+import Buttons from "../buttons.astro";
+---
+
+<section class="h-screen p-8 flex flex-col justify-evenly">
+  <div class="flex w-full justify-between">
+    <p>Paso 8 - 10</p>
+    <div class="flex gap-4">
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text="<"
+      />
+      <Buttons
+        link2="hidden"
+        button="hidden"
+        link="border-none text-xl "
+        text=">"
+      />
+    </div>
+  </div>
+  <p class="text-xl text-center">¿Que accesorios prefieres usar?</p>
+  <div class="h-[516px] grid grid-cols-3 w-full gap-5 justify-around">
+    <div class="flex flex-col gap-4 items-center">
+      <p>Dorados / Calidos</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group"
+        title="Dorados"
+      >
+        <input
+          type="radio"
+          name="accesorios"
+          id="calidos"
+          value="Dorados"
+          class="hidden"
+        />
+        <div class="flex justify-center items-center w-full h-full">
+          <div
+            class="w-[150px] h-[150px] rounded-full border border-[#D1C7B7] bg-[#FFD700] shadow-inner shadow-black/40 group-hover:scale-105 transition-all ease-linear delay-200"
+          >
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Plateados / Frios</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group"
+        title="Plateados"
+      >
+        <input
+          type="radio"
+          name="accesorios"
+          id="frios"
+          value="Plateados"
+          class="hidden"
+        />
+        <div class="flex justify-center items-center w-full h-full">
+          <div
+            class="w-[150px] h-[150px] rounded-full border border-[#D1C7B7] bg-[#C0C0C0] shadow-inner shadow-black/40 group-hover:scale-105 transition-all ease-linear delay-200"
+          >
+          </div>
+        </div>
+      </label>
+    </div>
+    <div class="flex flex-col gap-4 items-center">
+      <p>Ambos</p>
+      <label
+        class="h-full w-full rounded-lg relative overflow-hidden hover:cursor-pointer group"
+        title="Ambos"
+      >
+        <input
+          type="radio"
+          name="accesorios"
+          id="ambos"
+          value="Ambos"
+          class="hidden"
+        />
+        <div class="flex gap-4 items-center justify-center w-full h-full">
+          <div
+            class="w-[150px] h-[150px] rounded-full border border-[#D1C7B7] bg-[#FFD700] shadow-inner shadow-black/40 group-hover:scale-105 transition-all ease-linear delay-200"
+          >
+          </div>
+          <div
+            class="w-[150px] h-[150px] rounded-full border border-[#D1C7B7] bg-[#C0C0C0] shadow-inner shadow-black/40 group-hover:scale-105 transition-all ease-linear delay-200"
+          >
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+</section>
