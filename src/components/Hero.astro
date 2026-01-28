@@ -47,34 +47,37 @@ import ImageAnimation from "./imageAnimation.astro";
     </div>
   </div>
   <div
-    class="h-1/2 p-8 w-full flex justify-between items-center absolute inset-0 z-[100] poniter-events-none"
+    class="h-1/2 py-4 px-2 md:p-8 gap-8 w-full flex flex-col lg:flex-row justify-evenly items-center absolute inset-0 z-[100]"
   >
     <div
       class="flex flex-col justify-between w-full max-h-[500px] h-[460px]"
       id="hero"
     >
-      <div class="flex flex-col gap-4">
-        <h2 class="font-julius text-5xl w-fit items-center">YOUR COLOR</h2>
-        <hr class="border-2 border-black max-w-[333px] rounded-xl" />
-        <p>Colores que complementan mejor con tigo</p>
+      <div class="flex flex-col gap-4 items-center lg:items-start">
+        <h2 class="font-julius text-3xl md:text-5xl text-center lg:text-start">YOUR COLOR</h2>
+        <hr class="border-2 border-black w-full lg:max-w-[333px] rounded-xl" />
+        <p class="text-lg">Colores que complementan mejor con tigo</p>
+      </div>
+      <div class="flex justify-center md:hidden">
+        <ImageAnimation />
       </div>
       <Button
         text="Comienza a explorar tu colorimetria hoy!"
-        addClass="text-nowrap font-bold text-xl"
+        addClass="text-nowrap font-bold text-base md:text-xl flex justify-center lg:justify-start"
         link=""
         link1="#test"
         link2="hidden"
         button="hidden"
       />
     </div>
-    <div>
+    <div class="hidden md:block">
       <ImageAnimation />
     </div>
   </div>
-  <div class="h-1/2 w-full flex items-center">
-    <div class="w-1/2 flex flex-col items-center gap-16 p-8">
-      <h1 class="text-xl">¿Que es la colorimetria personal?</h1>
-      <p class="text-base max-w-[700px] min-w-[500px]">
+  <div class="h-1/2 w-full flex flex-col md:flex-row items-center gap-8 p-8">
+    <div class="w-full lg:w-1/2 flex flex-col items-center gap-4 lg:gap-16 ">
+      <h1 class="text-nowrap text-xl">¿Que es la colorimetria personal?</h1>
+      <p class="text-base max-w-[700px] min-w-[300px]">
         La colorimetria personal es una tecnica que identifica los colores que
         mas armonizan con las caracteristicas naturales de una persona, como <strong
           >tono de piel, color de ojos y cabello</strong
@@ -82,9 +85,9 @@ import ImageAnimation from "./imageAnimation.astro";
         transmitir una imagen mas equilibrada y favorecedora.
       </p>
     </div>
-    <div class="w-1/2 flex flex-col items-center gap-16 p-8">
+    <div class="w-full lg:w-1/2 flex flex-col items-center gap-4 lg:gap-16 ">
       <h2 class="text-xl">¿Por que es importante conocer tu colorimetria?</h2>
-      <p class="text-base max-w-[700px] min-w-[500px]">
+      <p class="text-base max-w-[700px] min-w-[300px]">
         Conocer tu colorimetria es importante por que te permite identificar los
         colores que mas armonizan con tu <strong
           >tono de piel, ojos y cabello</strong
