@@ -5,45 +5,38 @@ import Summer from "../images/summer.webp";
 import Autumn from "../images/autumn.webp";
 import Winter from "../images/winter.webp";
 ---
-
-<section
-  class="w-full h-screen flex flex-col justify-center items-center gap-16"
->
+  <section class="flex flex-col justify-center items-center gap-16 p-8">
   <h2 class="text-xl">
     <strong>La teoria de las estaciones</strong>
   </h2>
 
-  <p class="max-w-[700px] min-w-[500px]">
+  <p class="text-base max-w-[700px] min-w-[200px]">
     Las 12 estaciones es una evolucion del sitema tradicional de 4 estaciones en
     colorimetria, que permite una clasificasion mas precisa de los perfiles
     cromaticos
   </p>
-  <p class="max-w-[700px] min-w-[500px]">
+  <p class="max-w-[700px] min-w-[200px]">
     Cada estacion principal <strong>(Primavera, Verano, Otoño, Invierno)</strong
     > se divide en 3 substaciones segun combinaciones de <strong
       >temperatura (calida/fria), intensidad (brillante/suave)</strong
     > y <strong>valor (claro/oscuro)</strong>
   </p>
-  <div class="flex justify-around items-center w-full px-16">
-    <div>
-      <p class="font-julius text-center text-lg mb-8">Primavera</p>
-      <!-- <Image ImgUrl={Spring} alt="" addClass="w-[300px] h-[300px] rounded-lg" /> -->
-       <Image src={Spring} alt="spring" class="rounded-lg"/>
+    <div class="w-full h-fit grid grid-cols-2 lg:grid-cols-4 justify-items-center place-items-center gap-16 ">
+      <div class="w-36 h-36 lg:w-[300px] lg:h-[300px] flex flex-col gap-4">
+        <p class="font-julius text-center text-lg ">Primavera</p>
+         <Image src={Spring} alt="spring" class="rounded-lg w-full h-full "/>
+      </div>
+      <div class="w-36 h-36 lg:w-[300px] lg:h-[300px] flex flex-col gap-4">
+        <p class="font-julius text-center text-lg ">Verano</p>
+         <Image src={Summer} alt="summer" class="rounded-lg w-full h-full"/>
+      </div>
+      <div class="w-36 h-36 lg:w-[300px] lg:h-[300px] flex flex-col gap-4">
+        <p class="font-julius text-center text-lg ">Otoño</p>
+         <Image src={Autumn} alt="autumn" class="rounded-lg w-full h-full"/>
+      </div>
+      <div class="w-36 h-36 lg:w-[300px] lg:h-[300px] flex flex-col gap-4">
+        <p class="font-julius text-center text-lg ">Invierno</p>
+             <Image src={Winter} alt="winter" class="rounded-lg w-full h-full"/>
+      </div>
     </div>
-    <div>
-      <p class="font-julius text-center text-lg mb-8">Verano</p>
-      <!-- <Image ImgUrl={Summer} alt="" addClass="w-[300px] h-[300px] rounded-lg" /> -->
-       <Image src={Summer} alt="summer" class="rounded-lg"/>
-    </div>
-    <div>
-      <p class="font-julius text-center text-lg mb-8">Otoño</p>
-      <!-- <Image ImgUrl={Autumn} alt="" addClass="w-[300px] h-[300px] rounded-lg" /> -->
-       <Image src={Autumn} alt="autumn" class="rounded-lg"/>
-    </div>
-    <div>
-      <p class="font-julius text-center text-lg mb-8">Invierno</p>
-      <!-- <Image ImgUrl={Winter} alt="" addClass="w-[300px] h-[300px] rounded-lg" /> -->
-           <Image src={Winter} alt="winter" class="rounded-lg"/>
-    </div>
-  </div>
 </section>
