@@ -12,9 +12,9 @@ function ColorsPallet({ name, seasson, addClass }) {
   };
 
   return (
-    <div className="group ">
+    <div className="group w-full">
       <div
-        className={`relative w-[280px] h-[500px] mx-auto p-4 ${addClass} bg-cover bg-center before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-black/70  group-hover:before:-z-50 before:z-[1]`}
+        className={`relative flex flex-col min-w-[100px] before:w-full before:max-w-[400px] w-full max-w-[400px] h-[400px] lg:h-[500px] p-4 ${addClass} bg-cover bg-center before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-black/70 group-hover:before:-z-50 before:z-[1]`}
         style={{ backgroundImage: `url('${images[name]}')` }}
       >
         <div className="h-1/2 text-lg">
@@ -29,38 +29,13 @@ function ColorsPallet({ name, seasson, addClass }) {
             {name}
           </p>
         </div>
-        <div className="group-hover:grid grid-cols-3 items-center justify-items-center gap-1 h-1/2 hidden">
+        <div className="group-hover:grid grid-cols-3 items-center justify-items-center gap-1 w-full hidden">
           {seassonPallet.map((index, key) => (
             <div
               key={key}
               className="w-full h-[32px] rounded-lg flex items-center justify-center"
               style={{ backgroundColor: index.hexa }}
             >
-              {/* <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clipPath="url(#clip0_280_42)">
-                  <path
-                    d="M8.00016 5.33331V7.99998M8.00016 10.6666H8.00683M14.6668 7.99998C14.6668 11.6819 11.6821 14.6666 8.00016 14.6666C4.31826 14.6666 1.3335 11.6819 1.3335 7.99998C1.3335 4.31808 4.31826 1.33331 8.00016 1.33331C11.6821 1.33331 14.6668 4.31808 14.6668 7.99998Z"
-                    stroke="#1E1E1E"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_280_42">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <p className="text-center hidden group-[l]-hover:block">
-                {index.nombre}
-              </p> */}
             </div>
           ))}
         </div>
@@ -71,23 +46,23 @@ function ColorsPallet({ name, seasson, addClass }) {
 
 function SeasonsColors() {
   return (
-    <div className="h-screen flex flex-col gap-8 justify-evenly items-center p-4 border border-2-black ">
+    <div className="h-screen flex flex-col gap-8 justify-evenly items-center p-4">
       <h2 className="text-center text-xl font-bold">Paletas de colores</h2>
-      <div className="grid grid-cols-4  h-1/2">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 h-1/2 w-full max-w-[1500px]">
         <ColorsPallet
           name="Primavera"
           seasson={spring}
           addClass={
-            "rounded-tl-lg rounded-bl-lg before:rounded-tl-lg before:rounded-bl-lg"
+            "rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none lg:rounded-tl-lg lg:rounded-bl-lg lg:before:rounded-tl-lg lg:before:rounded-bl-lg"
           }
         />
-        <ColorsPallet name="Verano" seasson={summer} />
-        <ColorsPallet name="Otoño" seasson={autumn} />
+        <ColorsPallet name="Verano" seasson={summer} addClass={'rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none'}/>
+        <ColorsPallet name="Otoño" seasson={autumn} addClass={'rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none'}/>
         <ColorsPallet
           name="Invierno"
           seasson={winter}
           addClass={
-            "rounded-tr-lg rounded-br-lg before:rounded-tr-lg before:rounded-br-lg"
+            "rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none lg:rounded-tr-lg lg:rounded-br-lg lg:before:rounded-tr-lg lg:before:rounded-br-lg"
           }
         />
       </div>
