@@ -5,11 +5,10 @@ import sktinTone from "../images/skinTone.webp";
 import hairColor from "../images/hairColor.webp";
 ---
 
-<section class="h-screen p-8">
-  <h2 class="text-center text-lg font-bold">¿Como funciona?</h2>
-  <div class="flex justify-center items-center h-full">
-    <div class="w-1/2 h-1/2">
-      <ul class="flex flex-col max-w-[700px] h-full justify-evenly">
+<section class="py-4">
+  <h2 class="text-center text-lg font-bold mb-16">¿Como funciona?</h2>
+  <div class="flex flex-col lg:flex-row lg:justify-center max-h-[400px] items-center gap-8">
+      <ul class="flex flex-col  lg:w-1/2 max-w-[700px] h-full gap-8 justify-around">
         <li>
           El test de colorimetría se basa en analizar tres características: <strong
             >tono de piel, color de cabello y ojos,</strong
@@ -31,29 +30,37 @@ import hairColor from "../images/hairColor.webp";
           reducir el numero de prendas no usadas al hacer compras mas acertadas.
         </li>
       </ul>
-    </div>
-    <div
-      class="w-1/2 max-w-[700px] h-1/2 relative grid grid-cols-3 grid-rows-2 justify-center"
-    >
-      <div class="col-span-3 row-end-1 flex justify-center gap-8">
+      <div class="parent h-full lg:w-1/2 lg:max-w-[700px] justify-items-center">
+       <div class="div1 flex justify-center items-center gap-5">
         <Image
           src={eye}
           alt="eye macrop"
-          class="w-[200px] h-[300px] rounded-lg"
+          class=" min-w-[100px] min-h-[150px] w-full h-full max-w-[150px] max-h-[200px] rounded-lg"
         />
         <Image
           src={hairColor}
           alt="hair"
-          class="w-[200px] h-[300px] rounded-lg"
+          class=" min-w-[100px] min-h-[150px] w-full h-full max-w-[150px] max-h-[200px] rounded-lg"
         />
       </div>
-      <div class="col-start-2 row-span-2 row-start-1 flex relative">
+       <div class="div2 relative min-w-[100px] min-h-[150px] w-full h-full max-w-[150px]" >
         <Image
           src={sktinTone}
           alt="women "
-          class="w-[200px] h-[300px] absolute -top-16 rounded-lg"
+          class="absolute -top-16 rounded-lg w-full h-full"
         />
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .parent {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 5; }
+.div2 { grid-area: 2 / 2 / 2 / 4; }
+</style>
