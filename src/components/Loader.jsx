@@ -6,8 +6,8 @@ import React, { useState, useEffect } from "react";
 
 function TestHome({ onStart }) {
   return (
-    <section class="h-screen relative z-50" id="test">
-      <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
+    <section class=" relative z-50 lg:h-dvh" id="test">
+      <div class="absolute w-full h-full  bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
         <div class="flex w-full h-[150%] items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
           <div class="w-32 md:w-80 h-full bg-[#E0719B] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-40 relative"></div>
@@ -19,9 +19,9 @@ function TestHome({ onStart }) {
           <div class="w-32 md:w-80 h-full bg-[#F0A5BC] transform -skew-x-[15deg] z-10 relative"></div>
         </div>
       </div>
-      <div class="absolute w-full h-full z-50">
-        <div class="flex flex-col justify-center items-center gap-4 h-1/3">
-          <h2 class="text-lg text-center font-bold">
+      <div class=" w-full h-full z-50 p-2 flex flex-col gap-8 bg-[#FAF8F0]/15 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
+        <div class="flex flex-col justify-center items-center gap-8 h-1/3">
+          <h2 class="text-lg text-center font-bold my-16">
             Descubre tu estacion y Potencia tu imagen
           </h2>
           <p>
@@ -33,12 +33,11 @@ function TestHome({ onStart }) {
             para ubicarte en una de las 12 estaciones.
           </p>
         </div>
-        <div class="h-1/2 flex flex-col p-8 gap-8">
+        <div class="h-1/2 flex flex-col lg:p-8 gap-8">
           <p class="text-neutral-500 text-[32px]">CONSEJOS</p>
 
           <div
-            class="bg-gradient-to-b from-[#E0719B] from-50% to-[#FAF8F0] to-50% rounded-tl-full rounded-bl-full rounded-br-lg roudned-tr-lg flex w-fit h-22 shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
-            style={{ borderRadius: "100px 8px 8px 100px;" }}
+            class="bg-gradient-to-b from-[#E0719B] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full flex w-fit items-center lg:items-stretch  h-[250px] lg:h-24 shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
           >
             <div class="p-2 rounded-full bg-[#E0719B] shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
               <div class="p-4 rounded-full bg-[#FAF8F0] w-fit">
@@ -62,7 +61,7 @@ function TestHome({ onStart }) {
                 </svg>
               </div>
             </div>
-            <div class="flex flex-col w-fit px-2">
+            <div class="flex flex-col h-full lg:w-fit px-2">
               <p class="h-1/2 flex items-center text-white text-lg">
                 Luz Natural: Realiza el test cerca de una ventana.
               </p>
@@ -71,9 +70,9 @@ function TestHome({ onStart }) {
               </p>
             </div>
           </div>
+
           <div
-            class="bg-gradient-to-b from-[#BC4F90] from-50% to-[#FAF8F0] to-50% rounded-tl-full rounded-bl-full rounded-br-lg roudned-tr-lg flex w-fit h-22 shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
-            style={{ borderRadius: "100px 8px 8px 100px;" }}
+            class="bg-gradient-to-b from-[#BC4F90] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full lg:rounded-tr-lg lg:rounded-br-lg flex w-fit h-[240px] lg:h-24 items-center lg:items-stretch shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
           >
             <div class="p-2 rounded-full bg-[#BC4F90] shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
               <div class="p-4 rounded-full bg-[#FAF8F0] w-fit">
@@ -201,20 +200,20 @@ function TestHome({ onStart }) {
                 </svg>
               </div>
             </div>
-            <div class="flex flex-col w-fit px-2">
-              <p class="h-1/2 flex items-center text-white text-lg">
+            <div class="flex flex-col h-full lg:w-fit px-2 rounded-lg ">
+              <p class="h-1/2 flex items-center text-white text-base lg:text-lg">
                 Sin maquillaje: necesitas ver tu tono de piel real y tus
                 destellos naturales.
               </p>
-              <p class="h-1/2 flex items-center text-lg">
+              <p class="h-1/2 flex items-center text-base lg:text-lg">
                 El maquillaje pude alterar tu tono de piel y destellos
                 naturales.
               </p>
             </div>
           </div>
+
           <div
-            class="bg-gradient-to-b from-[#894773] from-50% to-[#FAF8F0] to-50% rounded-tl-full rounded-bl-full rounded-br-lg roudned-tr-lg flex w-fit h-22 shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
-            style={{ borderRadius: "100px 8px 8px 100px;" }}
+            class="bg-gradient-to-b from-[#894773] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full lg:rounded-br-lg lg:roudned-tr-lg flex w-fit h-[250px] lg:h-24 items-center lg:items-stretch shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
           >
             <div class="p-2 rounded-full bg-[#894773] shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
               <div class="p-4 rounded-full bg-[#FAF8F0] w-fit">
@@ -254,28 +253,21 @@ function TestHome({ onStart }) {
                 </svg>
               </div>
             </div>
-            <div class="flex flex-col w-fit px-2">
-              <p class="h-1/2 flex items-center text-white text-lg">
+            <div class="flex flex-col h-full lg:w-fit  px-2 rounded-lg">
+              <p class="h-1/2 flex items-center text-white text-base lg:text-lg">
                 Espejo a la mano: Tendrás que observar detalles de tu iris y
                 venas.
               </p>
-              <p class="h-1/2 flex items-center text-lg">
+              <p class="h-1/2 flex items-center text-base lg:text-lg">
                 Un reflejo claro te ayudará a distinguir los patrones de tu iris
                 y los reflejos sutiles de tu piel.
               </p>
             </div>
           </div>
         </div>
-        <div class="flex flex-col items-end justify-center gap-4 p-8">
-          <p>Tiempo estimado: "Solo te tomará 2 minutos".</p>
-          {/* <Buttons
-        text="Comienza a explorar tu colorimetria hoy!"
-        link="text-2xl"
-        link1="#TonoDePiel"
-        link2="hidden"
-        button="hidden"
-      /> */}
-          <button onClick={onStart}>
+        <div class="flex flex-col lg:items-end justify-center gap-4 p-8">
+          <p className="text-center">Tiempo estimado: "Solo te tomará 2 minutos".</p>
+          <button onClick={onStart} className="border-2 border-black py-4 px-2 rounded-lg font-bold text-lg hover:bg-[#FAF8F0]/50 hover:-translate-y-2 transition-all delay-150">
             Comienza a explorar tu colorimetria hoy!
           </button>
         </div>
@@ -336,7 +328,7 @@ export default function PageLoader() {
   };
 
   return (
-    <div className="w-full h-screen" id="test">
+    <div className="-mx-4" id="test">
       {step === "home" && <TestHome onStart={handleStart} />}
       {step === "loading" && <Loader />}
     </div>
