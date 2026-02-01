@@ -8,7 +8,7 @@ function TestHome({ onStart }) {
   return (
     <section class=" relative z-50 lg:h-dvh" id="test">
       <div class="absolute w-full h-full  bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
-        <div class="flex w-full h-[150%] items-center justify-center space-x-[-40px]">
+        <div class="flex w-full h-fullZ items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
           <div class="w-32 md:w-80 h-full bg-[#E0719B] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-40 relative"></div>
 
@@ -293,7 +293,7 @@ function Loader() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-screen  bg-[#F5F5DC] z-50 fixed top-0 left-0">
+    <div className="flex flex-col items-center justify-center h-screen w-screen  bg-[#FAF8F0] z-50 fixed top-0 left-0">
       {/* Spinner Minimalista */}
       {/* <div className="relative">
         <div className="w-16 h-16 border-2 border-black/10 rounded-full animate-pulse"></div>
