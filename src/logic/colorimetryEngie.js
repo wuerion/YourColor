@@ -1,11 +1,14 @@
 import RULES from "./rules";
-import visibleCard from "./functionsUi";
+import { determineTheSubTone } from "./helpers";
 
 export default function calculateResult(answer) {
+  const fullAnswers = {
+    ...answer, subTono_piel: determineTheSubTone(answer)
+  }
+  
   for (const rule of RULES) {
-    if (rule.match(answer)) {
-      visibleCard(rule.name);
-      return rule.result && rule.name;
+    if (rule.match(fullAnswers)) {
+      return {name: rule.name, palette: rule.result}
     }
   }
   return null;
