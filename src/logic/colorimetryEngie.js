@@ -1,7 +1,7 @@
 import RULES from "./rules";
 import { determineTheSubTone } from "./helpers";
 
-export default function calculateResult(answer) {
+export function calculateResult(answer) {
   const fullAnswers = {
     ...answer, subTono_piel: determineTheSubTone(answer)
   }
