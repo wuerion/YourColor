@@ -2,38 +2,32 @@ export function determineTheSubTone(answer) {
   let calido = 0;
   let frio = 0;
 
-  if (answer.vein_color === "Verde") {
+  if (answer.vein_color === "verde") {
     calido++;
   }
-  if (answer.vein_color === "Azul o Morado") {
+  if (answer.vein_color === "azulOMorado") {
     frio++;
   }
 
-  if (
-    ["Se broncea facil", "Se broncea ligeramente"].includes(answer.reaction_sun)
-  ) {
+  if (["bronceaFacil", "broncea"].includes(answer.reaction_sun)) {
     calido++;
   }
-  if (
-    ["Se quema facil", "Se quema ligeramente y broncea"].includes(
-      answer.reaction_sun,
-    )
-  ) {
+  if (["quema", "quemaLigeramenteyBroncea"].includes(answer.reaction_sun)) {
     frio++;
   }
 
-  if (answer.accesorios === "Dorados o Calidos") {
+  if (answer.accesorios === "doradosOCalidos") {
     calido++;
   }
-  if (answer.accesorios === "Plateados o Frios") {
+  if (answer.accesorios === "plateadosOFrios") {
     frio++;
   }
-  if (answer.accesorios === "Ambos") {
+  if (answer.accesorios === "ambos") {
     calido++;
     frio++;
   }
 
-  if (calido > frio) return "Calido";
-  if (frio > calido) return "Frio";
-  return "Neutro";
+  if (calido > frio) return "calido";
+  if (frio > calido) return "frio";
+  return "neutro";
 }
