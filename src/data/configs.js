@@ -42,10 +42,10 @@ let colorCard = document.getElementById("colorCard");
 
 //* Sub Tono De Piel
 //* Tono de piel
-const muyClaraPiel = document.getElementById("muyClara");
-const claraPiel = document.getElementById("clara");
-const mediaPiel = document.getElementById("media");
-const oscuraPiel = document.getElementById("oscura");
+const muyClara = document.getElementById("muyClara");
+const clara = document.getElementById("clara");
+const media = document.getElementById("media");
+const oscura = document.getElementById("oscura");
 
 //* Describir el tono de piel
 const calidoSubPiel = document.getElementById("calido");
@@ -57,7 +57,7 @@ const quema = document.getElementById("quema");
 const broncea = document.getElementById("broncea");
 const bronceaFacil = document.getElementById("bronceaFacil");
 const quemaLigeramenteYBroncea = document.getElementById(
-  "quemaLigeramenteYBroncea"
+  "quemaLigeramenteYBroncea",
 );
 
 //* Color de venas
@@ -66,58 +66,41 @@ const verde = document.getElementById("verde");
 const neutro = document.getElementById("neutro");
 
 //* Color de Cabello
-const caoba = document.getElementById("caoba");
-const castañoOscuro = document.getElementById("castañoOscuro");
-const castañoMedio = document.getElementById("castañoMedio");
-const castañoClaro = document.getElementById("castañoClaro");
-const castañoDorado = document.getElementById("castañoDorado");
-const castañoRojizo = document.getElementById("castañoRojizo");
-const castañoCenizo = document.getElementById("castañoCenizo");
-const castañoNeutro = document.getElementById("castañoNeutro");
-const rubioOscuro = document.getElementById("rubioOscuro");
-const rubioClaro = document.getElementById("rubioClaro");
-const rubioMiel = document.getElementById("rubioMiel");
-const rubioCenizo = document.getElementById("rubioCenizo");
-const rubioNeutro = document.getElementById("rubioNeutro");
-const rubioDorado = document.getElementById("rubioDorado");
-const pelirojo = document.getElementById("pelirojo");
-const platinoFrio = document.getElementById("platinoFrio");
-const rojoIntenso = document.getElementById("rojoIntenso");
-const rojoCobrizo = document.getElementById("rojoCobrizo");
+
 const negro = document.getElementById("negro");
+const castañoOscuro = document.getElementById("castañoOscuro");
+const castañoClaro = document.getElementById("castañoClaro");
+const rubio = document.getElementById("rubio");
+const pelirojo = document.getElementById("pelirojo");
+const grisOBlanco = document.getElementById("grisOBlanco");
+
 const negroAzulado = document.getElementById("negroAzulado");
-const negroNatural = document.getElementById("negroNatural");
+const negroSuave = document.getElementById("negroSuave");
+
+const cafeCenizo = document.getElementById("cafeCenizo");
+const cafeChocolate = document.getElementById("cafeChocolate");
+
+const cenizo = document.getElementById("cenizo");
+const castañoMiel = document.getElementById("castañoMiel");
+const castañoCaramelo = document.getElementById("castañoCaramelo");
+
+const rubioCenizo = document.getElementById("rubioCenizo");
+const rubioDorado = document.getElementById("rubioDorado");
+const rubioOscuro = document.getElementById("rubioOscuro");
+
+const caoba = document.getElementById("caoba");
+const cobrizo = document.getElementById("cobrizo");
+
+const plata = document.getElementById("plata");
+const crema = document.getElementById("crema");
 
 //* Color de ojos
-
-const azul = document.getElementById("azul");
-const azulClaro = document.getElementById("azulClaro");
 const azulBrillante = document.getElementById("azulBrillante");
-const azulGrisaceo = document.getElementById("azulGrisaceo");
-const azulTurquesa = document.getElementById("azulTurquesa");
-const azulAcero = document.getElementById("azulAcero");
-const azulHielo = document.getElementById("azulHielo");
-const azulVerdoso = document.getElementById("azulVerdoso");
-
+const azulClaro = document.getElementById("azulClaro");
 const verdeOjos = document.getElementById("verdeOjos");
-const verdeBrillante = document.getElementById("verdeBrillante");
-const verdeClaro = document.getElementById("verdeClaro");
-const verdeOliva = document.getElementById("verdeOliva");
-const verdeJade = document.getElementById("verdeJade");
-
-const marron = document.getElementById("marron");
-const marronClaro = document.getElementById("marronClaro");
-const marronDorado = document.getElementById("marronDorado");
-const marronMiel = document.getElementById("marronMiel");
 const marronAvellana = document.getElementById("marronAvellana");
 const marronOscuro = document.getElementById("marronOscuro");
-
 const gris = document.getElementById("gris");
-const grisClaro = document.getElementById("grisClaro");
-const grisVerde = document.getElementById("grisVerde");
-const grisAcero = document.getElementById("grisAcero");
-const grisAzulado = document.getElementById("grisAzulado");
-const grisPlateado = document.getElementById("grisPlateado");
 
 //* Destellos ojos
 const doradoOCalido = document.getElementById("doradosOCalidos");
