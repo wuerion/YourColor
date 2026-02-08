@@ -2,202 +2,264 @@
 
 import { spring, summer, autumn, winter } from "../data/seasons.js";
 import result from "./functionsUi.js";
-
 const RULES = [
-  //* SPRING - 3 subestaciones
+  // ==========================================
+  // PRIMAVERA (SPRING) - CALIDA Y CLARA
+  // ==========================================
+
+  // 1. Primavera Brillante (Bright Spring)
+  // Contraste Alto: Pelo oscuro + Ojos brillantes
+  {
+    name: "Primavera Brillante (Bright Spring)",
+    match: (r) =>
+      ["clara", "media"].includes(r.tono_piel) &&
+      ["neutro", "calido"].includes(r.subTono_piel) &&
+      // Cabello oscuro o vibrante
+      [
+        "negroSuave",
+        "castañoOscuro",
+        "castañoMedio",
+        "castañoCaramelo",
+      ].includes(r.color_cabello) &&
+      // Ojos brillantes
+      ["azulBrillante", "verdeOjos", "azulClaro"].includes(r.color_ojos) &&
+      // Desempate: La ropa fría NO le favorece
+      r.ropa !== "coloresFrios",
+    result: spring,
+  },
+
+  // 2. Primavera Clara (Light Spring)
+  // Contraste Bajo: Todo es claro y luminoso
   {
     name: "Primavera Clara (Light Spring)",
     match: (r) =>
-      ["Muy Clara", "Clara"].includes(r.tono_piel) &&
-      ["Neutro", "Calido"].includes(r.subTono_piel) &&
-      [
-        "Rubio Miel",
-        "Rubio Dorado",
-        "Azul Hielo",
-        "Verde Claro",
-        "Azul Brillante",
-      ].includes(r.color_ojos),
+      ["muyClara", "clara"].includes(r.tono_piel) &&
+      ["neutro", "calido"].includes(r.subTono_piel) &&
+      // Rubios claros
+      ["rubio", "rubioDorado", "rubioOscuro", "castañoClaro"].includes(
+        r.color_cabello,
+      ) &&
+      // Ojos Claros
+      ["azulClaro", "verdeOjos", "gris"].includes(r.color_ojos) &&
+      r.accesorios !== "plateados",
     result: spring,
   },
+
+  // 3. Primavera Calida (Warm Spring)
+  // Todo es dorado, miel o cobrizo
   {
     name: "Primavera Calida (Warm Spring)",
     match: (r) =>
-      ["Clara", "Media"].includes(r.tono_piel) &&
+      ["clara", "media"].includes(r.tono_piel) &&
       r.subTono_piel === "Calido" &&
-      ["Rubio Dorado", "Rubio Miel", "Castaño Dorado", "Rojo Cobrizo"].includes(
-        r.color_cabello
+      // Cabellos cálidos
+      ["rubioDorado", "castañoMiel", "castañoCaramelo", "cobrizo"].includes(
+        r.color_cabello,
       ) &&
-      ["Verde Claro", "Azul Turquesa", "Marron Dorado", "Marron Miel"].includes(
-        r.color_ojos
-      ),
-    result: spring,
-  },
-  {
-    name: "Primavera Brillante Bright Spring",
-    match: (r) =>
-      ["Clara", "Media"].includes(r.tono_piel) &&
-      ["Neutro", "Calido"].includes(r.subTono_piel) &&
-      ["Castaño Oscuro", "Negro", "Castaño Medio"].includes(r.color_cabello) &&
-      [
-        "Azul Brillante",
-        "Verde Brillante",
-        "Azul Turqueza",
-        "Azul Verdoso",
-      ].includes(r.color_ojos),
+      // Ojos cálidos
+      ["verdeOjos", "marronAvellana", "azulBrillante"].includes(r.color_ojos) &&
+      r.ropa === "coloresCalidos",
     result: spring,
   },
 
-  //* SUMMER - 3 subestaciones
+  // ==========================================
+  // VERANO (SUMMER) - FRIO Y SUAVE
+  // ==========================================
+
+  // 4. Verano Claro (Light Summer)
+  // Piel clara, pelo claro, subtono frío
   {
     name: "Verano Claro (Light Summer)",
     match: (r) =>
-      ["Muy Clara", "Clara"].includes(r.tono_piel) &&
-      ["Neutro", "Frio"].includes(r.subTono_piel) &&
-      ["Rubio Claro", "Rubio Cenizo"].includes(r.color_cabello) &&
-      ["Azul Claro", "Azul Hielo", "Gris Claro", "Verde Claro"].includes(
-        r.color_ojos
-      ),
+      ["muyClara", "clara"].includes(r.tono_piel) &&
+      ["neutro", "frio"].includes(r.subTono_piel) &&
+      // Rubios fríos
+      ["rubio", "rubioCenizo", "grisOBlanco", "plata", "perla"].includes(
+        r.color_cabello,
+      ) &&
+      // Ojos Claros
+      ["azulClaro", "gris", "verdeOjos"].includes(r.color_ojos) &&
+      r.accesorios === "plateados",
     result: summer,
   },
-  {
-    name: "Verano Suave (Soft Summer)",
-    match: (r) =>
-      ["Clara", "Media"].includes(r.tono_piel) &&
-      ["Neutro", "Frio"].includes(r.subTono_piel) &&
-      [
-        "Castaño Claro",
-        "Castaño Medio",
-        "Rubio Oscuro",
-        "Castaño Neutro",
-        "Castaño Cenizo",
-      ].includes(r.color_cabello) &&
-      ["Gris Verde", "Azul Grisaceo", "Marron Claro", "Verde Oliva"].includes(
-        r.color_ojos
-      ),
-    result: summer,
-  },
+
+  // 5. Verano Frio (Cool Summer)
+  // El verano clásico "cenizo"
   {
     name: "Verano Frio (Cool Summer)",
     match: (r) =>
-      ["Clara", "Media"].includes(r.tono_piel) &&
-      r.subTono_piel === "Frio" &&
-      [
-        "Castaño Cenizo",
-        "Rubio Cenizo",
-        "Rubio Oscuro",
-        "Castaño Oscuro",
-      ].includes(r.color_cabello) &&
-      [
-        "Azul Acero",
-        "Gris Azulado",
-        "Azul Grisaceo",
-        "Gris Plateado",
-        "Azul Hielo",
-      ].includes(r.color_ojos),
+      ["clara", "media"].includes(r.tono_piel) &&
+      r.subTono_piel === "frio" &&
+      // Tonos cenizos medios
+      ["rubioCenizo", "cenizo", "cafeCenizo"].includes(r.color_cabello) &&
+      ["azulClaro", "gris", "azulBrillante"].includes(r.color_ojos),
     result: summer,
   },
 
-  //* AUTUMN - 3 subestaciones
+  // 6. Verano Suave (Soft Summer)
+  // Neutro, bajo contraste, tonos "polvorientos"
   {
-    name: "Otoño Claro(Soft Autumn)",
+    name: "Verano Suave (Soft Summer)",
     match: (r) =>
-      ["Clara", "Media"].includes(r.tono_piel) &&
-      ["Neutro", "Calido"].includes(r.subTono_piel) &&
-      [
-        "Castaño Dorado",
-        "Castaño Neutro",
-        "Rubio Oscuro",
-        "Castaño Claro",
-      ].includes(r.color_cabello) &&
-      [
-        "Verde Oliva",
-        "Marron Claro",
-        "Azul Verdoso",
-        "Marron Avellana",
-        "Marron Miel",
-      ].includes(r.color_ojos) &&
-      r.destellos === "Dorados o Calidos" &&
-      r.accesorios === "Dorados o Calidos",
+      ["clara", "media"].includes(r.tono_piel) &&
+      ["neutro", "frio"].includes(r.subTono_piel) &&
+      // Cabello "ratón" o neutro
+      ["cenizo", "castañoClaro", "rubioOscuro"].includes(r.color_cabello) &&
+      // Ojos suaves
+      ["gris", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
+      // Desempate: Prefiere plata o fríos
+      (r.ropa === "coloresFrios" || r.accesorios === "plateados"),
+    result: summer,
+  },
+
+  // ==========================================
+  // OTOÑO (AUTUMN) - CALIDO Y PROFUNDO
+  // ==========================================
+
+  // 7. Otoño Suave (Soft Autumn)
+  // Neutro, bajo contraste, tonos tierra suave
+  {
+    name: "Otoño Suave (Soft Autumn)",
+    match: (r) =>
+      ["clara", "media"].includes(r.tono_piel) &&
+      ["neutro", "calido"].includes(r.subTono_piel) &&
+      // Castaños suaves o miel
+      ["castañoMiel", "castañoClaro", "rubioOscuro"].includes(
+        r.color_cabello,
+      ) &&
+      ["marronAvellana", "verdeOjos", "marronOscuro"].includes(r.color_ojos) &&
+      // Desempate: Prefiere oro o cálidos
+      (r.ropa === "coloresCalidos" || r.accesorios === "dorados"),
     result: autumn,
   },
+
+  // 8. Otoño Calido (Warm Autumn)
+  // Pelirojos y castaños rojizos intensos
   {
     name: "Otoño Calido (Warm Autumn)",
     match: (r) =>
-      (r.tono_piel === "Clara" ||
-        (r.tono_piel === "Media" && r.subTono_piel === "Calido")) &&
+      ["clara", "media"].includes(r.tono_piel) &&
+      r.subTono_piel === "Calido" &&
       [
-        "Rubio Miel",
-        "Castaño Medio",
-        "Pelirojo",
-        "Rojo Cobrizo",
-        "Rojo Intenso",
+        "pelirojo",
+        "caoba",
+        "cobrizo",
+        "cafeChocolate",
+        "castañoCaramelo",
       ].includes(r.color_cabello) &&
-      [
-        "Verde Brillante",
-        "Verde Oliva",
-        "Marron Dorado",
-        "Marron Avellana",
-        "Marron Miel",
-        "Azul Turquesa",
-      ].includes(r.color_ojos),
-    result: autumn,
-  },
-  {
-    name: "Otoño Profundo (Deep Autumn)",
-    match: (r) =>
-      ["Media", "Oscura"].includes(r.tono_piel) &&
-      ["Negro", "Castaño Oscuro", "Marron Oscuro"].includes(r.color_cabello) &&
-      ["Marron Oscuro", "Marron Avellana", "Verde Oliva"].includes(
-        r.color_ojos
-      ) &&
-      r.subTono_piel !== "Frio" &&
-      (r.ropa === "Colores Calidos" ||
-        r.accesorios === "Dorados o Calidos" ||
-        r.destellos === "Dorados o Calidos"),
+      ["verdeOjos", "marronAvellana", "marronOscuro"].includes(r.color_ojos),
     result: autumn,
   },
 
-  //* WINTER - 3 subestaciones
+  // 9. Otoño Oscuro (Dark Autumn)
+  // Cabello oscuro pero cálido
+  {
+    name: "Otoño Oscuro (Dark Autumn)",
+    match: (r) =>
+      ["media", "oscura"].includes(r.tono_piel) &&
+      ["calido", "neutro"].includes(r.subTono_piel) &&
+      ["castañoOscuro", "negroSuave", "caoba"].includes(r.color_cabello) &&
+      ["marronOscuro", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
+      // Desempate contra Invierno
+      (r.ropa === "coloresCalidos" || r.accesorios === "dorados"),
+    result: autumn,
+  },
+
+  // ==========================================
+  // INVIERNO (WINTER) - FRIO Y PROFUNDO
+  // ==========================================
+
+  // 10. Invierno Profundo (Deep Winter)
+  // Cabello negro/muy oscuro y piel neutra/fría
   {
     name: "Invierno Profundo (Deep Winter)",
     match: (r) =>
-      ["Media", "Oscura"].includes(r.tono_piel) &&
-      r.subTono_piel !== "Calido" &&
-      ["Negro", "Castaño Oscuro", "Negro Azulado"].includes(r.color_cabello) &&
-      ["Marron Oscuro", "Verde", "Azul Brillante", "Gris Acero"].includes(
-        r.color_ojos
+      ["media", "oscura"].includes(r.tono_piel) &&
+      ["frio", "neutro"].includes(r.subTono_piel) &&
+      ["negro", "negroAzulado", "negroSuave", "castañoOscuro"].includes(
+        r.color_cabello,
       ) &&
-      (r.ropa === "Colores Frios" ||
-        r.accesorios === "Plateados o Frios" ||
-        r.accesorios === "Ambos"),
+      ["marronOscuro", "negro", "marronAvellana"].includes(r.color_ojos) &&
+      // Desempate contra Otoño
+      (r.ropa === "coloresFrios" || r.accesorios === "plateados"),
     result: winter,
   },
-  {
-    name: "Invierno Frio (Cool Winter)",
-    match: (r) =>
-      ["Clara", "Media"].includes(r.tono_piel) &&
-      r.subTono_piel === "Frio" &&
-      ["Castaño Cenizo", "Negro Azulado", "Negro"].includes(r.color_cabello) &&
-      ["Azul Acero", "Gris Acero", "Gris Plateado", "Azul Hielo"].includes(
-        r.color_ojos
-      ),
-    result: winter,
-  },
+
+  // 11. Invierno Brillante (Bright Winter)
+  // Tipo "Blancanieves": Piel clara, Pelo negro, Ojos claros
   {
     name: "Invierno Brillante (Bright Winter)",
     match: (r) =>
-      (r.tono_piel === "Clara" ||
-        (r.tono_piel === "Media" && r.subTono_piel === "Frio")) &&
-      ["Negro", "Castaño Oscuro", "Negro Azulado"].includes(r.color_cabello) &&
+      ["clara", "media"].includes(r.tono_piel) &&
+      ["frio", "neutro"].includes(r.subTono_piel) &&
+      ["negro", "negroAzulado", "castañoOscuro"].includes(r.color_cabello) &&
+      ["azulBrillante", "verdeOjos", "azulClaro"].includes(r.color_ojos),
+    result: winter,
+  },
+
+  // 12. Invierno Frio (True Winter)
+  // Canas plateadas, negro azulado, cero calidez
+  {
+    name: "Invierno Frio (True Winter)",
+    match: (r) =>
+      r.subTono_piel === "frio" &&
       [
-        "Azul Brillante",
-        "Verde Claro",
-        "Gris Claro",
-        "Marron Oscuro",
-        "Azul Hielo",
-      ].includes(r.color_ojos),
+        "negroAzulado",
+        "negro",
+        "castañoCenizo",
+        "plata",
+        "grisOBlanco",
+      ].includes(r.color_cabello) &&
+      ["azulClaro", "gris", "marronOscuro", "azulBrillante"].includes(
+        r.color_ojos,
+      ),
+    result: winter,
+  },
+
+  // ==========================================
+  // REGLAS GENERALES (CATCH-ALL)
+  // Si ninguna específica coincide, usamos estas con exclusión
+  // ==========================================
+
+  {
+    name: "Primavera (General)",
+    match: (r) =>
+      ["calido", "neutro"].includes(r.subTono_piel) &&
+      r.ropa !== "coloresFrios" &&
+      r.accesorios !== "plateados" &&
+      !["negro", "negroAzulado", "grisOBlanco"].includes(r.color_cabello),
+    result: spring,
+  },
+
+  {
+    name: "Verano (General)",
+    match: (r) =>
+      ["frio", "neutro"].includes(r.subTono_piel) &&
+      r.ropa !== "coloresCalidos" &&
+      r.accesorios !== "dorados" &&
+      ["muyClara", "clara", "media"].includes(r.tono_piel),
+    result: summer,
+  },
+
+  {
+    name: "Otoño (General)",
+    match: (r) =>
+      ["calido", "neutro"].includes(r.subTono_piel) &&
+      r.ropa !== "coloresFrios" &&
+      r.accesorios !== "plateados",
+    result: autumn,
+  },
+
+  {
+    name: "Invierno (General)",
+    match: (r) =>
+      ["frio", "neutro"].includes(r.subTono_piel) &&
+      r.ropa !== "coloresCalidos" &&
+      r.accesorios !== "dorados" &&
+      ["negro", "negroAzulado", "castañoOscuro", "grisOBlanco"].includes(
+        r.color_cabello,
+      ),
     result: winter,
   },
 ];
-
 export default RULES;
