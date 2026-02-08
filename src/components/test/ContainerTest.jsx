@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { calculateResult } from "../../logic/colorimetryEngie";
 
 import TonoDePiel from "./steps/TonoPiel";
-import ReactionOfTheSun from "./steps/reactionOfTheSun";
+import ReactionOfTheSun from "./steps/ReactionOfTheSun";
 import ColorDeVenas from "./steps/colorDeVenas";
-import ColorDeCabello from "./steps/ColorDeCabello";
-import TonoDeNegro from "./tonos/TonoDeNegro";
-import TonoDeCastañoOscuro from "./tonos/TonoDeCastañoOscuro";
-import TonoDeCatañonoClaro from "./tonos/TonoDeCatañonoClaro";
-import TonoDeRubio from "./tonos/TonoDeRubio";
-import TonoDePelirojo from "./tonos/TonoDePelirojo";
-import TonoDeBlanco from "./tonos/TonoDeBlanco";
-import ColorOjos from "./steps/ColorOjos";
+import ColorDeCabello from "./steps/colorDeCabello";
+import TonoDeNegro from "./tonos/tonoDeNegro";
+import TonoDeCastañoOscuro from "./tonos/tonoDeCastañoOscuro";
+import TonoDeCatañonoClaro from "./tonos/tonoDeCastañoClaro";
+import TonoDeRubio from "./tonos/tonoDeRubio";
+import TonoDePelirojo from "./tonos/tonoDePelirojo";
+import TonoDeBlanco from "./tonos/tonoDeBlanco";
+import ColorOjos from "./steps/colorDeOjos";
 import Destellos from "./steps/destellos";
 import ColoresPreferidos from "./steps/coloresPreferidos";
 import Accesorios from "./steps/accesorios";
@@ -78,7 +78,7 @@ function ContainerTest() {
     };
     const currentKey = stepKey[step];
     const newAnswers = { ...answer, [currentKey]: val };
-    // console.log(newAnswers.tono_pelo); // Obtener el valor de tono_pelo
+    console.log(newAnswers.tono_piel); // Obtener el valor de tono_pelo
     setAnswer(newAnswers);
 
     if (step === 9) {
