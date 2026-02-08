@@ -8,7 +8,7 @@ function TestHome({ onStart }) {
   return (
     <section class=" relative z-50 lg:h-dvh" id="test">
       <div class="absolute w-full h-full  bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
-        <div class="flex w-full h-fullZ items-center justify-center space-x-[-40px]">
+        <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
           <div class="w-32 md:w-80 h-full bg-[#E0719B] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-40 relative"></div>
 
@@ -36,9 +36,7 @@ function TestHome({ onStart }) {
         <div class="h-1/2 flex flex-col lg:p-8 gap-8">
           <p class="text-neutral-500 text-[32px]">CONSEJOS</p>
 
-          <div
-            class="bg-gradient-to-b from-[#E0719B] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full flex w-fit items-center lg:items-stretch  h-[250px] lg:h-24 shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
-          >
+          <div class="bg-gradient-to-b from-[#E0719B] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full flex w-fit items-center lg:items-stretch  h-[250px] lg:h-24 shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
             <div class="p-2 rounded-full bg-[#E0719B] shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
               <div class="p-4 rounded-full bg-[#FAF8F0] w-fit">
                 <svg
@@ -71,9 +69,7 @@ function TestHome({ onStart }) {
             </div>
           </div>
 
-          <div
-            class="bg-gradient-to-b from-[#BC4F90] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full lg:rounded-tr-lg lg:rounded-br-lg flex w-fit h-[240px] lg:h-24 items-center lg:items-stretch shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
-          >
+          <div class="bg-gradient-to-b from-[#BC4F90] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full lg:rounded-tr-lg lg:rounded-br-lg flex w-fit h-[240px] lg:h-24 items-center lg:items-stretch shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
             <div class="p-2 rounded-full bg-[#BC4F90] shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
               <div class="p-4 rounded-full bg-[#FAF8F0] w-fit">
                 <svg
@@ -212,9 +208,7 @@ function TestHome({ onStart }) {
             </div>
           </div>
 
-          <div
-            class="bg-gradient-to-b from-[#894773] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full lg:rounded-br-lg lg:roudned-tr-lg flex w-fit h-[250px] lg:h-24 items-center lg:items-stretch shadow-[2px_2px_4px_rgb(0,0,0,0.40)]"
-          >
+          <div class="bg-gradient-to-b from-[#894773] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full lg:rounded-br-lg lg:roudned-tr-lg flex w-fit h-[250px] lg:h-24 items-center lg:items-stretch shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
             <div class="p-2 rounded-full bg-[#894773] shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
               <div class="p-4 rounded-full bg-[#FAF8F0] w-fit">
                 <svg
@@ -266,8 +260,13 @@ function TestHome({ onStart }) {
           </div>
         </div>
         <div class="flex flex-col lg:items-end justify-center gap-4 p-8">
-          <p className="text-center">Tiempo estimado: "Solo te tomará 2 minutos".</p>
-          <button onClick={onStart} className="border-2 border-black py-4 px-2 rounded-lg font-bold text-lg hover:bg-[#FAF8F0]/50 hover:-translate-y-2 transition-all delay-150">
+          <p className="text-center">
+            Tiempo estimado: "Solo te tomará 2 minutos".
+          </p>
+          <button
+            onClick={onStart}
+            className="border-2 border-black py-4 px-2 rounded-lg font-bold text-lg hover:bg-[#FAF8F0]/50 hover:-translate-y-2 transition-all delay-150"
+          >
             Comienza a explorar tu colorimetria hoy!
           </button>
         </div>
