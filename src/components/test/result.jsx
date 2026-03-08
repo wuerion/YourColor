@@ -46,7 +46,7 @@ function GridColors({ data, count }) {
   );
 }
 
-function result({ result }) {
+function result({ result, image }) {
   const [count, setCount] = useState(6);
   const [isVisible, setIsVisible] = useState(false);
   return (
@@ -129,7 +129,9 @@ function result({ result }) {
           </div>
         </div>
       )}
-      {isVisible && <Comparison setIsVisible={setIsVisible} />}
+      {isVisible && (
+        <Comparison setIsVisible={setIsVisible} data={result} image={image} />
+      )}
     </section>
   );
 }
