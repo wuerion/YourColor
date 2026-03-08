@@ -15,7 +15,7 @@ import ColorOjos from "./steps/colorDeOjos";
 import Destellos from "./steps/destellos";
 import ColoresPreferidos from "./steps/coloresPreferidos";
 import Accesorios from "./steps/accesorios";
-
+import Result from "./result";
 // function callApi(text) {
 //   const [images, setImages] = useState([]);
 //   useEffect(() => {
@@ -64,6 +64,8 @@ function tonoCabello(x, onNext) {
 function ContainerTest() {
   const [step, setStep] = useState(1);
   const [answer, setAnswer] = useState({});
+  const [result, setResult] = useState(null);
+  const [image, setImage] = useState(null);
   const handleNext = (val) => {
     const stepKey = {
       1: "tono_piel",
@@ -78,14 +80,18 @@ function ContainerTest() {
     };
     const currentKey = stepKey[step];
     const newAnswers = { ...answer, [currentKey]: val };
-    console.log(newAnswers.tono_piel); // Obtener el valor de tono_pelo
     setAnswer(newAnswers);
+    setImage(newAnswers.tono_piel);
 
     if (step === 9) {
-      const result = calculateResult(newAnswers);
+      const calculatedResult = calculateResult(newAnswers);
+      setResult(calculatedResult);
+      console.log(newAnswers.tono_piel); // Obtener el valor de tono_pelo
+      console.log(image);
       // mostrar la card del resultados
-      console.log(answer);
-      console.log("tu resultado es:", result);
+      // console.log(newAnswers);
+      console.log("tu resultado es:", calculatedResult);
+      setStep(step + 1);
     } else {
       setStep(step + 1);
     }
@@ -102,6 +108,7 @@ function ContainerTest() {
       {step === 7 && <Destellos onNext={handleNext} />}
       {step === 8 && <ColoresPreferidos onNext={handleNext} />}
       {step === 9 && <Accesorios onNext={handleNext} />}
+      {step === 10 && <Result result={result} image={image} />}
     </div>
   );
 }
