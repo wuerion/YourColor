@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Test from "../pages/test.astro";
-// import TestHome from "../Test.astro";
-// import Test from "../pages/test";
-// import "../style.css";
 
 function TestHome({ onStart }) {
   return (
@@ -20,8 +16,8 @@ function TestHome({ onStart }) {
         </div>
       </div>
       <div class=" w-full h-full z-50 p-2 flex flex-col gap-8 bg-[#FAF8F0]/15 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
-        <div class="flex flex-col justify-center items-center gap-8 h-1/3">
-          <h2 class="text-lg text-center font-bold my-16">
+        <div class="flex flex-col justify-center items-center gap-4 h-1/3">
+          <h2 class="text-lg text-center font-bold my-8">
             Descubre tu estacion y Potencia tu imagen
           </h2>
           <p>
@@ -33,10 +29,10 @@ function TestHome({ onStart }) {
             para ubicarte en una de las 12 estaciones.
           </p>
         </div>
-        <div class="h-1/2 flex flex-col lg:p-8 gap-8">
-          <p class="text-neutral-500 text-[32px]">CONSEJOS</p>
+        <div class="h-1/2 flex flex-col lg:p-8 gap-8 lg:gap-4">
+          <p class="text-neutral-500 text-2xl">CONSEJOS</p>
 
-          <div class="bg-gradient-to-b from-[#E0719B] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full flex w-fit items-center lg:items-stretch  h-[250px] lg:h-24 shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
+          <div class="bg-gradient-to-b from-[#E0719B] from-50% to-[#FAF8F0] to-50% rounded lg:rounded-tl-full lg:rounded-bl-full flex w-fit items-center lg:items-stretch  h-[250px] lg:h-24  shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
             <div class="p-2 rounded-full bg-[#E0719B] shadow-[2px_2px_4px_rgb(0,0,0,0.40)]">
               <div class="p-4 rounded-full bg-[#FAF8F0] w-fit">
                 <svg
@@ -259,13 +255,13 @@ function TestHome({ onStart }) {
             </div>
           </div>
         </div>
-        <div class="flex flex-col lg:items-end justify-center gap-4 p-8">
+        <div class="flex flex-col lg:items-end justify- gap-2">
           <p className="text-center">
             Tiempo estimado: "Solo te tomará 2 minutos".
           </p>
           <button
             onClick={onStart}
-            className="border-2 border-black py-4 px-2 rounded-lg font-bold text-lg hover:bg-[#FAF8F0]/50 hover:-translate-y-2 transition-all delay-150"
+            className="border-2 border-black py-2 px-2 rounded-lg font-bold text-lg hover:bg-[#FAF8F0]/50 hover:-translate-y-2 transition-all delay-150"
           >
             Comienza a explorar tu colorimetria hoy!
           </button>
@@ -293,11 +289,6 @@ function Loader() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen w-screen  bg-[#FAF8F0] z-50 fixed top-0 left-0">
-      {/* Spinner Minimalista */}
-      {/* <div className="relative">
-        <div className="w-16 h-16 border-2 border-black/10 rounded-full animate-pulse"></div>
-        <div className="w-16 h-16 border-t-2 border-black rounded-full animate-spin absolute top-0 left-0"></div>
-      </div> */}
       <div className="loader"></div>
 
       <p className="mt-8 font-julius tracking-[0.2em] text-gray-500 uppercase text-xs animate-bounce">
@@ -306,15 +297,8 @@ function Loader() {
     </div>
   );
 }
-// return (
-//   <section class="h-screen flex justify-center items-center gap-8">
-//     <span class="loader"></span>
-//   </section>
-// );
 
 export default function PageLoader() {
-  // const location = (window.location.href = "/test");
-
   const [step, setStep] = useState("home");
   const handleStart = () => {
     document.body.style.overflow = "hidden";
