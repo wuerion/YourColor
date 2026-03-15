@@ -27,14 +27,24 @@ function comparison({ setIsVisible, data, image }) {
     },
   };
 
-  function calculateColor(bgColor) {
-    let r = parseInt(bgColor.substring(1, 3), 16);
-    let g = parseInt(bgColor.substring(3, 5), 16);
-    let b = parseInt(bgColor.substring(5, 7), 16);
+  function calculateColor(hslColor) {
+    let lightness;
 
-    let dark = (r + g + b) / 3;
+    if (typeof hslColor === "string") {
+      if (hslColor.includes("hsl")) {
+        const match = hslColor.match(
+          /hsl\(\s*(\d+)\s*,\s*(\d+)%\s*,\s*(\d+)%\s*\)/,
+        );
+        lightness = match ? parseInt(match[3]) : 50;
+      } else if (hslColor.includes(",")) {
+        const parts = hslColor.split(",");
+        lightness = parseInt(parts[2]) || 50;
+      } else {
+        return "#000000";
+      }
+    }
 
-    return dark < 128 ? "#ffffff" : "#000000";
+    return lightness > 50 ? "#000000" : "#ffffff";
   }
 
   const handleClickLeft = (e, hsl, name) => {
