@@ -37,13 +37,13 @@ function comparison({ setIsVisible, data, image }) {
     return dark < 128 ? "#ffffff" : "#000000";
   }
 
-  const handleClickLeft = (e, hexa, name) => {
-    setSelecctColorLeft(hexa);
+  const handleClickLeft = (e, hsl, name) => {
+    setSelecctColorLeft(hsl);
     setSelecctNameLeft(name);
   };
 
-  const handleClickRight = (e, hexa, name) => {
-    setSelecctColorRight(hexa);
+  const handleClickRight = (e, hsl, name) => {
+    setSelecctColorRight(hsl);
     setSelecctNameRight(name);
   };
 
@@ -64,9 +64,9 @@ function comparison({ setIsVisible, data, image }) {
       <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-8 gap-8 bg-[#FAF8F0]/15 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
         <button
           onClick={() => setIsVisible(false)}
-          className="fixed top-2 left-2"
+          className="fixed top-2 left-2 rotate-180 text-2xl"
         >
-          atras
+          ⟶
         </button>
         <h2 className="text-xl lg:text-4xl text-center font-bold">
           MODO COMPARACION
@@ -85,9 +85,9 @@ function comparison({ setIsVisible, data, image }) {
                   <div
                     className="w-full h-[42px] md:w-1/2 lg:w-[80px] lg:h-[80px] rounded-lg flex items-center justify-center shadow-[2px_2px_4px_rgba(0,0,0,0.40)] hover:cursor-pointer"
                     title={index.nombre}
-                    style={{ backgroundColor: index.hexa }}
+                    style={{ backgroundColor: index.hsl }}
                     onClick={(e) => {
-                      handleClickLeft(e, index.hexa, index.nombre);
+                      handleClickLeft(e, index.hsl, index.nombre);
                     }}
                   ></div>
                 </div>
@@ -145,9 +145,9 @@ function comparison({ setIsVisible, data, image }) {
                   <div
                     className="w-full h-[42px] md:w-1/2 lg:w-[80px] lg:h-[80px] rounded-lg flex items-center justify-center shadow-[2px_2px_4px_rgba(0,0,0,0.40)] hover:cursor-pointer"
                     title={index.nombre}
-                    style={{ backgroundColor: index.hexa }}
+                    style={{ backgroundColor: index.hsl }}
                     onClick={(e) => {
-                      handleClickRight(e, index.hexa, index.nombre);
+                      handleClickRight(e, index.hsl, index.nombre);
                     }}
                   ></div>
                 </div>
