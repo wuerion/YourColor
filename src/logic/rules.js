@@ -15,7 +15,6 @@ import {
   winterTrue,
   winterBright,
 } from "../data/cautionColors.js";
-import result from "./functionsUi.js";
 const RULES = [
   // ==========================================
   // PRIMAVERA (SPRING) - CALIDA Y CLARA
@@ -278,6 +277,7 @@ const RULES = [
       r.ropa !== "coloresFrios" &&
       r.accesorios !== "plateados" &&
       !["negro", "negroAzulado", "grisOBlanco"].includes(r.color_cabello),
+    cautionResult: springLight,
     result: spring,
   },
 
@@ -288,6 +288,7 @@ const RULES = [
       r.ropa !== "coloresCalidos" &&
       r.accesorios !== "dorados" &&
       ["muyClara", "clara", "media"].includes(r.tono_piel),
+    cautionResult: summerLight,
     result: summer,
   },
 
@@ -297,6 +298,7 @@ const RULES = [
       ["calido", "neutro"].includes(r.subTono_piel) &&
       r.ropa !== "coloresFrios" &&
       r.accesorios !== "plateados",
+    cautionResult: autumnSoft,
     result: autumn,
   },
 
@@ -309,7 +311,17 @@ const RULES = [
       ["negro", "negroAzulado", "castañoOscuro", "grisOBlanco"].includes(
         r.color_cabello,
       ),
+    cautionResult: winterBright,
     result: winter,
+  },
+  // Catch-all
+  {
+    name: "Resultado por defecto",
+    match: (r) => true,
+    textresult:
+      "No encontramos una coincidencia clara. Te recomdendamos realizar el test nuevamente.",
+    cautionResult: springLight,
+    result: spring,
   },
 ];
 export default RULES;
