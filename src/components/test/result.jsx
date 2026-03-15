@@ -36,9 +36,9 @@ function GridColors({ data, count }) {
             {index.nombre}
           </p>
           <div
-            className={`bg-[${index.hexa}] w-[50px] h-[42px] lg:w-[50px] lg:h-[40px] rounded-lg flex items-center justify-center border `}
+            className={`bg-[${index.hsl}] w-[50px] h-[42px] lg:w-[50px] lg:h-[40px] rounded-lg flex items-center justify-center border `}
             title={index.nombre}
-            style={{ backgroundColor: index.hexa }}
+            style={{ backgroundColor: index.hsl }}
           ></div>
         </div>
       ))}
