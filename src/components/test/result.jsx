@@ -65,6 +65,14 @@ function result({ result, image }) {
       </div>
       {!isVisible && (
         <div className="w-full h-full grid grid-cols-1 py-8 gap-8 bg-[#FAF8F0]/15 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
+          <button
+            onClick={() => {
+              window.location.href = "/";
+            }}
+            className="fixed top-2 left-2 rotate-180 text-2xl"
+          >
+            ⟶
+          </button>
           <div className="flex flex-col justify-center items-center w-full">
             <p className="text-lg md:text-xl">Felicidades tu estacion es</p>
             <svg
