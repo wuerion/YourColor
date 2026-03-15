@@ -34,9 +34,8 @@ function ColorsPallet({ name, seasson, addClass }) {
             <div
               key={key}
               className="w-full h-[32px] rounded-lg flex items-center justify-center"
-              style={{ backgroundColor: index.hexa }}
-            >
-            </div>
+              style={{ backgroundColor: index.hsl }}
+            ></div>
           ))}
         </div>
       </div>
@@ -48,7 +47,9 @@ function SeasonsColors() {
   return (
     // <section className=" flex flex-col gap-8 justify-evenly items-center p-4">
     <section className="flex flex-col justify-around items-center gap-16 py-4">
-      <h2 className="text-center text-xl font-bold mt-16">Paletas de colores</h2>
+      <h2 className="text-center text-xl font-bold mt-16">
+        Paletas de colores
+      </h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 h-1/2 w-full max-w-[1500px]">
         <ColorsPallet
           name="Primavera"
@@ -57,8 +58,20 @@ function SeasonsColors() {
             "rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none lg:rounded-tl-lg lg:rounded-bl-lg lg:before:rounded-tl-lg lg:before:rounded-bl-lg"
           }
         />
-        <ColorsPallet name="Verano" seasson={summer} addClass={'rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none'}/>
-        <ColorsPallet name="Otoño" seasson={autumn} addClass={'rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none'}/>
+        <ColorsPallet
+          name="Verano"
+          seasson={summer}
+          addClass={
+            "rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none"
+          }
+        />
+        <ColorsPallet
+          name="Otoño"
+          seasson={autumn}
+          addClass={
+            "rounded-lg before:rounded-lg lg:rounded-none lg:before:rounded-none"
+          }
+        />
         <ColorsPallet
           name="Invierno"
           seasson={winter}
