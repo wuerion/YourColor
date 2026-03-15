@@ -1,6 +1,20 @@
 //* Funciones para determiar la estacion
 
 import { spring, summer, autumn, winter } from "../data/seasons.js";
+import {
+  springLight,
+  springTrue,
+  springBright,
+  summerLight,
+  summerTrue,
+  summerSoft,
+  autumnSoft,
+  autumnTrue,
+  autumnDeep,
+  winterDeep,
+  winterTrue,
+  winterBright,
+} from "../data/cautionColors.js";
 import result from "./functionsUi.js";
 const RULES = [
   // ==========================================
@@ -25,7 +39,10 @@ const RULES = [
       ["azulBrillante", "verdeOjos", "azulClaro"].includes(r.color_ojos) &&
       // Desempate: La ropa fría NO le favorece
       r.ropa !== "coloresFrios",
+    textResult:
+      "Huye de los colores suaves, empolvados y 'tristes'. Tu coloración vibrante necesita intensidad; los tonos apagados te hacen ver cansada.",
     result: spring,
+    cautionResult: springBright,
   },
 
   // 2. Primavera Clara (Light Spring)
@@ -42,7 +59,10 @@ const RULES = [
       // Ojos Claros
       ["azulClaro", "verdeOjos", "gris"].includes(r.color_ojos) &&
       r.accesorios !== "plateados",
+    textResult:
+      "Evita los colores oscuros y pesados que abruman tu delicada coloración, así como los tonos fríos y polvorientos que te hacen ver pálida.",
     result: spring,
+    cautionResult: springLight,
   },
 
   // 3. Primavera Calida (Warm Spring)
@@ -59,7 +79,10 @@ const RULES = [
       // Ojos cálidos
       ["verdeOjos", "marronAvellana", "azulBrillante"].includes(r.color_ojos) &&
       r.ropa === "coloresCalidos",
+    textResult:
+      "Tus peores enemigos son los colores fríos de base azulada (como el fucsia o el azul hielo) y los tonos grises apagados que drenan tu calidez dorada.",
     result: spring,
+    cautionResult: springTrue,
   },
 
   // ==========================================
@@ -80,7 +103,10 @@ const RULES = [
       // Ojos Claros
       ["azulClaro", "gris", "verdeOjos"].includes(r.color_ojos) &&
       r.accesorios === "plateados",
+    textResult:
+      "Aléjate de los colores oscuros y profundos que endurecen tus facciones, y de los tonos cálidos y anaranjados que chocan con tu subtono rosado.",
     result: summer,
+    cautionResult: summerLight,
   },
 
   // 5. Verano Frio (Cool Summer)
@@ -93,7 +119,10 @@ const RULES = [
       // Tonos cenizos medios
       ["rubioCenizo", "cenizo", "cafeCenizo"].includes(r.color_cabello) &&
       ["azulClaro", "gris", "azulBrillante"].includes(r.color_ojos),
+    textResult:
+      "Tu paleta es puramente fría. Evita cualquier color con base amarilla o dorada (como naranjas, marrones tierra o dorados) ya que te darán un aspecto enfermizo.",
     result: summer,
+    cautionResult: summerTrue,
   },
 
   // 6. Verano Suave (Soft Summer)
@@ -109,7 +138,10 @@ const RULES = [
       ["gris", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
       // Desempate: Prefiere plata o fríos
       (r.ropa === "coloresFrios" || r.accesorios === "plateados"),
+    textResult:
+      "Evita los colores extremadamente brillantes, neones o muy oscuros. Tu belleza es suave y los contrastes fuertes te hacen 'desaparecer' detrás del color.",
     result: summer,
+    cautionResult: summerSoft,
   },
 
   // ==========================================
@@ -130,7 +162,10 @@ const RULES = [
       ["marronAvellana", "verdeOjos", "marronOscuro"].includes(r.color_ojos) &&
       // Desempate: Prefiere oro o cálidos
       (r.ropa === "coloresCalidos" || r.accesorios === "dorados"),
+    textResult:
+      "Evita los colores fríos y brillantes que parecen 'duros' contra tu piel suave, así como el blanco puro y el negro total que resultan demasiado severos.",
     result: autumn,
+    cautionResult: autumnSoft,
   },
 
   // 8. Otoño Calido (Warm Autumn)
@@ -148,7 +183,10 @@ const RULES = [
         "castañoCaramelo",
       ].includes(r.color_cabello) &&
       ["verdeOjos", "marronAvellana", "marronOscuro"].includes(r.color_ojos),
+    textResult:
+      "Los colores fríos de base azulada son tu antítesis. Evita los rosas fríos, los azules hielo y los grises azulados que apagan tu rico resplandor dorado.",
     result: autumn,
+    cautionResult: autumnTrue,
   },
 
   // 9. Otoño Oscuro (Dark Autumn)
@@ -162,7 +200,10 @@ const RULES = [
       ["marronOscuro", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
       // Desempate contra Invierno
       (r.ropa === "coloresCalidos" || r.accesorios === "dorados"),
+    textResult:
+      "Aunque toleras la oscuridad, evita los colores claros, pasteles y 'helados' que no tienen la profundidad suficiente para equilibrar tu intensidad.",
     result: autumn,
+    cautionResult: autumnDeep,
   },
 
   // ==========================================
@@ -182,7 +223,10 @@ const RULES = [
       ["marronOscuro", "negro", "marronAvellana"].includes(r.color_ojos) &&
       // Desempate contra Otoño
       (r.ropa === "coloresFrios" || r.accesorios === "plateados"),
+    textResult:
+      "Evita los colores cálidos y terrosos que parecen 'sucios' junto a tu alto contraste, así como los pasteles suaves que no tienen la fuerza para definir tus rasgos.",
     result: winter,
+    cautionResult: winterDeep,
   },
 
   // 11. Invierno Brillante (Bright Winter)
@@ -194,7 +238,10 @@ const RULES = [
       ["frio", "neutro"].includes(r.subTono_piel) &&
       ["negro", "negroAzulado", "castañoOscuro"].includes(r.color_cabello) &&
       ["azulBrillante", "verdeOjos", "azulClaro"].includes(r.color_ojos),
+    textResult:
+      "Eres intensidad pura. Tus peores colores son los apagados, polvorientos y grises medios que 'ensucian' tu claridad y te hacen ver fatigada.",
     result: winter,
+    cautionResult: winterBright,
   },
 
   // 12. Invierno Frio (True Winter)
@@ -213,7 +260,10 @@ const RULES = [
       ["azulClaro", "gris", "marronOscuro", "azulBrillante"].includes(
         r.color_ojos,
       ),
+    textResult:
+      "Tu paleta no tolera la calidez. Huye de los naranjas, dorados, marrones rojizos y cualquier tono con matiz amarillo que choque con tu frialdad natural.",
     result: winter,
+    cautionResult: winterTrue,
   },
 
   // ==========================================
