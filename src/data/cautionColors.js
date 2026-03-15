@@ -52,7 +52,7 @@ export const autumnSoft = [
   { nombre: "Fucsia Brillante", hsl: "hsl(300, 100%, 50%)" },
   { nombre: "Azul Real Intenso", hsl: "hsl(213, 100%, 20%)" },
   { nombre: "Violeta Brillante", hsl: "hsl(268, 79%, 53%)" },
-  { nombre: "Gris Hielo", hsl: "hsl(268, 79%, 53%)" },
+  { nombre: "Gris Hielo", hsl: "hsl(210, 20%, 85%)" }, // Cambio: ahora sí es gris
 ];
 export const autumnTrue = [
   { nombre: "Rosa Barbie Frío", hsl: "hsl(330, 100%, 56%)" },
