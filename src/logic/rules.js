@@ -316,9 +316,9 @@ const RULES = [
   },
   // Catch-all
   {
-    name: "Resultado por defecto",
+    name: "Resultado por defecto Primavera",
     match: (r) => true,
-    textresult:
+    textResult:
       "No encontramos una coincidencia clara. Te recomdendamos realizar el test nuevamente.",
     cautionResult: springLight,
     result: spring,
