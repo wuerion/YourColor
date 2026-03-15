@@ -16,12 +16,37 @@ import SeasonsColors from "../components/SeasonsColors";
   <SeasonsColors />
   <Function />
   <Loader client:load/>
-  <!-- <Window /> -->
   <Footer />
 </Layout>
 
-<script src="/src/logic/formValidations.js"></script>
+<style is:global>
+  .loader {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #FAF8F0;
+  
+  animation: animloader 1.5s linear infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: -64px -64px #E0719B,  -22px -30px,  22px -30px, 64px -30px;
+  }
+  33% {
+    box-shadow: -64px -30px , -22px -64px #BC4F90,  22px -30px, 64px -30px;
+  }
+  66% {
+    box-shadow: -64px -30px , -22px -30px, 22px -64px #A35589, 64px -30px;
+  }
+  100% {
+    box-shadow: -64px -30px, -22px -30px, 22px -30px , 64px -64px #F0A5BC;
+  }
+}
+
+</style>
+
 <script src="/src/data/configs.js" defer></script>
-<script src="/src/logic/functionsUi.js"></script>
 <!-- TODO: Create: AXVOL and Feedback: Ana Gloria -->
-``
+<!-- git push -u origin master:new_desing -->
+ <!-- TODO:  -->
