@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { calculateResult } from "../../logic/colorimetryEngie";
+import { validateTestAnswers } from "../../logic/validateTest";
 
 import TonoDePiel from "./steps/TonoPiel";
 import ReactionOfTheSun from "./steps/ReactionOfTheSun";
@@ -16,44 +17,19 @@ import Destellos from "./steps/destellos";
 import ColoresPreferidos from "./steps/coloresPreferidos";
 import Accesorios from "./steps/accesorios";
 import Result from "./result";
-// function callApi(text) {
-//   const [images, setImages] = useState([]);
-//   useEffect(() => {
-//     async function handleSearch(text) {
-//       try {
-//         const response = await fetch("http://localhost:3000/photos", {
-//           method: "POST",
-//           headers: { "Content-Type": "application/json" },
-//           body: JSON.stringify({ query: text }),
-//         });
-//         const result = await response.json();
-//         if (result.success) {
-//           setImages(result.data);
-//         }
-//       } catch (error) {
-//         console.log("Error al conectar con la API:", error);
-//       }
-//     }
-//     handleSearch(text);
-//   }, []);
-// }
+
 function tonoCabello(x, onNext) {
   switch (x) {
     case "negro":
       return <TonoDeNegro onNext={onNext} />;
-      break;
     case "castañoOscuro":
       return <TonoDeCastañoOscuro onNext={onNext} />;
-      break;
     case "castañoClaro":
       return <TonoDeCatañonoClaro onNext={onNext} />;
-      break;
     case "rubio":
       return <TonoDeRubio onNext={onNext} />;
-      break;
     case "pelirojo":
       return <TonoDePelirojo onNext={onNext} />;
-      break;
     case "grisOBlanco":
       return <TonoDeBlanco onNext={onNext} />;
     default:
@@ -66,6 +42,8 @@ function ContainerTest() {
   const [answer, setAnswer] = useState({});
   const [result, setResult] = useState(null);
   const [image, setImage] = useState(null);
+  const [error, setError] = useState(null);
+
   const handleNext = (val) => {
     const stepKey = {
       1: "tono_piel",
@@ -78,19 +56,34 @@ function ContainerTest() {
       8: "ropa",
       9: "accesorios",
     };
+
     const currentKey = stepKey[step];
     const newAnswers = { ...answer, [currentKey]: val };
     setAnswer(newAnswers);
     setImage(newAnswers.tono_piel);
+    setError(null); // Limpiar errores previos
 
     if (step === 9) {
+      // Validar respuestas antes de calcular resultado
+      const validation = validateTestAnswers(newAnswers);
+
+      if (!validation.isValid) {
+        setError(validation.message);
+        return; // No avanzar si hay error
+      }
+
       const calculatedResult = calculateResult(newAnswers);
+
+      if (!calculatedResult) {
+        setError(
+          "No se pudo determinar tu coloración. Por favor, intenta nuevamente.",
+        );
+        return;
+      }
+
       setResult(calculatedResult);
-      console.log(newAnswers.tono_piel); // Obtener el valor de tono_pelo
-      console.log(image);
-      // mostrar la card del resultados
-      // console.log(newAnswers);
-      console.log("tu resultado es:", calculatedResult);
+      console.log("Respuestas verificadas:", newAnswers);
+      console.log("Resultado:", calculatedResult);
       setStep(step + 1);
     } else {
       setStep(step + 1);
@@ -99,6 +92,40 @@ function ContainerTest() {
 
   return (
     <div>
+      {error && (
+        <div
+          style={{
+            padding: "15px",
+            marginBottom: "20px",
+            backgroundColor: "#ffebee",
+            color: "#c62828",
+            borderRadius: "4px",
+            border: "1px solid #ef5350",
+          }}
+        >
+          ⚠️ {error}
+          <button
+            onClick={() => {
+              setStep(1);
+              setAnswer({});
+              setError(null);
+              setResult(null);
+            }}
+            style={{
+              marginLeft: "10px",
+              padding: "5px 15px",
+              cursor: "pointer",
+              backgroundColor: "#c62828",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+            }}
+          >
+            Reiniciar Test
+          </button>
+        </div>
+      )}
+
       {step === 1 && <TonoDePiel onNext={handleNext} />}
       {step === 2 && <ReactionOfTheSun onNext={handleNext} />}
       {step === 3 && <ColorDeVenas onNext={handleNext} />}
