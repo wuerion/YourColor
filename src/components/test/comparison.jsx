@@ -72,12 +72,19 @@ function comparison({ setIsVisible, data, image }) {
         </div>
       </div>
       <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-8 gap-8 bg-[#FAF8F0]/15 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
-        <button
-          onClick={() => setIsVisible(false)}
-          className="fixed top-2 left-2 rotate-180 text-2xl"
-        >
-          ⟶
-        </button>
+        <div className="w-full flwx justify-start p-4">
+          <button onClick={() => setIsVisible(false)} title="atras">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="Bold"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+            >
+              <path d="M19,10.5H10.207l2.439-2.439a1.5,1.5,0,0,0-2.121-2.122L6.939,9.525a3.505,3.505,0,0,0,0,4.95l3.586,3.586a1.5,1.5,0,0,0,2.121-2.122L10.207,13.5H19a1.5,1.5,0,0,0,0-3Z" />
+            </svg>
+          </button>
+        </div>
         <h2 className="text-xl lg:text-4xl text-center font-bold">
           MODO COMPARACION
         </h2>
