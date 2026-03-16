@@ -18,20 +18,24 @@ import ColoresPreferidos from "./steps/coloresPreferidos";
 import Accesorios from "./steps/accesorios";
 import Result from "./result";
 
-function tonoCabello(x, onNext) {
+function tonoCabello(x, onNext, step, setStep) {
   switch (x) {
     case "negro":
-      return <TonoDeNegro onNext={onNext} />;
+      return <TonoDeNegro onNext={onNext} step={step} setStep={setStep} />;
     case "castañoOscuro":
-      return <TonoDeCastañoOscuro onNext={onNext} />;
+      return (
+        <TonoDeCastañoOscuro onNext={onNext} step={step} setStep={setStep} />
+      );
     case "castañoClaro":
-      return <TonoDeCatañonoClaro onNext={onNext} />;
+      return (
+        <TonoDeCatañonoClaro onNext={onNext} step={step} setStep={setStep} />
+      );
     case "rubio":
-      return <TonoDeRubio onNext={onNext} />;
+      return <TonoDeRubio onNext={onNext} step={step} setStep={setStep} />;
     case "pelirojo":
-      return <TonoDePelirojo onNext={onNext} />;
+      return <TonoDePelirojo onNext={onNext} step={step} setStep={setStep} />;
     case "grisOBlanco":
-      return <TonoDeBlanco onNext={onNext} />;
+      return <TonoDeBlanco onNext={onNext} step={step} setStep={setStep} />;
     default:
       return null;
   }
@@ -126,16 +130,33 @@ function ContainerTest() {
         </div>
       )}
 
-      {step === 1 && <TonoDePiel onNext={handleNext} />}
-      {step === 2 && <ReactionOfTheSun onNext={handleNext} />}
-      {step === 3 && <ColorDeVenas onNext={handleNext} />}
-      {step === 4 && <ColorDeCabello onNext={handleNext} />}
-      {step === 5 && tonoCabello(answer.color_cabello, handleNext)}
-      {step === 6 && <ColorOjos onNext={handleNext} />}
-      {step === 7 && <Destellos onNext={handleNext} />}
-      {step === 8 && <ColoresPreferidos onNext={handleNext} />}
-      {step === 9 && <Accesorios onNext={handleNext} />}
-      {step === 10 && <Result result={result} image={image} />}
+      {step === 1 && <TonoDePiel onNext={handleNext} step={step} />}
+      {step === 2 && (
+        <ReactionOfTheSun onNext={handleNext} step={step} setStep={setStep} />
+      )}
+      {step === 3 && (
+        <ColorDeVenas onNext={handleNext} step={step} setStep={setStep} />
+      )}
+      {step === 4 && (
+        <ColorDeCabello onNext={handleNext} step={step} setStep={setStep} />
+      )}
+      {step === 5 &&
+        tonoCabello(answer.color_cabello, handleNext, step, setStep)}
+      {step === 6 && (
+        <ColorOjos onNext={handleNext} step={step} setStep={setStep} />
+      )}
+      {step === 7 && (
+        <Destellos onNext={handleNext} step={step} setStep={setStep} />
+      )}
+      {step === 8 && (
+        <ColoresPreferidos onNext={handleNext} step={step} setStep={setStep} />
+      )}
+      {step === 9 && (
+        <Accesorios onNext={handleNext} step={step} setStep={setStep} />
+      )}
+      {step === 10 && (
+        <Result result={result} image={image} setStep={setStep} />
+      )}
     </div>
   );
 }
