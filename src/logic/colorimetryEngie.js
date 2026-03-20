@@ -1,5 +1,5 @@
-import RULES from "./rules";
-import { determineTheSubTone } from "./helpers";
+import RULES from "./rules.js";
+import { determineTheSubTone } from "./helpers.js";
 
 export function calculateResult(answer) {
   const fullAnswers = {
