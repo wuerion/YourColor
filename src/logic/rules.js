@@ -17,10 +17,31 @@ import {
 } from "../data/cautionColors.js";
 const RULES = [
   // ==========================================
-  // PRIMAVERA (SPRING) - CALIDA Y CLARA
+  // REGLAS MÁS ESPECÍFICAS PRIMERO
   // ==========================================
 
-  // 1. Primavera Brillante (Bright Spring)
+  // 1. Primavera Cálida (Warm Spring) - MÁS ESPECÍFICA
+  // Todo es dorado, miel o cobrizo
+  {
+    name: "Primavera Calida (Warm Spring)",
+    match: (r) =>
+      ["clara", "media"].includes(r.tono_piel) &&
+      r.subTono_piel === "calido" &&
+      // Cabellos cálidos específicos
+      ["rubioDorado", "castañoMiel", "castañoCaramelo", "cobrizo"].includes(
+        r.color_cabello,
+      ) &&
+      // Ojos cálidos PERO NO terr osos (marronAvellana es terroso)
+      ["verdeOjos", "azulBrillante"].includes(r.color_ojos) &&
+      // Preferencia calida ESPECÍFICA
+      r.ropa === "coloresCalidos",
+    textResult:
+      "Tus peores enemigos son los colores fríos de base azulada (como el fucsia o el azul hielo) y los tonos grises apagados que drenan tu calidez dorada.",
+    result: spring,
+    cautionResult: springTrue,
+  },
+
+  // 2. Primavera Brillante (Bright Spring)
   // Contraste Alto: Pelo oscuro + Ojos brillantes
   {
     name: "Primavera Brillante (Bright Spring)",
@@ -44,7 +65,7 @@ const RULES = [
     cautionResult: springBright,
   },
 
-  // 2. Primavera Clara (Light Spring)
+  // 3. Primavera Clara (Light Spring)
   // Contraste Bajo: Todo es claro y luminoso
   {
     name: "Primavera Clara (Light Spring)",
@@ -57,36 +78,13 @@ const RULES = [
       ) &&
       // Ojos Claros
       ["azulClaro", "verdeOjos", "gris"].includes(r.color_ojos) &&
-      r.accesorios !== "plateados",
+      r.accesorios !== "plateados" &&
+      r.ropa !== "coloresFrios",
     textResult:
       "Evita los colores oscuros y pesados que abruman tu delicada coloración, así como los tonos fríos y polvorientos que te hacen ver pálida.",
     result: spring,
     cautionResult: springLight,
   },
-
-  // 3. Primavera Calida (Warm Spring)
-  // Todo es dorado, miel o cobrizo
-  {
-    name: "Primavera Calida (Warm Spring)",
-    match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
-      r.subTono_piel === "Calido" &&
-      // Cabellos cálidos
-      ["rubioDorado", "castañoMiel", "castañoCaramelo", "cobrizo"].includes(
-        r.color_cabello,
-      ) &&
-      // Ojos cálidos
-      ["verdeOjos", "marronAvellana", "azulBrillante"].includes(r.color_ojos) &&
-      r.ropa === "coloresCalidos",
-    textResult:
-      "Tus peores enemigos son los colores fríos de base azulada (como el fucsia o el azul hielo) y los tonos grises apagados que drenan tu calidez dorada.",
-    result: spring,
-    cautionResult: springTrue,
-  },
-
-  // ==========================================
-  // VERANO (SUMMER) - FRIO Y SUAVE
-  // ==========================================
 
   // 4. Verano Claro (Light Summer)
   // Piel clara, pelo claro, subtono frío
@@ -143,11 +141,45 @@ const RULES = [
     cautionResult: summerSoft,
   },
 
-  // ==========================================
-  // OTOÑO (AUTUMN) - CALIDO Y PROFUNDO
-  // ==========================================
+  // 7. Otoño Oscuro (Dark Autumn) - ANTES DE OTOÑO CÁLIDO
+  // Cabello oscuro pero cálido
+  {
+    name: "Otoño Oscuro (Dark Autumn)",
+    match: (r) =>
+      ["media", "oscura"].includes(r.tono_piel) &&
+      ["calido", "neutro"].includes(r.subTono_piel) &&
+      ["castañoOscuro", "negroSuave", "caoba"].includes(r.color_cabello) &&
+      ["marronOscuro", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
+      // Desempate contra Invierno - PREFERENCIA CALIDA
+      (r.ropa === "coloresCalidos" || r.accesorios === "dorados"),
+    textResult:
+      "Aunque toleras la oscuridad, evita los colores claros, pasteles y 'helados' que no tienen la profundidad suficiente para equilibrar tu intensidad.",
+    result: autumn,
+    cautionResult: autumnDeep,
+  },
 
-  // 7. Otoño Suave (Soft Autumn)
+  // 8. Otoño Calido (Warm Autumn)
+  // Pelirojos y castaños rojizos intensos
+  {
+    name: "Otoño Calido (Warm Autumn)",
+    match: (r) =>
+      ["clara", "media"].includes(r.tono_piel) &&
+      r.subTono_piel === "calido" &&
+      [
+        "pelirojo",
+        "caoba",
+        "cobrizo",
+        "cafeChocolate",
+        "castañoCaramelo",
+      ].includes(r.color_cabello) &&
+      ["verdeOjos", "marronAvellana", "marronOscuro"].includes(r.color_ojos),
+    textResult:
+      "Los colores fríos de base azulada son tu antítesis. Evita los rosas fríos, los azules hielo y los grises azulados que apagan tu rico resplandor dorado.",
+    result: autumn,
+    cautionResult: autumnTrue,
+  },
+
+  // 9. Otoño Suave (Soft Autumn)
   // Neutro, bajo contraste, tonos tierra suave
   {
     name: "Otoño Suave (Soft Autumn)",
@@ -167,48 +199,6 @@ const RULES = [
     cautionResult: autumnSoft,
   },
 
-  // 8. Otoño Calido (Warm Autumn)
-  // Pelirojos y castaños rojizos intensos
-  {
-    name: "Otoño Calido (Warm Autumn)",
-    match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
-      r.subTono_piel === "Calido" &&
-      [
-        "pelirojo",
-        "caoba",
-        "cobrizo",
-        "cafeChocolate",
-        "castañoCaramelo",
-      ].includes(r.color_cabello) &&
-      ["verdeOjos", "marronAvellana", "marronOscuro"].includes(r.color_ojos),
-    textResult:
-      "Los colores fríos de base azulada son tu antítesis. Evita los rosas fríos, los azules hielo y los grises azulados que apagan tu rico resplandor dorado.",
-    result: autumn,
-    cautionResult: autumnTrue,
-  },
-
-  // 9. Otoño Oscuro (Dark Autumn)
-  // Cabello oscuro pero cálido
-  {
-    name: "Otoño Oscuro (Dark Autumn)",
-    match: (r) =>
-      ["media", "oscura"].includes(r.tono_piel) &&
-      ["calido", "neutro"].includes(r.subTono_piel) &&
-      ["castañoOscuro", "negroSuave", "caoba"].includes(r.color_cabello) &&
-      ["marronOscuro", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
-      // Desempate contra Invierno
-      (r.ropa === "coloresCalidos" || r.accesorios === "dorados"),
-    textResult:
-      "Aunque toleras la oscuridad, evita los colores claros, pasteles y 'helados' que no tienen la profundidad suficiente para equilibrar tu intensidad.",
-    result: autumn,
-    cautionResult: autumnDeep,
-  },
-
-  // ==========================================
-  // INVIERNO (WINTER) - FRIO Y PROFUNDO
-  // ==========================================
-
   // 10. Invierno Profundo (Deep Winter)
   // Cabello negro/muy oscuro y piel neutra/fría
   {
@@ -220,7 +210,7 @@ const RULES = [
         r.color_cabello,
       ) &&
       ["marronOscuro", "negro", "marronAvellana"].includes(r.color_ojos) &&
-      // Desempate contra Otoño
+      // Desempate contra Otoño - PREFERENCIA FRIA
       (r.ropa === "coloresFrios" || r.accesorios === "plateados"),
     textResult:
       "Evita los colores cálidos y terrosos que parecen 'sucios' junto a tu alto contraste, así como los pasteles suaves que no tienen la fuerza para definir tus rasgos.",
@@ -314,14 +304,15 @@ const RULES = [
     cautionResult: winterBright,
     result: winter,
   },
-  // Catch-all
-  {
-    name: "Resultado por defecto Primavera",
-    match: (r) => true,
-    textResult:
-      "No encontramos una coincidencia clara. Te recomdendamos realizar el test nuevamente.",
-    cautionResult: springLight,
-    result: spring,
-  },
 ];
+// Catch-all
+// {
+//   name: "Resultado por defecto Primavera",
+//   match: (r) => true,
+//   textResult:
+//     "No encontramos una coincidencia clara. Te recomdendamos realizar el test nuevamente.",
+//   cautionResult: springLight,
+//   result: spring,
+// },
+
 export default RULES;
