@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { calculateResult } from "../../logic/colorimetryEngie";
-import { validateTestAnswers } from "../../logic/validateTest";
+import { calculateResult } from "../../logic/colorimetryEngie.js";
+import { validateTestAnswers } from "../../logic/validateTest.js";
 
 import TonoDePiel from "./steps/TonoPiel";
 import ReactionOfTheSun from "./steps/ReactionOfTheSun";
@@ -73,19 +73,20 @@ function ContainerTest() {
 
       if (!validation.isValid) {
         setError(validation.message);
+        console.log(error);
         return; // No avanzar si hay error
       }
 
       const calculatedResult = calculateResult(newAnswers);
+      console.log(calculatedResult);
 
+      setResult(calculatedResult);
       if (!calculatedResult) {
         setError(
           "No se pudo determinar tu coloración. Por favor, intenta nuevamente.",
         );
         return;
       }
-
-      setResult(calculatedResult);
       console.log("Respuestas verificadas:", newAnswers);
       console.log("Resultado:", calculatedResult);
       setStep(step + 1);
@@ -100,7 +101,7 @@ function ContainerTest() {
         <div
           style={{
             padding: "15px",
-            marginBottom: "20px",
+            margin: "20px 0",
             backgroundColor: "#ffebee",
             color: "#c62828",
             borderRadius: "4px",
