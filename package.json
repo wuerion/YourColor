@@ -7,7 +7,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky",
+    "test": "node src/logic/tests/runTests.js",
+    "test:single": "node -e \"import('./src/logic/tests/colorimetryTests.js').then(m => console.log(m.runSingleTest(process.argv[1])))\" "
   },
   "dependencies": {
     "@astrojs/react": "^4.2.1",
@@ -22,5 +25,10 @@
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.15",
     "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "husky": "^9.1.7"
   }
 }
