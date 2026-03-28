@@ -1,26 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
-// function callApi(text) {
-//   const [images, setImages] = useState([]);
-//   useEffect(() => {
-//     async function handleSearch(text) {
-//       try {
-//         const response = await fetch("http://localhost:3000/photos", {
-//           method: "POST",
-//           headers: { "Content-Type": "application/json" },
-//           body: JSON.stringify({ query: text }),
-//         });
-//         const result = await response.json();
-//         if (result.success) {
-//           setImages(result.data);
-//         }
-//       } catch (error) {
-//         console.log("Error al conectar con la API:", error);
-//       }
-//     }
-//     handleSearch(text);
-//   }, []);
-// }
+
 function GridColors({ data, count }) {
   return (
     <div
@@ -49,6 +29,48 @@ function GridColors({ data, count }) {
 function result({ result, image }) {
   const [count, setCount] = useState(6);
   const [isVisible, setIsVisible] = useState(false);
+  const [images, setImages] = useState([]);
+  let resultEnglish = "";
+
+  const seasonMap = {
+    "Primavera Calida (Warm Spring)": "spring",
+    "Primavera Brillante (Bright Spring)": "spring",
+    "Primavera Clara (Light Spring)": "spring",
+    "Primavera (General)": "spring",
+    "Verano Claro (Light Summer)": "summer",
+    "Verano Frio (Cool Summer)": "summer",
+    "Verano Suave (Soft Summer)": "summer",
+    "Verano (General)": "summer",
+    "Otoño Oscuro (Dark Autumn)": "autumn",
+    "Otoño Calido (Warm Autumn)": "autumn",
+    "Otoño Suave (Soft Autumn)": "autumn",
+    "Otoño (General)": "autumn",
+    "Invierno Profundo (Deep Winter)": "winter",
+    "Invierno Brillante (Bright Winter)": "winter",
+    "Invierno Frio (Cool Winter)": "winter",
+    "Invierno (General)": "winter",
+  };
+
+  resultEnglish = seasonMap[result.name];
+
+  useEffect(() => {
+    async function handleSearch(text) {
+      try {
+        const response = await fetch("http://localhost:3000/photos", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: text }),
+        });
+        const result = await response.json();
+        if (result.success) {
+          setImages(result.data);
+        }
+      } catch (error) {
+        console.log("Error al conectar con la API:", error);
+      }
+    }
+    handleSearch(`outfit peaple ${resultEnglish} season`);
+  }, []);
   return (
     <section className="relative z-50 -mx-4 lg:h-dvh">
       <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
@@ -118,17 +140,90 @@ function result({ result, image }) {
               <GridColors data={result.paletteCaution} count={count} />
             </div>
             {/* contenedor central imagenes */}
-            <div className="grid grid-cols-[1fr_1.5fr_1fr] row-start-1 gap-1 justify-items-center">
-              <div className="flex flex-col justify-between w-full h-full items-center md:gap-4  ">
-                <div className="w-[90px] h-[90px] md:w-[140px] md:h-[140px] xl:w-[180px] xl:h-[180px] rounded bg-violet-300"></div>
-                <div className="w-[90px] h-[90px] md:w-[140px] md:h-[140px] xl:w-[180px] xl:h-[180px] rounded bg-violet-300"></div>
+            {images.length > 0 ? (
+              <div className="grid grid-cols-[1fr_1.5fr_1fr] row-start-1 gap-1 justify-items-center">
+                <div className="flex flex-col justify-between w-full h-full items-center md:gap-4  ">
+                  <div
+                    id={images[0]?.id}
+                    className="w-[90px] h-[90px] md:w-[140px] md:h-[140px] xl:w-[180px] xl:h-[180px] rounded "
+                  >
+                    <img
+                      className="w-full h-full"
+                      src={images[0]?.src}
+                      alt={images[0]?.alt}
+                      title={
+                        "fotografo: " +
+                        images[0]?.photographer_name +
+                        " (pexels)"
+                      }
+                    />
+                  </div>
+                  <div
+                    id={images[1]?.id}
+                    className="w-[90px] h-[90px] md:w-[140px] md:h-[140px] xl:w-[180px] xl:h-[180px] rounded "
+                  >
+                    <img
+                      className="w-full h-full"
+                      src={images[1]?.src}
+                      alt={images[1]?.alt}
+                      title={
+                        "fotografo: " +
+                        images[1]?.photographer_name +
+                        " (pexels)"
+                      }
+                    />
+                  </div>
+                </div>
+                <div
+                  id={images[2]?.id}
+                  className="w-[130px] h-[206px] md:w-[180px] md:h-[400px] lg:w-full lg:h-full rounded "
+                >
+                  <img
+                    className="w-full h-full"
+                    src={images[2]?.src}
+                    alt={images[2]?.alt}
+                    title={
+                      "fotografo: " + images[2]?.photographer_name + " (pexels)"
+                    }
+                  />
+                </div>
+                <div className="flex flex-col justify-between w-full h-full items-center md:gap-4  ">
+                  <div
+                    id={images[3]?.id}
+                    className="w-[90px] h-[90px] md:w-[140px] md:h-[140px] xl:w-[180px] xl:h-[180px] rounded "
+                  >
+                    <img
+                      className="w-full h-full"
+                      src={images[3]?.src}
+                      alt={images[3]?.alt}
+                      title={
+                        "fotografo: " +
+                        images[3]?.photographer_name +
+                        " (pexels)"
+                      }
+                    />
+                  </div>
+                  <div
+                    id={images[4]?.id}
+                    className="w-[90px] h-[90px] md:w-[140px] md:h-[140px] xl:w-[180px] xl:h-[180px] rounded "
+                  >
+                    <img
+                      className="w-full h-full"
+                      src={images[4]?.src}
+                      alt={images[4]?.alt}
+                      title={
+                        "fotografo: " +
+                        images[4]?.photographer_name +
+                        " (pexels)"
+                      }
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="w-[130px] h-[206px] md:w-[180px] md:h-[400px] lg:w-full lg:h-full rounded bg-violet-300"></div>
-              <div className="flex flex-col justify-between w-full h-full items-center md:gap-4  ">
-                <div className="w-[90px] h-[90px] md:w-[140px] md:h-[140px] xl:w-[180px] xl:h-[180px] rounded bg-violet-300"></div>
-                <div className="w-[90px] h-[90px] md:w-[140px] md:h-[140px] xl:w-[180px] xl:h-[180px] rounded bg-violet-300"></div>
-              </div>
-            </div>
+            ) : (
+              <p className="text-center text-gray-500">Cargando imágenes...</p>
+            )}
+
             {/* colores luminosidad */}
             <div className="flex flex-col lg:col-start-3 lg:col-end-3 gap-2 items-center">
               <p className="text-center text-lg">Colores que te favorecen</p>
