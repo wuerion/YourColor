@@ -30,6 +30,7 @@ function result({ result, image }) {
   const [count, setCount] = useState(6);
   const [isVisible, setIsVisible] = useState(false);
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
   let resultEnglish = "";
 
   const seasonMap = {
@@ -70,6 +71,11 @@ function result({ result, image }) {
       }
     }
     handleSearch(`outfit peaple ${resultEnglish} season`);
+  }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3500);
   }, []);
   return (
     <section className="relative z-50 -mx-4 lg:h-dvh">
@@ -221,7 +227,13 @@ function result({ result, image }) {
                 </div>
               </div>
             ) : (
-              <p className="text-center text-gray-500">Cargando imágenes...</p>
+              <p
+                className={`text-center ${loading ? "text-white animate-pulse" : "text-orange-500"}`}
+              >
+                {loading
+                  ? "Cargando imágenes..."
+                  : "Error al cargar las imágenes"}
+              </p>
             )}
 
             {/* colores luminosidad */}
