@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
-import.meta.env.PORT;
+
+const PORT = import.meta.env.VITE_PORT;
 
 function GridColors({ data, count }) {
   return (
