@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
+import PORT from ".env";
 
 function GridColors({ data, count }) {
   return (
@@ -57,7 +58,7 @@ function result({ result, image }) {
   useEffect(() => {
     async function handleSearch(text) {
       try {
-        const response = await fetch("http://localhost:3000/photos", {
+        const response = await fetch(PORT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: text }),
