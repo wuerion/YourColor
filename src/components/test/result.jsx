@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
-
-const PORT = import.meta.env.VITE_PORT;
+// import { VITE_PORT } from VITE_PORT.env
+// const PORT = import.meta.env.VITE_PORT;
 
 function GridColors({ data, count }) {
   return (
@@ -59,7 +59,7 @@ function result({ result, image }) {
   useEffect(() => {
     async function handleSearch(text) {
       try {
-        const response = await fetch(PORT, {
+        const response = await fetch(import.meta.env.VITE_PORT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: text }),
