@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
-// import { VITE_PORT } from VITE_PORT.env
-// const PORT = import.meta.env.VITE_PORT;
+// import VITE_API_URL from
+const VITE_API_URL = "https://yout-color-api.vercel.app/photos";
 
 function GridColors({ data, count }) {
   return (
@@ -54,12 +54,14 @@ function result({ result, image }) {
     "Invierno (General)": "winter",
   };
 
+  console.log("URl utilizada:", VITE_API_URL);
   resultEnglish = seasonMap[result.name];
 
   useEffect(() => {
     async function handleSearch(text) {
       try {
-        const response = await fetch(import.meta.env.VITE_PORT, {
+        console.log(text);
+        const response = await fetch(VITE_API_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: text }),
@@ -69,7 +71,7 @@ function result({ result, image }) {
           setImages(result.data);
         }
       } catch (error) {
-        console.log("Error al conectar con la API:", error);
+        console.error("Error al conectar con la API:", error);
       }
     }
     handleSearch(`outfit peaple ${resultEnglish} season`);
