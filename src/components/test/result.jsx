@@ -62,7 +62,6 @@ function result({ result, image, apiUrl }) {
   useEffect(() => {
     async function handleSearch(text) {
       try {
-        console.log("Consultando API en:", VITE_API_URL);
         const response = await fetch(VITE_API_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
