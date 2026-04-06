@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
-// import VITE_API_URL from
-const VITE_API_URL = "https://yout-color-api.vercel.app/photos";
 
 function GridColors({ data, count }) {
   return (
     <div
-      className={`grid grid-cols-3 gap-1 border rounded p-1 justify-items-center w-full transition-all delay-200 `}
+      className={
+        "grid grid-cols-3 gap-1 border rounded p-1 justify-items-center w-full transition-all delay-200 "
+      }
     >
       {data.slice(0, count).map((index, key) => (
         <div
@@ -28,12 +28,14 @@ function GridColors({ data, count }) {
   );
 }
 
-function result({ result, image }) {
+function result({ result, image, apiUrl }) {
   const [count, setCount] = useState(6);
   const [isVisible, setIsVisible] = useState(false);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   let resultEnglish = "";
+
+  const VITE_API_URL = apiUrl;
 
   const seasonMap = {
     "Primavera Calida (Warm Spring)": "spring",
@@ -54,24 +56,39 @@ function result({ result, image }) {
     "Invierno (General)": "winter",
   };
 
-  console.log("URl utilizada:", VITE_API_URL);
   resultEnglish = seasonMap[result.name];
 
+  //!Conexion API
   useEffect(() => {
     async function handleSearch(text) {
       try {
-        console.log(text);
+        console.log("Consultando API en:", VITE_API_URL);
         const response = await fetch(VITE_API_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: text }),
         });
+
+        // Verifica si la respuesta fue exitosa
+        if (!response.ok) {
+          console.error(
+            `Error HTTP ${response.status}: ${response.statusText}`,
+          );
+          setLoading(false);
+          return;
+        }
+
         const result = await response.json();
         if (result.success) {
           setImages(result.data);
         }
+        console.log(
+          "%c✅ ¡Operación completada con éxito!",
+          "color: green; font-weight: bold; font-size: 14px;",
+        );
       } catch (error) {
-        console.error("Error al conectar con la API:", error);
+        console.error("Error al conectar con la API: ", error);
+        setLoading(false);
       }
     }
     handleSearch(`outfit peaple ${resultEnglish} season`);
