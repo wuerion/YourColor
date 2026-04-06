@@ -41,7 +41,7 @@ function tonoCabello(x, onNext, step, setStep) {
   }
 }
 
-function ContainerTest() {
+function ContainerTest({ apiUrl }) {
   const [step, setStep] = useState(1);
   const [answer, setAnswer] = useState({});
   const [result, setResult] = useState(null);
@@ -156,7 +156,12 @@ function ContainerTest() {
         <Accesorios onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 10 && (
-        <Result result={result} image={image} setStep={setStep} />
+        <Result
+          result={result}
+          image={image}
+          setStep={setStep}
+          apiUrl={apiUrl}
+        />
       )}
     </div>
   );
