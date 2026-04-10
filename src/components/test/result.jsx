@@ -80,11 +80,11 @@ function result({ result, image, apiUrl }) {
         const result = await response.json();
         if (result.success) {
           setImages(result.data);
+          console.log(
+            "%c✅ ¡Operación completada con éxito!",
+            "color: green; font-weight: bold; font-size: 14px;",
+          );
         }
-        console.log(
-          "%c✅ ¡Operación completada con éxito!",
-          "color: green; font-weight: bold; font-size: 14px;",
-        );
       } catch (error) {
         console.error("Error al conectar con la API: ", error);
         setLoading(false);
