@@ -22,9 +22,9 @@ function colorDeOjos({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Cual es tu tono de piel?
+        ¿Cual es tu color de ojos?
       </h2>
-      <div className="grid grid-cols-2 lg:grid-cols-6 justify-around lg:h-1/4 gap-4 w-full">
+      <div className="grid grid-cols-2 lg:grid-cols-6 justify-around h-1/2 lg:h-1/4 gap-4 w-full">
         <Card
           title={"Azul Brillante"}
           name={"colorDeOjos"}
