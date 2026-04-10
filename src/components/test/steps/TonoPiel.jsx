@@ -56,9 +56,9 @@ function TonoPiel({ onNext, step }) {
           onNext={onNext}
         />
         <Card
-          title={"Media"}
+          title={"Morena"}
           name={"tonoDePiel"}
-          id={"media"}
+          id={"morena"}
           circle1={"hidden"}
           circle2={"hidden"}
           circle3={"hidden"}

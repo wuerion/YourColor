@@ -20,9 +20,9 @@ export default function Card({
       component: "/tonoDePiel/clara.webp",
       alt: "Mujer con piel clara",
     },
-    Media: {
-      component: "/tonoDePiel/media.webp",
-      alt: "Mujer con piel media/morena",
+    Morena: {
+      component: "/tonoDePiel/morena.webp",
+      alt: "Mujer con piel morena/morena",
     },
     Oscura: {
       component: "/tonoDePiel/oscura.webp",
