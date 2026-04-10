@@ -36,7 +36,7 @@ export default function Card({
       component: "/colorDeCabello/castañoOscuro.webp",
       alt: "Mujer con cabello de color castaño oscuro",
     },
-    "Castaño Claro / Medio": {
+    "Castaño Claro": {
       component: "/colorDeCabello/castañoClaro.webp",
       alt: "Mujer con cabello de color castaño claro",
     },

@@ -47,7 +47,7 @@ function colorDeCabello({ onNext, step, setStep }) {
           onNext={onNext}
         />
         <Card
-          title={"Castaño Claro / Medio"}
+          title={"Castaño Claro"}
           name={"colorDeCabello"}
           id={"castañoClaro"}
           circle1={"hidden"}
