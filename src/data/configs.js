@@ -1,45 +1,5 @@
 //* vars
 
-//* windowCard
-let textresult = document.getElementById("textresult");
-let exit = document.getElementById("exit");
-let windowCard = document.getElementById("windowCard");
-let resetButton = document.getElementById("resetButton");
-
-let items1 = document.getElementById("item-1");
-let items2 = document.getElementById("item-2");
-let items3 = document.getElementById("item-3");
-let items4 = document.getElementById("item-4");
-let items5 = document.getElementById("item-5");
-let items6 = document.getElementById("item-6");
-let items7 = document.getElementById("item-7");
-let items8 = document.getElementById("item-8");
-let items9 = document.getElementById("item-9");
-let items10 = document.getElementById("item-10");
-
-//*Otros Datos
-let otrosDatosList = document.getElementById("otrosDatos");
-let item1Data = document.getElementById("item-Data-1");
-let item2Data = document.getElementById("item-Data-2");
-let item3Data = document.getElementById("item-Data-3");
-let item4Data = document.getElementById("item-Data-4");
-let item5Data = document.getElementById("item-Data-5");
-let item6Data = document.getElementById("item-Data-6");
-let item7Data = document.getElementById("item-Data-7");
-let item8Data = document.getElementById("item-Data-8");
-let item9Data = document.getElementById("item-Data-9");
-let item10Data = document.getElementById("item-Data-10");
-
-//* stacions crads
-let titlePallet = document.querySelector("#colorCard #titlePallet");
-let containerCards = document.querySelector("#colorCard #colorPalette");
-let primaveraCard = document.querySelector("#colorCard #primavera");
-let veranoCard = document.querySelector("#colorCard #verano");
-let otoñoCard = document.querySelector("#colorCard #otoño");
-let inviernoCard = document.querySelector("#colorCard #invierno");
-
-let colorCard = document.getElementById("colorCard");
-
 //* Sub Tono De Piel
 //* Tono de piel
 const muyClara = document.getElementById("muyClara");
@@ -116,6 +76,3 @@ const coloresNeutros = document.getElementById("coloresNeutros");
 const dorados = document.getElementById("dorados");
 const plateados = document.getElementById("plateados");
 const ambos = document.getElementById("ambos");
-
-//* Button
-const startTest = document.getElementById("startTest");
