@@ -17,7 +17,7 @@ function comparison({ setIsVisible, data, image }) {
       component: "/tonoDePiel/clara.webp",
       alt: "Mujer con piel clara",
     },
-    media: {
+    morena: {
       component: "/tonoDePiel/morena.webp",
       alt: "Mujer con piel morena",
     },
