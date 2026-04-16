@@ -78,7 +78,6 @@ function ContainerTest({ apiUrl }) {
       }
 
       const calculatedResult = calculateResult(newAnswers);
-      console.log(calculatedResult);
 
       setResult(calculatedResult);
       if (!calculatedResult) {
@@ -87,8 +86,6 @@ function ContainerTest({ apiUrl }) {
         );
         return;
       }
-      console.log("Respuestas verificadas:", newAnswers);
-      console.log("Resultado:", calculatedResult);
       setStep(step + 1);
     } else {
       setStep(step + 1);
