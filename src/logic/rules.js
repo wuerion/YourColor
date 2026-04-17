@@ -25,7 +25,7 @@ const RULES = [
   {
     name: "Primavera Calida (Warm Spring)",
     match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
+      ["clara", "morena"].includes(r.tono_piel) &&
       r.subTono_piel === "calido" &&
       // Cabellos cálidos específicos
       ["rubioDorado", "castañoMiel", "castañoCaramelo", "cobrizo"].includes(
@@ -46,7 +46,7 @@ const RULES = [
   {
     name: "Primavera Brillante (Bright Spring)",
     match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
+      ["clara", "morena"].includes(r.tono_piel) &&
       ["neutro", "calido"].includes(r.subTono_piel) &&
       // Cabello oscuro o vibrante
       [
@@ -111,7 +111,7 @@ const RULES = [
   {
     name: "Verano Frio (Cool Summer)",
     match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
+      ["clara", "morena"].includes(r.tono_piel) &&
       r.subTono_piel === "frio" &&
       // Tonos cenizos medios
       ["rubioCenizo", "cenizo", "cafeCenizo"].includes(r.color_cabello) &&
@@ -127,7 +127,7 @@ const RULES = [
   {
     name: "Verano Suave (Soft Summer)",
     match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
+      ["clara", "morena"].includes(r.tono_piel) &&
       ["neutro", "frio"].includes(r.subTono_piel) &&
       // Cabello "ratón" o neutro
       ["cenizo", "castañoClaro", "rubioOscuro"].includes(r.color_cabello) &&
@@ -146,7 +146,7 @@ const RULES = [
   {
     name: "Otoño Oscuro (Dark Autumn)",
     match: (r) =>
-      ["media", "oscura"].includes(r.tono_piel) &&
+      ["morena", "oscura"].includes(r.tono_piel) &&
       ["calido", "neutro"].includes(r.subTono_piel) &&
       ["castañoOscuro", "negroSuave", "caoba"].includes(r.color_cabello) &&
       ["marronOscuro", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
@@ -163,7 +163,7 @@ const RULES = [
   {
     name: "Otoño Calido (Warm Autumn)",
     match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
+      ["clara", "morena"].includes(r.tono_piel) &&
       r.subTono_piel === "calido" &&
       [
         "pelirojo",
@@ -184,7 +184,7 @@ const RULES = [
   {
     name: "Otoño Suave (Soft Autumn)",
     match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
+      ["clara", "morena"].includes(r.tono_piel) &&
       ["neutro", "calido"].includes(r.subTono_piel) &&
       // Castaños suaves o miel
       ["castañoMiel", "castañoClaro", "rubioOscuro"].includes(
@@ -204,7 +204,7 @@ const RULES = [
   {
     name: "Invierno Profundo (Deep Winter)",
     match: (r) =>
-      ["media", "oscura"].includes(r.tono_piel) &&
+      ["morena", "oscura"].includes(r.tono_piel) &&
       ["frio", "neutro"].includes(r.subTono_piel) &&
       ["negro", "negroAzulado", "negroSuave", "castañoOscuro"].includes(
         r.color_cabello,
@@ -223,7 +223,7 @@ const RULES = [
   {
     name: "Invierno Brillante (Bright Winter)",
     match: (r) =>
-      ["clara", "media"].includes(r.tono_piel) &&
+      ["clara", "morena"].includes(r.tono_piel) &&
       ["frio", "neutro"].includes(r.subTono_piel) &&
       ["negro", "negroAzulado", "castañoOscuro"].includes(r.color_cabello) &&
       ["azulBrillante", "verdeOjos", "azulClaro"].includes(r.color_ojos),
@@ -277,7 +277,7 @@ const RULES = [
       ["frio", "neutro"].includes(r.subTono_piel) &&
       r.ropa !== "coloresCalidos" &&
       r.accesorios !== "dorados" &&
-      ["muyClara", "clara", "media"].includes(r.tono_piel),
+      ["muyClara", "clara", "morena"].includes(r.tono_piel),
     cautionResult: summerLight,
     result: summer,
   },
