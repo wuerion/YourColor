@@ -13,7 +13,7 @@ import BlondTone from "./tones/BlondTone.jsx";
 import RedheadTone from "./tones/RedheadTone.jsx";
 import WhiteTone from "./tones/WhiteTone.jsx";
 import EyeTone from "./steps/EyeColor.jsx";
-import Destellos from "./steps/Gander.jsx";
+import Gander from "./steps/Gander.jsx";
 import FacoriteColors from "./steps/FavoriteColors.jsx";
 import Accessories from "./steps/Accessories.jsx";
 import Result from "./result";
@@ -42,6 +42,7 @@ function ContainerTest({ apiUrl }) {
   const [answer, setAnswer] = useState({});
   const [result, setResult] = useState(null);
   const [image, setImage] = useState(null);
+  const [gander, setGander] = useState(null);
   const [error, setError] = useState(null);
 
   const handleNext = (val) => {
@@ -52,16 +53,19 @@ function ContainerTest({ apiUrl }) {
       4: "color_cabello",
       5: "tono_pelo",
       6: "color_ojos",
-      7: "destellos",
-      8: "ropa",
-      9: "Accessories",
+      7: "ropa",
+      8: "accessories",
+      9: "gander",
     };
 
     const currentKey = stepKey[step];
     const newAnswers = { ...answer, [currentKey]: val };
     setAnswer(newAnswers);
     setImage(newAnswers.tono_piel);
+    setGander(newAnswers.gander);
     setError(null); // Limpiar errores previos
+
+    console.log(newAnswers);
 
     if (step === 9) {
       // Validar respuestas antes de calcular resultado
@@ -69,7 +73,7 @@ function ContainerTest({ apiUrl }) {
 
       if (!validation.isValid) {
         setError(validation.message);
-        console.log(error);
+        console.error(error);
         return; // No avanzar si hay error
       }
 
@@ -146,12 +150,13 @@ function ContainerTest({ apiUrl }) {
         <Accessories onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 9 && (
-        <Destellos onNext={handleNext} step={step} setStep={setStep} />
+        <Gander onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 10 && (
         <Result
           result={result}
           image={image}
+          gander={gander}
           setStep={setStep}
           apiUrl={apiUrl}
         />
