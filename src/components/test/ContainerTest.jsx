@@ -144,13 +144,13 @@ function ContainerTest({ apiUrl }) {
         <ColorOjos onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 7 && (
-        <Destellos onNext={handleNext} step={step} setStep={setStep} />
-      )}
-      {step === 8 && (
         <ColoresPreferidos onNext={handleNext} step={step} setStep={setStep} />
       )}
-      {step === 9 && (
+      {step === 8 && (
         <Accesorios onNext={handleNext} step={step} setStep={setStep} />
+      )}
+      {step === 9 && (
+        <Destellos onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 10 && (
         <Result
