@@ -12,9 +12,9 @@ export const validateTestAnswers = (answers) => {
     "color_cabello",
     "tono_pelo",
     "color_ojos",
-    "destellos",
     "ropa",
-    "accesorios",
+    "accessories",
+    "gander",
   ];
 
   // Verificar que todas las claves existan
