@@ -1,0 +1,66 @@
+---
+import Image from "astro/components/Image.astro";
+import eye from "../images/eyeColor.webp";
+import sktinTone from "../images/skinTone.webp";
+import hairColor from "../images/hairColor.webp";
+---
+
+<section class="py-4">
+  <h2 class="text-center text-lg font-bold mb-16">¿Como funciona?</h2>
+  <div class="flex flex-col lg:flex-row lg:justify-center lg:max-h-[400px] items-center gap-8">
+      <ul class="flex flex-col  lg:w-1/2 max-w-[700px] h-full gap-8 justify-around">
+        <li>
+          El test de colorimetría se basa en analizar tres características: <strong
+            >tono de piel, color de cabello y ojos,</strong
+          > evaluando tiente, valor y croma.
+        </li>
+        <li>
+          <strong>El sistema de puntaje:</strong> La piel es el factor determinante
+          <strong>(3 puntos)</strong>, seguido del cabello <strong
+            >(2 puntos)</strong
+          > y los ojos <strong>(1 punto)</strong>. La suma ubica a la persona en
+          una estacion: <strong>Primavera, Verano, Otoño o Invierno</strong>.
+        </li>
+        <li>
+          <strong>El resultado:</strong> Un informe personalizado con tu paleta de
+          colores ideal para identificar decisiones en moda y maquillaje.
+        </li>
+        <li>
+          Este enfoque no solo mejora la apariencia, sino que tambien ayuda a
+          reducir el numero de prendas no usadas al hacer compras mas acertadas.
+        </li>
+      </ul>
+      <div class="parent h-full lg:w-1/2 lg:max-w-[700px] justify-items-center">
+       <div class="div1 flex justify-center items-center gap-5">
+        <Image
+          src={eye}
+          alt="eye macrop"
+          class=" min-w-[100px] min-h-[150px] w-full h-full max-w-[150px] max-h-[200px] rounded-lg"
+        />
+        <Image
+          src={hairColor}
+          alt="hair"
+          class=" min-w-[100px] min-h-[150px] w-full h-full max-w-[150px] max-h-[200px] rounded-lg"
+        />
+      </div>
+       <div class="div2 relative min-w-[100px] min-h-[150px] w-full h-full max-w-[150px]" >
+        <Image
+          src={sktinTone}
+          alt="women "
+          class="absolute -top-16 rounded-lg w-full h-full"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .parent {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 5; }
+.div2 { grid-area: 2 / 2 / 2 / 4; }
+</style>
