@@ -28,13 +28,12 @@ function GridColors({ data, count }) {
   );
 }
 
-function result({ result, image, apiUrl }) {
+function result({ result, image, gander, apiUrl }) {
   const [count, setCount] = useState(6);
   const [isVisible, setIsVisible] = useState(false);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   let resultEnglish = "";
-
   const VITE_API_URL = apiUrl;
 
   const seasonMap = {
@@ -58,6 +57,8 @@ function result({ result, image, apiUrl }) {
 
   resultEnglish = seasonMap[result.name];
 
+  const mapGander = { hombre: "Man", mujer: "Woman" };
+  const resultGander = mapGander[gander];
   //!Conexion API
   useEffect(() => {
     async function handleSearch(text) {
@@ -90,7 +91,7 @@ function result({ result, image, apiUrl }) {
         setLoading(false);
       }
     }
-    handleSearch(`outfit peaple ${resultEnglish} season`);
+    handleSearch(`outfit peaple ${gander} ${resultEnglish} season`);
   }, []);
   useEffect(() => {
     setTimeout(() => {
