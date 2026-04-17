@@ -6,7 +6,7 @@ function accesorios({ onNext, step, setStep }) {
       <div className="w-full flex justify-between">
         <button
           onClick={() => {
-            setStep(8);
+            setStep(7);
           }}
         >
           <svg
@@ -52,7 +52,7 @@ function accesorios({ onNext, step, setStep }) {
           name={"accesorios"}
           id={"ambos"}
           circle1={"bg-[#FFD700]"}
-          circle2={"bg-[C0C0C0]"}
+          circle2={"bg-[#C0C0C0]"}
           circle3={"hidden"}
           contCircle={"block"}
           image={"hidden"}

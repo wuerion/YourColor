@@ -6,7 +6,7 @@ function coloresPreferidos({ onNext, step, setStep }) {
       <div className="w-full flex justify-between">
         <button
           onClick={() => {
-            setStep(7);
+            setStep(6);
           }}
         >
           <svg
@@ -22,7 +22,7 @@ function coloresPreferidos({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Que colores prefieres ussar?
+        ¿Que colores prefieres usar?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-around h-1/2 gap-4 w-full">
         <Card
