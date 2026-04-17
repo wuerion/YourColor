@@ -113,7 +113,7 @@ function result({ result, image, gander, apiUrl }) {
         </div>
       </div>
       {!isVisible && (
-        <div className="w-full h-full grid grid-cols-1 py-8 gap-8 bg-[#FAF8F0]/15 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
+        <div className="w-full h-full grid grid-cols-1 py-8 gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
           <div className="w-full flex justify-start px-4">
             <button
               onClick={() => {

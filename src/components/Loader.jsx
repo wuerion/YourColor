@@ -15,7 +15,7 @@ function TestHome({ onStart }) {
           <div class="w-32 md:w-80 h-full bg-[#F0A5BC] transform -skew-x-[15deg] z-10 relative"></div>
         </div>
       </div>
-      <div class=" w-full h-full z-50 p-2 flex flex-col gap-8 bg-[#FAF8F0]/15 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
+      <div class=" w-full h-full z-50 p-2 flex flex-col gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
         <div class="flex flex-col justify-center items-center gap-4 h-1/3">
           <h2 class="text-lg text-center font-bold my-8">
             Descubre tu estacion y Potencia tu imagen
