@@ -2,40 +2,36 @@ import React, { useState } from "react";
 import { calculateResult } from "../../logic/colorimetryEngie.js";
 import { validateTestAnswers } from "../../logic/validateTest.js";
 
-import TonoDePiel from "./steps/TonoPiel";
+import SkinTone from "./steps/SkinTone.jsx";
 import ReactionOfTheSun from "./steps/ReactionOfTheSun";
-import ColorDeVenas from "./steps/colorDeVenas";
-import ColorDeCabello from "./steps/colorDeCabello";
-import TonoDeNegro from "./tonos/tonoDeNegro";
-import TonoDeCastañoOscuro from "./tonos/tonoDeCastañoOscuro";
-import TonoDeCatañonoClaro from "./tonos/tonoDeCastañoClaro";
-import TonoDeRubio from "./tonos/tonoDeRubio";
-import TonoDePelirojo from "./tonos/tonoDePelirojo";
-import TonoDeBlanco from "./tonos/tonoDeBlanco";
-import ColorOjos from "./steps/colorDeOjos";
-import Destellos from "./steps/destellos";
-import ColoresPreferidos from "./steps/coloresPreferidos";
-import Accesorios from "./steps/accesorios";
+import VeinsColor from "./steps/VeinsColor.jsx";
+import ColorDeCabello from "./steps/HairColor.jsx";
+import BlackTone from "./tonos/BlackTone.jsx";
+import DarkBrownTone from "./tonos/DarkBrownTone.jsx";
+import LightBrownTone from "./tonos/LightBrownTone.jsx";
+import BlondTone from "./tonos/BlondTone.jsx";
+import RedheadTone from "./tonos/RedheadTone.jsx";
+import WhiteTone from "./tonos/WhiteTone.jsx";
+import EyeTone from "./steps/EyeColor.jsx";
+import Destellos from "./steps/Gander.jsx";
+import FacoriteColors from "./steps/FavoriteColors.jsx";
+import Accessories from "./steps/Accessories.jsx";
 import Result from "./result";
 
 function tonoCabello(x, onNext, step, setStep) {
   switch (x) {
     case "negro":
-      return <TonoDeNegro onNext={onNext} step={step} setStep={setStep} />;
+      return <BlackTone onNext={onNext} step={step} setStep={setStep} />;
     case "castañoOscuro":
-      return (
-        <TonoDeCastañoOscuro onNext={onNext} step={step} setStep={setStep} />
-      );
+      return <DarkBrownTone onNext={onNext} step={step} setStep={setStep} />;
     case "castañoClaro":
-      return (
-        <TonoDeCatañonoClaro onNext={onNext} step={step} setStep={setStep} />
-      );
+      return <LightBrownTone onNext={onNext} step={step} setStep={setStep} />;
     case "rubio":
-      return <TonoDeRubio onNext={onNext} step={step} setStep={setStep} />;
+      return <BlondTone onNext={onNext} step={step} setStep={setStep} />;
     case "pelirojo":
-      return <TonoDePelirojo onNext={onNext} step={step} setStep={setStep} />;
+      return <RedheadTone onNext={onNext} step={step} setStep={setStep} />;
     case "grisOBlanco":
-      return <TonoDeBlanco onNext={onNext} step={step} setStep={setStep} />;
+      return <WhiteTone onNext={onNext} step={step} setStep={setStep} />;
     default:
       return null;
   }
@@ -58,7 +54,7 @@ function ContainerTest({ apiUrl }) {
       6: "color_ojos",
       7: "destellos",
       8: "ropa",
-      9: "accesorios",
+      9: "Accessories",
     };
 
     const currentKey = stepKey[step];
@@ -128,12 +124,12 @@ function ContainerTest({ apiUrl }) {
         </div>
       )}
 
-      {step === 1 && <TonoDePiel onNext={handleNext} step={step} />}
+      {step === 1 && <SkinTone onNext={handleNext} step={step} />}
       {step === 2 && (
         <ReactionOfTheSun onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 3 && (
-        <ColorDeVenas onNext={handleNext} step={step} setStep={setStep} />
+        <VeinsColor onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 4 && (
         <ColorDeCabello onNext={handleNext} step={step} setStep={setStep} />
@@ -141,13 +137,13 @@ function ContainerTest({ apiUrl }) {
       {step === 5 &&
         tonoCabello(answer.color_cabello, handleNext, step, setStep)}
       {step === 6 && (
-        <ColorOjos onNext={handleNext} step={step} setStep={setStep} />
+        <EyeTone onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 7 && (
-        <ColoresPreferidos onNext={handleNext} step={step} setStep={setStep} />
+        <FacoriteColors onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 8 && (
-        <Accesorios onNext={handleNext} step={step} setStep={setStep} />
+        <Accessories onNext={handleNext} step={step} setStep={setStep} />
       )}
       {step === 9 && (
         <Destellos onNext={handleNext} step={step} setStep={setStep} />
