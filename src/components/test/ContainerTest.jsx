@@ -65,8 +65,6 @@ function ContainerTest({ apiUrl }) {
     setGander(newAnswers.gander);
     setError(null); // Limpiar errores previos
 
-    console.log(newAnswers);
-
     if (step === 9) {
       // Validar respuestas antes de calcular resultado
       const validation = validateTestAnswers(newAnswers);
