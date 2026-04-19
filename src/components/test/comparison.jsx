@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function comparison({ setIsVisible, data, image }) {
+function comparison({ setIsVisibleComparation, data, image }) {
   const [selecctColorLeft, setSelecctColorLeft] = useState("#faf8f0");
   const [selecctNameLeft, setSelecctNameLeft] = useState("Selecciona un color");
   const [selecctColorRight, setSelecctColorRight] = useState("#faf8f0");
@@ -73,7 +73,7 @@ function comparison({ setIsVisible, data, image }) {
       </div>
       <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-8 gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
         <div className="w-full flwx justify-start p-4">
-          <button onClick={() => setIsVisible(false)} title="atras">
+          <button onClick={() => setIsVisibleComparation(false)} title="atras">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               id="Bold"
