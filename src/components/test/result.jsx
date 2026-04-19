@@ -31,7 +31,7 @@ function GridColors({ data, count }) {
 
 function result({ result, image, gander, apiUrl }) {
   const [count, setCount] = useState(6);
-  const [isVisibleComparation, setIsVisibleComparation] = useState(false);
+  const [isVisibleComparison, setIsVisibleComparison] = useState(false);
   const [isVisibleVirtualMode, setIsVisibleVirtualMode] = useState(false);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -114,7 +114,7 @@ function result({ result, image, gander, apiUrl }) {
           <div class="w-32 md:w-80 h-full bg-[#F0A5BC] transform -skew-x-[15deg] z-10 relative"></div>
         </div>
       </div>
-      {!isVisibleComparation ||
+      {!isVisibleComparison ||
         (!isVisibleVirtualMode && (
           <div className="w-full h-full grid grid-cols-1 py-8 gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
             <div className="w-full flex justify-start px-4">
@@ -288,7 +288,7 @@ function result({ result, image, gander, apiUrl }) {
                     Provador Virtual
                   </button>
                   <button
-                    onClick={() => setIsVisibleComparation(true)}
+                    onClick={() => setIsVisibleComparison(true)}
                     className="uppercase border py-2 px-4 w-fit text-center rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
                   >
                     modo comparacion
@@ -299,9 +299,9 @@ function result({ result, image, gander, apiUrl }) {
           </div>
         ))}
       {isVisibleVirtualMode && <VirtualMode />}
-      {isVisibleComparation && (
+      {isVisibleComparison && (
         <Comparison
-          setIsVisibleComparation={setIsVisibleComparation}
+          setIsVisibleComparison={setIsVisibleComparison}
           data={result}
           image={image}
         />
