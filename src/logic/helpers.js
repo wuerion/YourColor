@@ -4,11 +4,11 @@ export function determineTheSubTone(answer) {
 let neutro = 0
 
   // Venas - Verde se interpreta como FRÍO (según tests), Roja como CÁLIDO
-  if (answer.vein_color === "verde) {
+  if (answer.vein_color === "verde") {
     calido++;
   }
   if (
-    answer.vein_color === "azulOMorado" ||
+    answer.vein_color === "azulOMorado"
   ) {
     frio++;
   }
