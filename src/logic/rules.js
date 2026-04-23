@@ -304,15 +304,15 @@ const RULES = [
     cautionResult: winterBright,
     result: winter,
   },
+  // Catch-all
+  {
+    name: "Resultado por defecto Primavera",
+    match: (r) => true,
+    textResult:
+      "No encontramos una coincidencia clara. Te recomdendamos realizar el test nuevamente.",
+    cautionResult: springLight,
+    result: spring,
+  },
 ];
-// Catch-all
-// {
-//   name: "Resultado por defecto Primavera",
-//   match: (r) => true,
-//   textResult:
-//     "No encontramos una coincidencia clara. Te recomdendamos realizar el test nuevamente.",
-//   cautionResult: springLight,
-//   result: spring,
-// },
 
 export default RULES;
