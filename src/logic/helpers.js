@@ -1,31 +1,28 @@
 export function determineTheSubTone(answer) {
   let calido = 0;
   let frio = 0;
-let neutro = 0
+  let neutro = 0;
 
-  // Venas - Verde se interpreta como FRÍO (según tests), Roja como CÁLIDO
+  // Venas - Verde es CÁLIDO, Azul/Morado es FRÍO
   if (answer.vein_color === "verde") {
     calido++;
   }
-  if (
-    answer.vein_color === "azulOMorado"
-  ) {
+  if (answer.vein_color === "azulOMorado") {
     frio++;
   }
-  if(
-    answer.vein_color === "neutro"
-){ neutro++;}
+  if (answer.vein_color === "neutro") {
+    neutro++;
+  }
 
   // Reacción al sol - ajustado según patrones en tests
-  if (
-    ["bronceaFacilmente", "bronceaLigeramente", "seBroncea"].includes(
-      answer.reaction_sun,
-    )
-  ) {
+  if (["bronceaFacilmente", "seBroncea"].includes(answer.reaction_sun)) {
     calido++;
   }
+  if (["bronceaLigeramente"].includes(answer.reaction_sun)) {
+    frio++; // Broncea ligeramente = piel sensible (fría/clara)
+  }
   if (["seQuema"].includes(answer.reaction_sun)) {
-    calido++; // Se quema = piel sensible clara, se relaciona con primavera clara
+    frio++; // Se quema = piel sensible clara
   }
   if (["seQuemaYBroncea"].includes(answer.reaction_sun)) {
     frio++;
