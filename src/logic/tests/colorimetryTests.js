@@ -15,7 +15,7 @@ export const COLORIMETRY_TESTS = [
     id: 1,
     name: "Test 1: Invierno Profundo",
     input: {
-      tono_piel: "media",
+      tono_piel: "morena",
       reaction_sun: "bronceaLigeramente",
       vein_color: "verde",
       color_cabello: "negro",
@@ -27,14 +27,14 @@ export const COLORIMETRY_TESTS = [
     },
     expectedResult: "Invierno Profundo (Deep Winter)",
     description:
-      "Piel morena, venas verdes (frío), cabello negro, ojos marrones oscuros, prefiere fríos y plateados",
+      "Piel morena, venas verdes (cálido), cabello negro, ojos marrones oscuros, prefiere fríos y plateados",
   },
 
   {
     id: 2,
     name: "Test 2: Otoño Oscuro",
     input: {
-      tono_piel: "media",
+      tono_piel: "morena",
       reaction_sun: "bronceaFacilmente",
       vein_color: "roja",
       color_cabello: "caoba",
@@ -55,7 +55,7 @@ export const COLORIMETRY_TESTS = [
     input: {
       tono_piel: "clara",
       reaction_sun: "seBroncea",
-      vein_color: "azul",
+      vein_color: "azulOMorado",
       color_cabello: "castañoOscuro",
       tono_pelo: "castañoOscuro",
       color_ojos: "azulBrillante",
@@ -74,7 +74,7 @@ export const COLORIMETRY_TESTS = [
     input: {
       tono_piel: "clara",
       reaction_sun: "seQuema",
-      vein_color: "azul",
+      vein_color: "azulOMorado",
       color_cabello: "rubioCenizo",
       tono_pelo: "rubioCenizo",
       color_ojos: "azulClaro",
@@ -129,9 +129,9 @@ export const COLORIMETRY_TESTS = [
     id: 7,
     name: "Test 7: Verano Suave",
     input: {
-      tono_piel: "media",
+      tono_piel: "clara",
       reaction_sun: "seBroncea",
-      vein_color: "azul",
+      vein_color: "azulOMorado",
       color_cabello: "castañoClaro",
       tono_pelo: "castañoClaro",
       color_ojos: "gris",
@@ -168,13 +168,13 @@ export const COLORIMETRY_TESTS = [
     input: {
       tono_piel: "muyClara",
       reaction_sun: "seQuema",
-      vein_color: "azul",
+      vein_color: "azulOMorado",
       color_cabello: "rubio",
       tono_pelo: "rubio",
       color_ojos: "verdeOjos",
       ropa: "coloresCalidos",
       accesorios: "dorados",
-      subTono_piel: "calido",
+      subTono_piel: "frio",
     },
     expectedResult: "Primavera Clara (Light Spring)",
     description:
@@ -187,7 +187,7 @@ export const COLORIMETRY_TESTS = [
     input: {
       tono_piel: "oscura",
       reaction_sun: "seBroncea",
-      vein_color: "azul",
+      vein_color: "azulOMorado",
       color_cabello: "negroAzulado",
       tono_pelo: "negroAzulado",
       color_ojos: "azulClaro",
@@ -203,7 +203,7 @@ export const COLORIMETRY_TESTS = [
     id: 11,
     name: "Test 11: Otoño Suave",
     input: {
-      tono_piel: "media",
+      tono_piel: "morena",
       reaction_sun: "seBroncea",
       vein_color: "verde",
       color_cabello: "castañoMiel",
@@ -211,7 +211,7 @@ export const COLORIMETRY_TESTS = [
       color_ojos: "marronAvellana",
       ropa: "coloresCalidos",
       accesorios: "dorados",
-      subTono_piel: "neutro",
+      subTono_piel: "calido",
     },
     expectedResult: "Otoño Suave (Soft Autumn)",
     description:
@@ -222,9 +222,9 @@ export const COLORIMETRY_TESTS = [
     id: 12,
     name: "Test 12: Verano Frío",
     input: {
-      tono_piel: "media",
+      tono_piel: "morena",
       reaction_sun: "seBroncea",
-      vein_color: "azul",
+      vein_color: "azulOMorado",
       color_cabello: "rubioCenizo",
       tono_pelo: "rubioCenizo",
       color_ojos: "azulBrillante",
