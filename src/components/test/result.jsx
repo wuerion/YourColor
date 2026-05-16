@@ -37,7 +37,7 @@ function result({ result, image, gander, apiUrl }) {
   const [loading, setLoading] = useState(true);
   let resultEnglish = "";
   const VITE_API_URL = apiUrl;
-
+  
   const seasonMap = {
     "Primavera Calida (Warm Spring)": "spring",
     "Primavera Brillante (Bright Spring)": "spring",
@@ -63,12 +63,16 @@ function result({ result, image, gander, apiUrl }) {
   //!Conexion API
   useEffect(() => {
     async function handleSearch(text) {
+      console.log(text)
+      
       try {
-        const response = await fetch(VITE_API_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: text }),
-        });
+      //   const response = await fetch(`${VITE_API_URL}/api/pexels/photos`, {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     body: JSON.stringify({ query: text }),
+      //   });
+
+        console.log(response)
 
         // Verifica si la respuesta fue exitosa
         if (!response.ok) {
@@ -80,8 +84,9 @@ function result({ result, image, gander, apiUrl }) {
         }
 
         const result = await response.json();
+        setImages(result.data);
+        console.log(result)
         if (result.success) {
-          setImages(result.data);
           console.log(
             "%c✅ ¡Operación completada con éxito!",
             "color: green; font-weight: bold; font-size: 14px;",
@@ -101,7 +106,7 @@ function result({ result, image, gander, apiUrl }) {
     }, 3500);
   }, []);
   return (
-    <section className="relative z-50 -mx-4 lg:h-dvh">
+    <section className="relative z-50 -mx-4 h-dvh">
       <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
         <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
@@ -299,6 +304,7 @@ function result({ result, image, gander, apiUrl }) {
         <VirtualMode
           setIsVisibleVirtualMode={setIsVisibleVirtualMode}
           data={result}
+          apiUrl={apiUrl}
         />
       )}
       {isVisibleComparison && (
