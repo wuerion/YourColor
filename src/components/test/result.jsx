@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
+import VirtualMode from "./VirtualMode";
 
 function GridColors({ data, count }) {
   return (
@@ -30,12 +31,13 @@ function GridColors({ data, count }) {
 
 function result({ result, image, gander, apiUrl }) {
   const [count, setCount] = useState(6);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisibleComparison, setIsVisibleComparison] = useState(false);
+  const [isVisibleVirtualMode, setIsVisibleVirtualMode] = useState(false);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   let resultEnglish = "";
   const VITE_API_URL = apiUrl;
-
+  
   const seasonMap = {
     "Primavera Calida (Warm Spring)": "spring",
     "Primavera Brillante (Bright Spring)": "spring",
@@ -54,20 +56,23 @@ function result({ result, image, gander, apiUrl }) {
     "Invierno Frio (Cool Winter)": "winter",
     "Invierno (General)": "winter",
   };
-
   resultEnglish = seasonMap[result.name];
 
-  const mapGander = { hombre: "Man", mujer: "Woman" };
+  const mapGander = { hombre: "man", mujer: "woman" };
   const resultGander = mapGander[gander];
   //!Conexion API
   useEffect(() => {
     async function handleSearch(text) {
+      console.log(text)
+      
       try {
-        const response = await fetch(VITE_API_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: text }),
-        });
+      //   const response = await fetch(`${VITE_API_URL}/api/pexels/photos`, {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     body: JSON.stringify({ query: text }),
+      //   });
+
+        console.log(response)
 
         // Verifica si la respuesta fue exitosa
         if (!response.ok) {
@@ -79,8 +84,9 @@ function result({ result, image, gander, apiUrl }) {
         }
 
         const result = await response.json();
+        setImages(result.data);
+        console.log(result)
         if (result.success) {
-          setImages(result.data);
           console.log(
             "%c✅ ¡Operación completada con éxito!",
             "color: green; font-weight: bold; font-size: 14px;",
@@ -91,15 +97,16 @@ function result({ result, image, gander, apiUrl }) {
         setLoading(false);
       }
     }
-    handleSearch(`outfit peaple ${gander} ${resultEnglish} season`);
+    handleSearch(`outfit peaple ${resultGander} ${resultEnglish} season`);
   }, []);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3500);
   }, []);
   return (
-    <section className="relative z-50 -mx-4 lg:h-dvh">
+    <section className="relative z-50 -mx-4 h-dvh">
       <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
         <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
@@ -112,7 +119,7 @@ function result({ result, image, gander, apiUrl }) {
           <div class="w-32 md:w-80 h-full bg-[#F0A5BC] transform -skew-x-[15deg] z-10 relative"></div>
         </div>
       </div>
-      {!isVisible && (
+      {!(isVisibleComparison || isVisibleVirtualMode) && (
         <div className="w-full h-full grid grid-cols-1 py-8 gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
           <div className="w-full flex justify-start px-4">
             <button
@@ -270,21 +277,42 @@ function result({ result, image, gander, apiUrl }) {
             </div>
           </div>
           {/* insight, comparacion mode */}
-          <div className="flex flex-col justify-center items-center gap-4 ">
-            <p className="text-center text-base sm:text-lg min-w-[300px] max-w-[700px]">
-              {result.textResult}
-            </p>
-            <button
-              onClick={() => setIsVisible(true)}
-              className="uppercase border py-2 px-4 w-fit text-center rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
-            >
-              modo comparacion
-            </button>
+          <div>
+            <div className="flex flex-col justify-center items-center gap-4 ">
+              <p className="text-center text-base sm:text-lg min-w-[300px] max-w-[700px]">
+                {result.textResult}
+              </p>
+              <div className="flex flex-col md:flex-row gap-2 w-full justify-center items-center">
+                <button
+                  onClick={() => setIsVisibleVirtualMode(true)}
+                  className="uppercase border py-2 px-4 w-fit text-center rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
+                >
+                  Provador Virtual
+                </button>
+                <button
+                  onClick={() => setIsVisibleComparison(true)}
+                  className="uppercase border py-2 px-4 w-fit text-center rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
+                >
+                  modo comparacion
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
-      {isVisible && (
-        <Comparison setIsVisible={setIsVisible} data={result} image={image} />
+      {isVisibleVirtualMode && (
+        <VirtualMode
+          setIsVisibleVirtualMode={setIsVisibleVirtualMode}
+          data={result}
+          apiUrl={apiUrl}
+        />
+      )}
+      {isVisibleComparison && (
+        <Comparison
+          setIsVisibleComparison={setIsVisibleComparison}
+          data={result}
+          image={image}
+        />
       )}
     </section>
   );
