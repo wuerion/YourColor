@@ -10,7 +10,7 @@ export const validateTestAnswers = (answers) => {
     "reaction_sun",
     "vein_color",
     "color_cabello",
-    "tono_pelo",
+    "tono_cabello",
     "color_ojos",
     "ropa",
     "accessories",
