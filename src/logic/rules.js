@@ -29,7 +29,7 @@ const RULES = [
       r.subTono_piel === "calido" &&
       // Cabellos cálidos específicos
       ["rubioDorado", "castañoMiel", "castañoCaramelo", "cobrizo"].includes(
-        r.color_cabello,
+        r.tono_pelo,
       ) &&
       // Ojos cálidos PERO NO terr osos (marronAvellana es terroso)
       ["verdeOjos", "azulBrillante"].includes(r.color_ojos) &&
@@ -54,7 +54,7 @@ const RULES = [
         "castañoOscuro",
         "castañoMedio",
         "castañoCaramelo",
-      ].includes(r.color_cabello) &&
+      ].includes(r.tono_pelo) &&
       // Ojos brillantes
       ["azulBrillante", "verdeOjos", "azulClaro"].includes(r.color_ojos) &&
       // Desempate: La ropa fría NO le favorece
@@ -74,7 +74,7 @@ const RULES = [
       ["neutro", "calido"].includes(r.subTono_piel) &&
       // Rubios claros
       ["rubio", "rubioDorado", "rubioOscuro", "castañoClaro"].includes(
-        r.color_cabello,
+        r.tono_pelo,
       ) &&
       // Ojos Claros
       ["azulClaro", "verdeOjos", "gris"].includes(r.color_ojos) &&
@@ -95,7 +95,7 @@ const RULES = [
       ["neutro", "frio"].includes(r.subTono_piel) &&
       // Rubios fríos
       ["rubio", "rubioCenizo", "grisOBlanco", "plata", "perla"].includes(
-        r.color_cabello,
+        r.tono_pelo,
       ) &&
       // Ojos Claros
       ["azulClaro", "gris", "verdeOjos"].includes(r.color_ojos) &&
@@ -114,7 +114,7 @@ const RULES = [
       ["clara", "morena"].includes(r.tono_piel) &&
       r.subTono_piel === "frio" &&
       // Tonos cenizos medios
-      ["rubioCenizo", "cenizo", "cafeCenizo"].includes(r.color_cabello) &&
+      ["rubioCenizo", "cenizo", "cafeCenizo"].includes(r.tono_pelo) &&
       ["azulClaro", "gris", "azulBrillante"].includes(r.color_ojos),
     textResult:
       "Tu paleta es puramente fría. Evita cualquier color con base amarilla o dorada (como naranjas, marrones tierra o dorados) ya que te darán un aspecto enfermizo.",
@@ -130,7 +130,7 @@ const RULES = [
       ["clara", "morena"].includes(r.tono_piel) &&
       ["neutro", "frio"].includes(r.subTono_piel) &&
       // Cabello "ratón" o neutro
-      ["cenizo", "castañoClaro", "rubioOscuro"].includes(r.color_cabello) &&
+      ["cenizo", "castañoClaro", "rubioOscuro"].includes(r.tono_pelo) &&
       // Ojos suaves
       ["gris", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
       // Desempate: Prefiere plata o fríos
@@ -148,7 +148,7 @@ const RULES = [
     match: (r) =>
       ["morena", "oscura"].includes(r.tono_piel) &&
       ["calido", "neutro"].includes(r.subTono_piel) &&
-      ["castañoOscuro", "negroSuave", "caoba"].includes(r.color_cabello) &&
+      ["castañoOscuro", "negroSuave", "caoba"].includes(r.tono_pelo) &&
       ["marronOscuro", "marronAvellana", "verdeOjos"].includes(r.color_ojos) &&
       // Desempate contra Invierno - PREFERENCIA CALIDA
       (r.ropa === "coloresCalidos" || r.accesorios === "dorados"),
@@ -171,7 +171,7 @@ const RULES = [
         "cobrizo",
         "cafeChocolate",
         "castañoCaramelo",
-      ].includes(r.color_cabello) &&
+      ].includes(r.tono_pelo) &&
       ["verdeOjos", "marronAvellana", "marronOscuro"].includes(r.color_ojos),
     textResult:
       "Los colores fríos de base azulada son tu antítesis. Evita los rosas fríos, los azules hielo y los grises azulados que apagan tu rico resplandor dorado.",
@@ -188,7 +188,7 @@ const RULES = [
       ["neutro", "calido"].includes(r.subTono_piel) &&
       // Castaños suaves o miel
       ["castañoMiel", "castañoClaro", "rubioOscuro"].includes(
-        r.color_cabello,
+        r.tono_pelo,
       ) &&
       ["marronAvellana", "verdeOjos", "marronOscuro"].includes(r.color_ojos) &&
       // Desempate: Prefiere oro o cálidos
@@ -207,7 +207,7 @@ const RULES = [
       ["morena", "oscura"].includes(r.tono_piel) &&
       ["frio", "neutro"].includes(r.subTono_piel) &&
       ["negro", "negroAzulado", "negroSuave", "castañoOscuro"].includes(
-        r.color_cabello,
+        r.tono_pelo,
       ) &&
       ["marronOscuro", "negro", "marronAvellana"].includes(r.color_ojos) &&
       // Desempate contra Otoño - PREFERENCIA FRIA
@@ -225,7 +225,7 @@ const RULES = [
     match: (r) =>
       ["clara", "morena"].includes(r.tono_piel) &&
       ["frio", "neutro"].includes(r.subTono_piel) &&
-      ["negro", "negroAzulado", "castañoOscuro"].includes(r.color_cabello) &&
+      ["negro", "negroAzulado", "castañoOscuro"].includes(r.tono_pelo) &&
       ["azulBrillante", "verdeOjos", "azulClaro"].includes(r.color_ojos),
     textResult:
       "Eres intensidad pura. Tus peores colores son los apagados, polvorientos y grises medios que 'ensucian' tu claridad y te hacen ver fatigada.",
@@ -245,7 +245,7 @@ const RULES = [
         "castañoCenizo",
         "plata",
         "grisOBlanco",
-      ].includes(r.color_cabello) &&
+      ].includes(r.tono_pelo) &&
       ["azulClaro", "gris", "marronOscuro", "azulBrillante"].includes(
         r.color_ojos,
       ),
@@ -266,7 +266,7 @@ const RULES = [
       ["calido", "neutro"].includes(r.subTono_piel) &&
       r.ropa !== "coloresFrios" &&
       r.accesorios !== "plateados" &&
-      !["negro", "negroAzulado", "grisOBlanco"].includes(r.color_cabello),
+      !["negro", "negroAzulado", "grisOBlanco"].includes(r.tono_pelo),
     cautionResult: springLight,
     result: spring,
   },
@@ -299,7 +299,7 @@ const RULES = [
       r.ropa !== "coloresCalidos" &&
       r.accesorios !== "dorados" &&
       ["negro", "negroAzulado", "castañoOscuro", "grisOBlanco"].includes(
-        r.color_cabello,
+        r.tono_pelo,
       ),
     cautionResult: winterBright,
     result: winter,
