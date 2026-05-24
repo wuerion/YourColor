@@ -63,16 +63,14 @@ function result({ result, image, gander, apiUrl }) {
   //!Conexion API
   useEffect(() => {
     async function handleSearch(text) {
-      console.log(text)
       
       try {
-      //   const response = await fetch(`${VITE_API_URL}/api/pexels/photos`, {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: JSON.stringify({ query: text }),
-      //   });
+        const response = await fetch(`${VITE_API_URL}/api/pexels/photos`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: text }),
+        });
 
-        console.log(response)
 
         // Verifica si la respuesta fue exitosa
         if (!response.ok) {
