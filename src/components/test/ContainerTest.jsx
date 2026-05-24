@@ -51,7 +51,7 @@ function ContainerTest({ apiUrl }) {
       2: "reaction_sun",
       3: "vein_color",
       4: "color_cabello",
-      5: "tono_pelo",
+      5: "tono_cabello",
       6: "color_ojos",
       7: "ropa",
       8: "accessories",
