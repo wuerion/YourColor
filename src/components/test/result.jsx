@@ -83,7 +83,6 @@ function result({ result, image, gander, apiUrl }) {
 
         const result = await response.json();
         setImages(result.data);
-        console.log(result)
         if (result.success) {
           console.log(
             "%c✅ ¡Operación completada con éxito!",
