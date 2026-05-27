@@ -3,9 +3,10 @@ import Button from "./buttons.astro";
 import ImageAnimation from "./imageAnimation.astro";
 ---
 
-<section>
+<section class=" min-h-[400px] h-[600px] max-h-[700px] -mx-4 lg:h-[534px] lg:max-h-[770px] ">
+  <!-- min-h-[400px] h-[500px] max-h-[600px] lg:h-[534px] lg:max-h-[570px] -->
   <div
-    class="relative w-dvh -mx-4 min-h-[400px] h-[500px] max-h-[600px] lg:h-[534px] lg:max-h-[570px] bg-[#FBF9F4] overflow-hidden flex items-center justify-center"
+    class="relative h-full w-full lg:h-[534px] lg:max-h-[770px] bg-[#FBF9F4] backdrop-blur-[100px] overflow-hidden flex items-center justify-center"
   >
     <div
       class="flex w-full h-full items-center justify-center space-x-[-40px]"
@@ -36,7 +37,7 @@ import ImageAnimation from "./imageAnimation.astro";
     </div>
   </div>
   <div
-    class="min-h-[400px] h-[500px] max-h-[600px] py-4 px-2 md:p-8 gap-8 w-full flex flex-col lg:flex-row justify-evenly items-center absolute inset-0 z-[100] bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]"
+    class="min-h-[400px] h-full  lg:h-[500px] max-h-[600px] py-4 px-2 md:p-8 gap-8 w-full flex flex-col lg:flex-row justify-evenly items-center absolute inset-0 z-[100]"
   >
     <div
       class="flex flex-col justify-between w-full max-h-[500px] h-[460px]"
@@ -47,7 +48,7 @@ import ImageAnimation from "./imageAnimation.astro";
         <hr class="border-2 border-black w-full lg:max-w-[333px] rounded-xl" />
         <p class="text-lg">Colores que complementan mejor con tigo</p>
       </div>
-      <div class="flex justify-center md:hidden">
+      <div class="flex justify-center items-center md:hidden h-full">
         <ImageAnimation />
       </div>
       <Button
@@ -59,33 +60,11 @@ import ImageAnimation from "./imageAnimation.astro";
         button="hidden"
       />
     </div>
-    <div class="hidden md:block">
+    <div class="hidden md:flex justify-center items-center ">
       <ImageAnimation />
-    </div>
-  </div>
-  <div class="h-1/2 w-full flex flex-col md:flex-row items-center gap-16 py-4">
-    <div class="w-full lg:w-1/2 flex flex-col items-center gap-4 lg:gap-16 ">
-      <h1 class="text-nowrap text-xl">¿Que es la colorimetria personal?</h1>
-      <p class="text-base max-w-[700px] min-w-[300px]">
-        La colorimetria personal es una tecnica que identifica los colores que
-        mas armonizan con las caracteristicas naturales de una persona, como <strong
-          >tono de piel, color de ojos y cabello</strong
-        >. Su objetivo es realzar su belleza natural, mejorando la apariencia y
-        transmitir una imagen mas equilibrada y favorecedora.
-      </p>
-    </div>
-    <div class="w-full lg:w-1/2 flex flex-col items-center gap-4 lg:gap-16 ">
-      <h2 class="text-xl">¿Por que es importante conocer tu colorimetria?</h2>
-      <p class="text-base max-w-[700px] min-w-[300px]">
-        Conocer tu colorimetria es importante por que te permite identificar los
-        colores que mas armonizan con tu <strong
-          >tono de piel, ojos y cabello</strong
-        >, potenciando tu belleza natural y proyectando una imagen mas
-        equilibrada y atractiva. Esto se traduce en mayor confianza, ahorro de
-        tiempo y dinero al elegir ropa y maquillaje, y una mejor impresion en
-        contextos personales y profesionales.
-      </p>
     </div>
   </div>
   <!-- max-w-56 -->
 </section>
+<!-- bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] -->
+ <!--  -->
