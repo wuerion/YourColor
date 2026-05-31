@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Suggestion from "./suggestion";
 
 function comparison({ setIsVisibleComparison, data, image }) {
   const [selecctColorLeft, setSelecctColorLeft] = useState("#faf8f0");
@@ -72,7 +73,7 @@ function comparison({ setIsVisibleComparison, data, image }) {
         </div>
       </div>
       <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-8 gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
-        <div className="w-full flwx justify-start p-4">
+        <div className="w-full flex justify-between items-center p-4">
           <button onClick={() => setIsVisibleComparison(false)} title="atras">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -84,6 +85,8 @@ function comparison({ setIsVisibleComparison, data, image }) {
               <path d="M19,10.5H10.207l2.439-2.439a1.5,1.5,0,0,0-2.121-2.122L6.939,9.525a3.505,3.505,0,0,0,0,4.95l3.586,3.586a1.5,1.5,0,0,0,2.121-2.122L10.207,13.5H19a1.5,1.5,0,0,0,0-3Z" />
             </svg>
           </button>
+
+          <Suggestion />
         </div>
         <h2 className="text-xl lg:text-4xl text-center font-bold">
           MODO COMPARACION

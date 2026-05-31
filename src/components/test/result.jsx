@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
 import VirtualMode from "./VirtualMode";
+import Suggestion from "./suggestion";
 
 function GridColors({ data, count }) {
   return (
@@ -103,7 +104,7 @@ function result({ result, image, gander, apiUrl }) {
     }, 3500);
   }, []);
   return (
-    <section className="relative z-50 -mx-4 h-dvh">
+    <section className="relative z-50 -mx-4 lg:h-dvh">
       <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
         <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
@@ -118,7 +119,7 @@ function result({ result, image, gander, apiUrl }) {
       </div>
       {!(isVisibleComparison || isVisibleVirtualMode) && (
         <div className="w-full h-full grid grid-cols-1 py-8 gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
-          <div className="w-full flex justify-start px-4">
+          <div className="w-full flex justify-between items-center px-4">
             <button
               onClick={() => {
                 window.location.href = "/";
@@ -143,6 +144,9 @@ function result({ result, image, gander, apiUrl }) {
                 </g>
               </svg>
             </button>
+
+            <Suggestion />
+
           </div>
           <div className="flex flex-col justify-center items-center w-full">
             <p className="text-lg md:text-xl">Felicidades tu estacion es</p>
