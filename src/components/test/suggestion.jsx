@@ -17,9 +17,9 @@ function suggestion() {
       </svg>
 
       <div className='rounded-xl bg-[#FAF8F0] p-2 w-[300px] gap-2 md:p-4 sm:gap-4 md:w-[500px] shadow-xl hidden flex-col absolute top-8 group-hover:flex '>
-        <p>Esta seleccion de colores es la ideal para tu temporada. Sin enmargo, recuerda que esta es solo una recomendacion, no una regla estricta.</p>
+        <p>Esta seleccion de colores es la ideal para tu temporada. Sin enbargo, recuerda que esta es solo una recomendacion, no una regla estricta.</p>
         <p>Si bien sugerimos el uso de esta paleta para realzar su belleza, sientase en completa libertad de sustituirlos por otros colores con los que se sienta mas identificado/a y comodo/a</p>
-        <p>El onjetivo de este test es inpirate, no limitarte. Te invitamos a adaptar, mezclar y eligir los colores que mejor resuenen con tu vision creativa y te hagan sentir seguro/a al crear</p>
+        <p>El objetivo de este test es inspirate, no limitarte. Te invitamos a adaptar, mezclar y eligir los colores que mejor resuenen con tu vision creativa y te hagan sentir seguro/a al crear</p>
         <p className='text-center text-lg'>Tu estilo, tu eleccion!</p>
       </div>
       </div>
