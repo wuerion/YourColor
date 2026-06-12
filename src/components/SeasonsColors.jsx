@@ -19,7 +19,7 @@ function ColorsPallet({ name, seasson, addClass }) {
       >
         <div className="h-1/2 text-lg">
           <p
-            className="text-center uppercase relative z-[2] text-lg font-bold text-transparent transition delay-150 group-hover:text-black/70"
+            className="text-center font-julius uppercase relative z-[2] text-lg font-bold text-transparent transition delay-150 group-hover:text-black/70"
             style={{
               backgroundImage: `url('${images[name]}')`,
               backgroundClip: "text",
