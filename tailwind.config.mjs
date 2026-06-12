@@ -3,8 +3,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        lato: ["Lato"],
-        inconsolata: ["Inconsolata", "monospace"],
+        k2d: ["K2D"],
+        julius: ["Julius Sans One"],
       },
       animation: {
         "spin-slow": "spin 4s linear infinite",
