@@ -18,6 +18,8 @@
     "@astrojs/tailwind": "^5.1.2",
     "@astrojs/vercel": "^8.0.0",
     "@fontsource/inconsolata": "^5.2.5",
+    "@fontsource/julius-sans-one": "^5.2.7",
+    "@fontsource/k2d": "^5.2.8",
     "@fontsource/lato": "^5.2.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
