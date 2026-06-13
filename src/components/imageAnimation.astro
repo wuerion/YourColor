@@ -1,67 +1,82 @@
 ---
 import Image from "astro/components/Image.astro";
-import img1 from "../images/imgsHero/1S.webp";
-import img2 from "../images/imgsHero/2S.webp";
-import img3 from "../images/imgsHero/3SU.webp";
-import img4 from "../images/imgsHero/4SU.webp";
-import img5 from "../images/imgsHero/5A.webp";
-import img6 from "../images/imgsHero/6A.webp";
-import img7 from "../images/imgsHero/7W.webp";
-import img8 from "../images/imgsHero/8W.webp";
+import img1Lg from "../images/imgsHero/1Lg.webp";
+import img1Sm from '../images/imgsHero/1Sm.webp'
+import img2Lg from '../images/imgsHero/2Lg.webp'
+import img2Sm from "../images/imgsHero/2Sm.webp";
+import img3Lg from '../images/imgsHero/3Lg.webp'
+import img3Sm from "../images/imgsHero/3Sm.webp";
+import img4Lg from '../images/imgsHero/4Lg.webp'
+import img4Sm from "../images/imgsHero/4Sm.webp";
+import img5Lg from '../images/imgsHero/5Lg.webp'
+import img5Sm from "../images/imgsHero/5Sm.webp";
+import img6Lg from '../images/imgsHero/6Lg.webp'
+import img6Sm from "../images/imgsHero/6Sm.webp";
+import img7Lg from '../images/imgsHero/7Lg.webp'
+import img7Sm from "../images/imgsHero/7Sm.webp";
+import img8Lg from '../images/imgsHero/8Lg.webp'
+import img8Sm from "../images/imgsHero/8Sm.webp";
+
+
+let w = false;
+if (typeof window !== "undefined" && window.innerWidth <= 1024) {
+  w = true;
+}
+
 ---
 
 <div class="w-3/4 h-4/5 md:w-[280px] md:h-[320px] lg:w-[360px] lg:h-[460px] rounded-lg relative overflow-hidden ">
   <Image
-    src={img1}
+    src={w ? img1Lg : img1Sm}
     alt="img1"
     class="slide"
     style="animation-delay: -0s;"
     loading="eager"
   />
   <Image
-    src={img2}
+    src={w ? img2Lg :img2Sm}
     alt="img2"
     class="slide"
     style="animation-delay: -2.5s;"
     loading="eager"
   />
   <Image
-    src={img3}
+    src={w ? img3Lg :img3Sm}
     alt="img3"
     class="slide"
     style="animation-delay: -5s;"
     loading="eager"
   />
   <Image
-    src={img4}
+    src={w ? img4Lg :img4Sm}
     alt="img4"
     class="slide"
     style="animation-delay: -7.5s;"
     loading="eager"
   />
   <Image
-    src={img5}
+    src={w ? img5Lg :img5Sm}
     alt="img5"
     class="slide"
     style="animation-delay: -10s;"
     loading="eager"
   />
   <Image
-    src={img6}
+    src={w ? img6Lg :img6Sm}
     alt="img6"
     class="slide"
     style="animation-delay: -12.5s;"
     loading="eager"
   />
   <Image
-    src={img7}
+    src={w ? img7Lg :img7Sm}
     alt="img7"
     class="slide"
     style="animation-delay: -15s;"
     loading="eager"
   />
   <Image
-    src={img8}
+    src={w ? img8Lg :img8Sm}
     alt="img8"
     class="slide"
     style="animation-delay: -17.5s;"
