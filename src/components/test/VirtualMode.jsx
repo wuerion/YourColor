@@ -81,7 +81,7 @@ function VirtualMode({ setIsVisibleVirtualMode, data, apiUrl }) {
 
   return (
     <section className="relative z-50 h-dvh">
-      <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
+      <div class="absolute w-full h-dvh bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
         <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
           <div class="w-32 md:w-80 h-full bg-[#E0719B] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-40 relative"></div>
@@ -163,7 +163,7 @@ function VirtualMode({ setIsVisibleVirtualMode, data, apiUrl }) {
                 />
                 ) : (
                  <div className="w-full h-full flex flex-col items-center justify-center bg-gray-200 relative group hover:cursor-pointer" title="Subir foto">
-                   <input type="file" placeholder=" " accept=".jpg, .jpeg, .png, .webp" className="w-full h-full absolute opacity-0 border border-black" onChange={ (e) => {
+                   <input type="file" placeholder=" " accept=".jpg, .jpeg, .png, .webp" className="w-full h-full absolute opacity-0 group-hover:z-10  border border-black" onChange={ (e) => {
              const file = e.target.files[0]
              const reader = new FileReader()
              reader.readAsDataURL(file)
@@ -176,7 +176,7 @@ function VirtualMode({ setIsVisibleVirtualMode, data, apiUrl }) {
             <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><path className="fill-gray-500" d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm64 80a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM272 224c8.4 0 16.1 4.4 20.5 11.5l88 144c4.5 7.4 4.7 16.7 .5 24.3S368.7 416 360 416L88 416c-8.9 0-17.2-5-21.3-12.9s-3.5-17.5 1.6-24.8l56-80c4.5-6.4 11.8-10.2 19.7-10.2s15.2 3.8 19.7 10.2l26.4 37.8 61.4-100.5c4.4-7.1 12.1-11.5 20.5-11.5z"/></svg>
                    <p className="text-gray-500 group-hover:text-green-500 text-center bg-inherit">Subir imagen o arrastra aqui<br/><span className="text-xs">(.jpg, .pgn, .webp .avif)</span></p>
            </div>
-                   <div className="w-full h-full border-8 border-dashed group-hover:border-[#F0A5BC] group-hover:bg-[#F0A5BC]/20 hidden group-hover:flex flex-col gap-2 justify-center items-center absolute">
+                   <div className="w-full h-full border-8 border-dashed group-hover:border-[#F0A5BC] group-hover:bg-[#F0A5BC]/20 hidden group-hover:flex group-hover:z-0 flex-col gap-2 justify-center items-center absolute">
                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512">
                    <path className="fill-[#F0A5BC]" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/>
                    </svg>
