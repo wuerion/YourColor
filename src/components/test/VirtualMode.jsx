@@ -81,7 +81,7 @@ function VirtualMode({ setIsVisibleVirtualMode, data, apiUrl }) {
 
   return (
     <section className="relative z-50 h-dvh">
-      <div class="absolute w-full h-dvh bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
+      <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
         <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
           <div class="w-32 md:w-80 h-full bg-[#E0719B] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-40 relative"></div>
@@ -93,7 +93,7 @@ function VirtualMode({ setIsVisibleVirtualMode, data, apiUrl }) {
           <div class="w-32 md:w-80 h-full bg-[#F0A5BC] transform -skew-x-[15deg] z-10 relative"></div>
         </div>
       </div>
-      <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-8 gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
+      <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-2 gap-4 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
         <div className="w-full flex justify-between items-center p-4">
           <button onClick={() => setIsVisibleVirtualMode(false)} title="atras">
             <svg
