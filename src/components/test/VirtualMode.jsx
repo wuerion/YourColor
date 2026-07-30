@@ -47,34 +47,41 @@ function VirtualMode({ setIsVisibleVirtualMode, data, apiUrl }) {
     setActualSelecctColor(hsl);
   };
 
-  useEffect(() => {
-    const removeBg = async () => {
-      try {
-        const response = await fetch(`${VITE_API_URL}/api/removebg/process`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ imageBase64: userImage }),
-        });
-        const blob = await response.blob();
+useEffect(() => {
+  if (!userImage) return; 
 
-        if (!response.ok) {
-          const errorText = await response.json();
-          console.log("El servidor diece: ", JSON.stringify(errorText));
-          return;
-        }
+  const removeBg = async () => {
+    try {
+      const response = await fetch(`${VITE_API_URL}/api/removebg/process`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ imageBase64: userImage }),
+      });
 
-        const url = URL.createObjectURL(blob);
-        setProcessImage(url);
-        setIsLoad(true);
-      } catch (error) {
-        console.error("Error al conectar con la API: ", error);
+      // 1. Si el servidor respondió con un error (400, 500, etc.)
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: "Error desconocido" }));
+        console.error("El servidor devolvió un error 400/500:", errorData);
+        return;
       }
-    };
-    removeBg();
-    return () => {
-      if (processImage) URL.revomeObjectURL(processImage);
-    };
-  }, [userImage]);
+
+      // 2. Si la respuesta es exitosa (200 OK), leemos el blob
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      setProcessImage(url);
+      setIsLoad(true);
+
+    } catch (error) {
+      console.error("Error de red o conexión al intentar llamar a la API:", error);
+    }
+  };
+
+  removeBg();
+
+  return () => {
+    if (processImage) URL.revokeObjectURL(processImage);
+  };
+}, [userImage]);
 
   return (
     <section className="relative z-50 h-dvh md:h-full">
