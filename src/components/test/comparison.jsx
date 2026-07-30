@@ -59,7 +59,7 @@ function comparison({ setIsVisibleComparison, data, image }) {
   };
 
   return (
-    <section className="relative z-50 h-dvh w-dvw">
+    <section className="relative z-50 h-dvh md:h-full">
       <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
         <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
@@ -115,7 +115,7 @@ function comparison({ setIsVisibleComparison, data, image }) {
             </div>
           </div>
           {/* image center*/}
-          <div className="w-full h-full max-h-[600px] lg:w-fit grid grid-cols-[80px_2fr_80px] md:grid-cols-[200px_2fr_200px] lg:grid-cols-[200px_400px_200px] justify-items-stretch shadow-[2px_2px_2px_rgba(0,0,0,0.40)] rounded-lg">
+          <div className="w-full h-full max-h-[500px] lg:w-fit grid grid-cols-[80px_2fr_80px] md:grid-cols-[200px_2fr_200px] lg:grid-cols-[200px_400px_200px] justify-items-stretch shadow-[2px_2px_2px_rgba(0,0,0,0.40)] rounded-lg">
             {/* top color */}
             <div className="h-full w-full lg:min-w-[200px] lg:max-w-[260px]">
               <div
@@ -131,7 +131,7 @@ function comparison({ setIsVisibleComparison, data, image }) {
               </div>
             </div>
             {/* image */}
-            <div className="w-full h-full lg:max-h-[600px] ">
+            <div className="w-full h-full max-h-[500px] ">
               <img
                 src={images[image] ? images[image].component : ""}
                 alt={images[image] ? images[image].alt : ""}
