@@ -104,7 +104,7 @@ function result({ result, image, gander, apiUrl }) {
     }, 3500);
   }, []);
   return (
-    <section className="relative z-50 -mx-4 ">
+    <section className="relative z-50 -mx-4 h-max lg:h-screen">
       <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
         <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
           <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
