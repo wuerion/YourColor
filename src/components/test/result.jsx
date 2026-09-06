@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Comparison from "./comparison";
 import VirtualMode from "./VirtualMode";
 import Suggestion from "./suggestion";
+import ColorTeory from "../colorTeory/ColorTeory";
 
 function GridColors({ data, count }) {
   return (
@@ -34,11 +35,12 @@ function result({ result, image, gander, apiUrl }) {
   const [count, setCount] = useState(6);
   const [isVisibleComparison, setIsVisibleComparison] = useState(false);
   const [isVisibleVirtualMode, setIsVisibleVirtualMode] = useState(false);
+  const [isVisibleColorTeory, setIsVisibleColorTeory] = useState(false);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   let resultEnglish = "";
   const VITE_API_URL = apiUrl;
-  
+
   const seasonMap = {
     "Primavera Calida (Warm Spring)": "spring",
     "Primavera Brillante (Bright Spring)": "spring",
@@ -64,14 +66,12 @@ function result({ result, image, gander, apiUrl }) {
   //!Conexion API
   useEffect(() => {
     async function handleSearch(text) {
-      
       try {
         const response = await fetch(`${VITE_API_URL}/api/pexels/photos`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: text }),
         });
-
 
         // Verifica si la respuesta fue exitosa
         if (!response.ok) {
@@ -117,7 +117,11 @@ function result({ result, image, gander, apiUrl }) {
           <div class="w-32 md:w-80 h-full bg-[#F0A5BC] transform -skew-x-[15deg] z-10 relative"></div>
         </div>
       </div>
-      {!(isVisibleComparison || isVisibleVirtualMode) && (
+      {!(
+        isVisibleComparison ||
+        isVisibleVirtualMode ||
+        isVisibleColorTeory
+      ) && (
         <div className="w-full h-full grid grid-cols-1 py-8 gap-8 lg:py-2 lg:gap-2 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
           <div className="w-full flex justify-between items-center px-4 ">
             <button
@@ -146,7 +150,6 @@ function result({ result, image, gander, apiUrl }) {
             </button>
 
             <Suggestion />
-
           </div>
           <div className="flex flex-col justify-center items-center w-full">
             <p className="text-lg md:text-xl">Felicidades tu estacion es</p>
@@ -296,6 +299,12 @@ function result({ result, image, gander, apiUrl }) {
                 >
                   modo comparacion
                 </button>
+                <button
+                  onClick={() => setIsVisibleColorTeory(true)}
+                  className="uppercase border py-2 px-4 w-fit text-center rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
+                >
+                  teoria del color
+                </button>
               </div>
             </div>
           </div>
@@ -313,6 +322,12 @@ function result({ result, image, gander, apiUrl }) {
           setIsVisibleComparison={setIsVisibleComparison}
           data={result}
           image={image}
+        />
+      )}
+      {isVisibleColorTeory && (
+        <ColorTeory
+          setIsVisibleColorTeory={setIsVisibleColorTeory}
+          nameSeasson={result.name}
         />
       )}
     </section>
