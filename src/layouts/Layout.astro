@@ -3,22 +3,34 @@ import "@fontsource/julius-sans-one";
 import "@fontsource/k2d";
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "Descubre los colores que mejor complementan tu tono de piel, cabello y ojos con Your Color.",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="canonical" href="https://yourcolor.axvolestudio.com" />
+    <link rel="canonical" href="https://yourcolor.axvolestudio.com/" />
     <link rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)" href="/logoYCDark.svg" />
     <link rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)" href="/logoYCLight.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/>
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://yourcolor.axvolestudio.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <title>{title}</title>
     <script defer src="/_vercel/insights/script.js"></script>
   </head>
