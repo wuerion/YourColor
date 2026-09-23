@@ -34,7 +34,9 @@ const {
     <title>{title}</title>
     <script defer src="/_vercel/insights/script.js"></script>
   </head>
-  <body class="font-k2d bg-[#FAF8F0] flex flex-col gap-y-8 px-4" id="home">
-    <slot />
+  <body class="font-k2d bg-[#FAF8F0] px-4" id="home">
+    <main class="flex flex-col gap-y-8">
+      <slot />
+    </main>
   </body>
 </html>

@@ -85,16 +85,16 @@ useEffect(() => {
 
   return (
     <section className="relative z-50 h-dvh md:h-full">
-      <div class="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
-        <div class="flex w-full h-full items-center justify-center space-x-[-40px]">
-          <div class="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
-          <div class="w-32 md:w-80 h-full bg-[#E0719B] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-40 relative"></div>
+      <div className="absolute w-full h-full bg-[#FAF8F0] overflow-hidden flex items-center justify-center -z-10">
+        <div className="flex w-full h-full items-center justify-center space-x-[-40px]">
+          <div className="w-32 md:w-80 h-full transform bg-[#FAF8F0] -skew-x-[15deg] shadow-[20px_0_10px_rgba(0,0,0,0.5)] z-[41] relative"></div>
+          <div className="w-32 md:w-80 h-full bg-[#E0719B] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-40 relative"></div>
 
-          <div class="w-32 md:w-80 h-full bg-[#BC4F90] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-30 relative"></div>
+          <div className="w-32 md:w-80 h-full bg-[#BC4F90] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-30 relative"></div>
 
-          <div class="w-32 md:w-80 h-full bg-[#A35589] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-20 relative"></div>
+          <div className="w-32 md:w-80 h-full bg-[#A35589] transform -skew-x-[15deg] shadow-[20px_0_40px_rgba(0,0,0,0.6)] z-20 relative"></div>
 
-          <div class="w-32 md:w-80 h-full bg-[#F0A5BC] transform -skew-x-[15deg] z-10 relative"></div>
+          <div className="w-32 md:w-80 h-full bg-[#F0A5BC] transform -skew-x-[15deg] z-10 relative"></div>
         </div>
       </div>
       <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-2 gap-4 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
@@ -114,7 +114,7 @@ useEffect(() => {
           <Suggestion />
         </div>
         <h2 className="text-xl lg:text-4xl text-center font-bold">
-          POBADOR VIRTUAL
+          PROBADOR VIRTUAL
         </h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
           <div className="w-full lg:w-fit">
@@ -196,9 +196,9 @@ useEffect(() => {
                       />
                     </svg>
                     <p className="text-gray-500 group-hover:text-green-500 text-center bg-inherit">
-                      Subir imagen o arrastra aqui
+                      Subir imagen o arrastra aquí
                       <br />
-                      <span className="text-xs">(.jpg, .pgn, .webp .avif)</span>
+                      <span className="text-xs">(.jpg, .png, .webp, .avif)</span>
                     </p>
                   </div>
                   <div className="w-full h-full border-8 border-dashed group-hover:border-[#F0A5BC] group-hover:bg-[#F0A5BC]/20 hidden group-hover:flex group-hover:z-0 flex-col gap-2 justify-center items-center absolute">
