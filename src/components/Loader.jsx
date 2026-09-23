@@ -18,7 +18,7 @@ function TestHome({ onStart }) {
       <div class=" w-full h-full z-50 p-2 flex flex-col gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
         <div class="flex flex-col justify-center items-center gap-4 h-1/3">
           <h2 class="text-lg text-center font-bold my-8">
-            Descubre tu estacion y Potencia tu imagen
+            Descubre tu estación y potencia tu imagen
           </h2>
           <p>
             Analiza tu piel, cabello y ojos con nuestro método profesional de
@@ -260,10 +260,11 @@ function TestHome({ onStart }) {
             Tiempo estimado: "Solo te tomará 2 minutos".
           </p>
           <button
+            title="Comenzar el test de colorimetría"
             onClick={onStart}
             className="border-2 border-black py-2 px-2 rounded-lg font-bold text-lg hover:bg-[#FAF8F0]/50 hover:-translate-y-2 transition-all delay-150"
           >
-            Comienza a explorar tu colorimetria hoy!
+            ¡Comienza a explorar tu colorimetría hoy!
           </button>
         </div>
       </div>

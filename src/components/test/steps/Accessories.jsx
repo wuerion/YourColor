@@ -5,6 +5,7 @@ function accesorios({ onNext, step, setStep }) {
     <section className="h-dvh flex flex-col justify-around items-center">
       <div className="w-full flex justify-between">
         <button
+          title="Volver al paso anterior"
           onClick={() => {
             setStep(7);
           }}
@@ -22,11 +23,11 @@ function accesorios({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Que tipo de accesorios te quedan mejor?
+        ¿Qué tipo de accesorios te quedan mejor?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-around h-1/2 gap-4 w-full">
         <Card
-          title={"Calidos"}
+          title={"Cálidos"}
           name={"accesorios"}
           id={"dorados"}
           circle1={"bg-[#FFD700]"}
@@ -37,7 +38,7 @@ function accesorios({ onNext, step, setStep }) {
           onNext={onNext}
         />
         <Card
-          title={"Frios"}
+          title={"Fríos"}
           name={"accesorios"}
           id={"plateados"}
           circle1={"bg-[#C0C0C0]"}

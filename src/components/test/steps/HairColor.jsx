@@ -6,6 +6,7 @@ function colorDeCabello({ onNext, step, setStep }) {
     <section className="h-dvh flex flex-col justify-around items-center">
       <div className="w-full flex justify-between">
         <button
+          title="Volver al paso anterior"
           onClick={() => {
             setStep(3);
           }}
@@ -23,7 +24,7 @@ function colorDeCabello({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Cual es tu color de cabello?
+        ¿Cuál es tu color de cabello?
       </h2>
       <div className="grid grid-cols-2 lg:grid-cols-6 justify-around h-1/2 gap-4 w-full">
         <Card
@@ -67,7 +68,7 @@ function colorDeCabello({ onNext, step, setStep }) {
           onNext={onNext}
         />
         <Card
-          title={"Pelirojo"}
+          title={"Pelirrojo"}
           name={"colorDeCabello"}
           id={"pelirojo"}
           circle1={"hidden"}

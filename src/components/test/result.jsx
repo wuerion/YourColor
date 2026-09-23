@@ -152,7 +152,7 @@ function result({ result, image, gander, apiUrl }) {
             <Suggestion />
           </div>
           <div className="flex flex-col justify-center items-center w-full">
-            <p className="text-lg md:text-xl">Felicidades tu estacion es</p>
+            <p className="text-lg md:text-xl">Felicidades, tu estación es</p>
             <svg
               width="24"
               height="24"
@@ -274,6 +274,7 @@ function result({ result, image, gander, apiUrl }) {
               <GridColors data={result.palette} count={count} />
               <button
                 onClick={() => setCount(count === 6 ? 21 : 6)}
+                title={count === 6 ? "Ver más colores" : "Ver menos colores"}
                 className="border px-2 w-fit rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
               >
                 {count === 6 ? "ver mas" : "ver menos"}
@@ -289,21 +290,24 @@ function result({ result, image, gander, apiUrl }) {
               <div className="flex flex-col md:flex-row gap-2 w-full justify-center items-center">
                 <button
                   onClick={() => setIsVisibleVirtualMode(true)}
+                  title="Abrir probador virtual"
                   className="uppercase border py-2 px-4 w-fit text-center rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
                 >
-                  Provador Virtual
+                  Probador virtual
                 </button>
                 <button
                   onClick={() => setIsVisibleComparison(true)}
+                  title="Abrir modo de comparación"
                   className="uppercase border py-2 px-4 w-fit text-center rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
                 >
-                  modo comparacion
+                  Modo de comparación
                 </button>
                 <button
                   onClick={() => setIsVisibleColorTeory(true)}
+                  title="Abrir teoría del color"
                   className="uppercase border py-2 px-4 w-fit text-center rounded hover:bg-[#FAF8F0]/20 transition-all delay-150 hover:-translate-y-1"
                 >
-                  teoria del color
+                  Teoría del color
                 </button>
               </div>
             </div>

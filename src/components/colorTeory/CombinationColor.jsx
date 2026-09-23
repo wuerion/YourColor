@@ -17,7 +17,7 @@ function CombinationColor({ colores, nameSection, hsl, base }) {
     multichromatic: {
       title: "Diferentes tono",
       subTitle: "multicromática",
-      desc: "Varios colres del círculo cromático.",
+      desc: "Varios colores del círculo cromático.",
     },
     rule: {
       title: "Regla 60-30-10",

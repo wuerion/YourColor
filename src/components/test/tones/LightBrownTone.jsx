@@ -5,6 +5,7 @@ function tonoDeCastañoClaro({ onNext, step, setStep }) {
     <section className="h-dvh flex flex-col justify-around items-center">
       <div className="w-full flex justify-between">
         <button
+          title="Volver al paso anterior"
           onClick={() => {
             setStep(4);
           }}
@@ -22,7 +23,7 @@ function tonoDeCastañoClaro({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Como es tu tono de castaño claro?
+        ¿Cómo es tu tono de castaño claro?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-around h-1/2 gap-4 w-full">
         <Card

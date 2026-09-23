@@ -4,6 +4,9 @@ import ContainerTest from '../components/test/ContainerTest'
 const apiUrl = import.meta.env.SECRET_API_URL
 ---
 
-<Layout title="test">
+<Layout
+    title="Test de colorimetría | Your Color"
+    description="Responde el test de colorimetría de Your Color y descubre la paleta de colores que mejor te favorece."
+>
     <ContainerTest client:load apiUrl={apiUrl} />
 </Layout>

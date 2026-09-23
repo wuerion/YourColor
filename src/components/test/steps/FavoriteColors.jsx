@@ -5,6 +5,7 @@ function coloresPreferidos({ onNext, step, setStep }) {
     <section className="h-dvh flex flex-col justify-around items-center">
       <div className="w-full flex justify-between">
         <button
+          title="Volver al paso anterior"
           onClick={() => {
             setStep(6);
           }}
@@ -22,11 +23,11 @@ function coloresPreferidos({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Que colores prefieres usar?
+        ¿Qué colores prefieres usar?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-around h-1/2 gap-4 w-full">
         <Card
-          title={"Calidos"}
+          title={"Cálidos"}
           name={"coloresPreferidos"}
           id={"coloresCalidos"}
           circle1={"bg-[#FF0000] w-[60px] h-[60px]"}
@@ -37,7 +38,7 @@ function coloresPreferidos({ onNext, step, setStep }) {
           onNext={onNext}
         />
         <Card
-          title={"Frios"}
+          title={"Fríos"}
           name={"coloresPreferidos"}
           id={"coloresFrios"}
           circle1={"bg-[#0000FF] w-[60px] h-[60px] "}

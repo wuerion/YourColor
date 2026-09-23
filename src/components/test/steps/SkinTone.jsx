@@ -32,7 +32,7 @@ function TonoPiel({ onNext, step }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Cual es tu tono de piel?
+        ¿Cuál es tu tono de piel?
       </h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 justify-around h-1/2 gap-4 w-full">
         <Card

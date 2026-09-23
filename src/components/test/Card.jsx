@@ -46,7 +46,7 @@ export default function Card({
     },
     Pelirojo: {
       component: "/colorDeCabello/pelirojo.webp",
-      alt: "Mujer con cabello de color pelirojo",
+      alt: "Mujer con cabello de color pelirrojo",
     },
     "Gris / Blanco": {
       component: "/colorDeCabello/gris.webp",
@@ -62,11 +62,11 @@ export default function Card({
     },
     "Marron Avellana": {
       component: "/colorDeOjos/marronAvellana.webp",
-      alt: "Iris de color marron avellana",
+      alt: "Iris de color marrón avellana",
     },
     "Marron Oscuro": {
       component: "/colorDeOjos/marronOscuro.webp",
-      alt: "Iris de color marron oscuro",
+      alt: "Iris de color marrón oscuro",
     },
     Verde: {
       component: "/colorDeOjos/verde.webp",
@@ -78,11 +78,11 @@ export default function Card({
     },
     "Dorados / Calidos": {
       component: "/destellos/dorados.webp",
-      alt: "Mujer con destellos/reflejos dorados o calidos",
+      alt: "Mujer con destellos/reflejos dorados o cálidos",
     },
     "Plateados / Frios": {
       component: "/destellos/plateados.webp",
-      alt: "Mujer con destellos/reflejos plateados o frios",
+      alt: "Mujer con destellos/reflejos plateados o fríos",
     },
   };
   return (

@@ -5,6 +5,7 @@ function colorDeOjos({ onNext, step, setStep }) {
     <section className="h-dvh flex flex-col justify-around items-center">
       <div className="w-full flex justify-between">
         <button
+          title="Volver al paso anterior"
           onClick={() => {
             setStep(5);
           }}
@@ -22,7 +23,7 @@ function colorDeOjos({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Cual es tu color de ojos?
+        ¿Cuál es tu color de ojos?
       </h2>
       <div className="grid grid-cols-2 lg:grid-cols-6 justify-around h-1/2 lg:h-1/4 gap-4 w-full">
         <Card
@@ -46,7 +47,7 @@ function colorDeOjos({ onNext, step, setStep }) {
           onNext={onNext}
         />
         <Card
-          title={"Marron Avellana"}
+          title={"Marrón avellana"}
           name={"colorDeOjos"}
           id={"marronAvellana"}
           circle1={"hidden"}
@@ -56,7 +57,7 @@ function colorDeOjos({ onNext, step, setStep }) {
           onNext={onNext}
         />
         <Card
-          title={"Marron Oscuro"}
+          title={"Marrón oscuro"}
           name={"colorDeOjos"}
           id={"marronAvellana"}
           circle1={"hidden"}

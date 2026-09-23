@@ -74,7 +74,7 @@ function comparison({ setIsVisibleComparison, data, image }) {
       </div>
       <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-8 gap-8 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px] ">
         <div className="w-full flex justify-between items-center p-4">
-          <button onClick={() => setIsVisibleComparison(false)} title="atras">
+          <button onClick={() => setIsVisibleComparison(false)} title="Volver al resultado">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               id="Bold"
@@ -89,7 +89,7 @@ function comparison({ setIsVisibleComparison, data, image }) {
           <Suggestion />
         </div>
         <h2 className="text-xl lg:text-4xl text-center font-bold">
-          MODO COMPARACION
+          MODO COMPARACIÓN
         </h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
           {/* color palette top */}

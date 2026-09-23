@@ -6,6 +6,7 @@ export default function colorDeVenas({ onNext, step, setStep }) {
     <section className="h-dvh flex flex-col justify-around items-center">
       <div className="w-full flex justify-between">
         <button
+          title="Volver al paso anterior"
           onClick={() => {
             setStep(2);
           }}
@@ -23,7 +24,7 @@ export default function colorDeVenas({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿De que color aparecen tus venas en las muñecas?
+        ¿De qué color aparecen tus venas en las muñecas?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-around h-1/2 gap-4 w-full">
         <Card

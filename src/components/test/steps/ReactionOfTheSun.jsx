@@ -6,6 +6,7 @@ function ReactionOfTheSun({ onNext, step, setStep }) {
     <section className="h-dvh flex flex-col justify-around items-center">
       <div className="w-full flex justify-between">
         <button
+          title="Volver al paso anterior"
           onClick={() => {
             setStep(1);
           }}
@@ -23,11 +24,11 @@ function ReactionOfTheSun({ onNext, step, setStep }) {
         <p className="text-lg">Paso {step}</p>
       </div>
       <h2 className="text-lg font-bold lg:text-2xl">
-        ¿Como reacciona tu piel ante el sol?
+        ¿Cómo reacciona tu piel ante el sol?
       </h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 justify-around h-1/2 gap-4 w-full">
         <CardSvg
-          title={"Se quema facilmente"}
+          title={"Se quema fácilmente"}
           name={"reactionSun"}
           id={"quema"}
           onNext={onNext}

@@ -6,6 +6,7 @@ function destellos({ onNext, step, setStep }) {
     <section className="h-dvh flex flex-col justify-around items-center">
       <div className="w-full flex justify-between">
         <button
+          title="Volver al paso anterior"
           onClick={() => {
             setStep(8);
           }}
@@ -22,7 +23,7 @@ function destellos({ onNext, step, setStep }) {
         </button>
         <p className="text-lg">Paso {step}</p>
       </div>
-      <h2 className="text-lg font-bold lg:text-2xl">¿Que genero eres?</h2>
+      <h2 className="text-lg font-bold lg:text-2xl">¿Qué género eres?</h2>
       <div className="grid grid-cols-2 lg:grid-cols-2 justify-around h-1/3 lg:h-1/2 gap-4 w-full lg:w-3/4">
         <CardSvg
           title={"Hombre"}

@@ -99,7 +99,7 @@ useEffect(() => {
       </div>
       <div className="w-full h-full grid grid-cols-1 px-2 lg:px-0 py-2 gap-4 bg-[#FAF8F0]/25 lg:bg-[#FAF8F0]/0 backdrop-blur-[1px]">
         <div className="w-full flex justify-between items-center p-4">
-          <button onClick={() => setIsVisibleVirtualMode(false)} title="atras">
+          <button onClick={() => setIsVisibleVirtualMode(false)} title="Volver al resultado">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               id="Bold"
@@ -118,7 +118,7 @@ useEffect(() => {
         </h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
           <div className="w-full lg:w-fit">
-            <p className="text-center text-lg my-1">Precaucion</p>
+            <p className="text-center text-lg my-1">Precaución</p>
             <div className="flex lg:grid lg:grid-cols-1 gap-1 w-full">
               {data.paletteCaution.map((index, key) => (
                 <div

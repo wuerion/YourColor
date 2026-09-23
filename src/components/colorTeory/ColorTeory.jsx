@@ -195,7 +195,7 @@ function ColorTeory({ setIsVisibleColorTeory, nameSeasson }) {
         </div>
       }
       <div className="w-full flex justify-between items-center p-4 absolute">
-        <button onClick={() => setIsVisibleColorTeory(false)} title="atras">
+        <button onClick={() => setIsVisibleColorTeory(false)} title="Volver al resultado">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="Bold"
@@ -366,15 +366,15 @@ function ColorTeory({ setIsVisibleColorTeory, nameSeasson }) {
             </p>
             <p className="text-base text-[#5a544c]">
               Si bien sugerimos el uso de esta paleta para realzar su belleza,
-              sientase en completa libertad de sustituirlos por otros colores
-              con los que se sienta mas identificado/a y comodo/a
+              siéntase en completa libertad de sustituirlos por otros colores
+              con los que se sienta más identificado/a y cómodo/a
             </p>
             <p className="text-base text-[#5a544c]">
-              El objetivo de este test es inspirate, no limitarte. Te invitamos
-              a adaptar, mezclar y eligir los colores que mejor resuenen con tu
-              vision creativa y te hagan sentir seguro/a al crear
+              El objetivo de este test es inspirarte, no limitarte. Te invitamos
+              a adaptar, mezclar y elegir los colores que mejor resuenen con tu
+              visión creativa y te hagan sentir seguro/a al crear.
             </p>
-            <b className="text-center text-lg ">Tu estilo, tu eleccion!</b>
+            <b className="text-center text-lg ">¡Tu estilo, tu elección!</b>
           </div>
           <img src="/qr-code.png" alt="qr" className="h-64 bg-white m-8" />
           <div></div>

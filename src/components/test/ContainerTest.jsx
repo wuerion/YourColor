@@ -105,6 +105,7 @@ function ContainerTest({ apiUrl }) {
         >
           ⚠️ {error}
           <button
+            title="Reiniciar el test"
             onClick={() => {
               setStep(1);
               setAnswer({});

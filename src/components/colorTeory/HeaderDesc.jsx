@@ -23,7 +23,7 @@ function HeaderDesc({ nameHead }) {
     terciario: {
       subTitle: "Mezcla 2:1",
       title: "Colores terciarios",
-      desc: "Se obtiene mezclando un color primarion y uno secundario.",
+      desc: "Se obtiene mezclando un color primario y uno secundario.",
       styleBar: "#E37B2C",
     },
     warmColor: {
@@ -34,7 +34,7 @@ function HeaderDesc({ nameHead }) {
     },
     coldColor: {
       subTitle: "Serenidad",
-      title: "Colores ríos",
+      title: "Colores fríos",
       desc: "Transmiten calma, profundidad, confianza y frescura",
       styleBar: "#2A7DE1",
     },
@@ -47,7 +47,7 @@ function HeaderDesc({ nameHead }) {
     combinationColor: {
       subTitle: "Con tu color base",
       title: "Combinaciones de colores",
-      desc: "Formas de armoniosas de combinar colres, calculadas a partir del color seleccionado en la rueda.",
+      desc: "Formas armoniosas de combinar colores, calculadas a partir del color seleccionado en la rueda.",
       styleBar: "#161310",
     },
     guideColor: {
