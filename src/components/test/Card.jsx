@@ -60,11 +60,11 @@ export default function Card({
       component: "/colorDeOjos/azulClaro.webp",
       alt: "Iris de color azul claro",
     },
-    "Marron Avellana": {
+    "Marrón Avellana": {
       component: "/colorDeOjos/marronAvellana.webp",
       alt: "Iris de color marrón avellana",
     },
-    "Marron Oscuro": {
+    "Marrón Oscuro": {
       component: "/colorDeOjos/marronOscuro.webp",
       alt: "Iris de color marrón oscuro",
     },

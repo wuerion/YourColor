@@ -47,7 +47,7 @@ function colorDeOjos({ onNext, step, setStep }) {
           onNext={onNext}
         />
         <Card
-          title={"Marrón avellana"}
+          title={"Marrón Avellana"}
           name={"colorDeOjos"}
           id={"marronAvellana"}
           circle1={"hidden"}
@@ -57,7 +57,7 @@ function colorDeOjos({ onNext, step, setStep }) {
           onNext={onNext}
         />
         <Card
-          title={"Marrón oscuro"}
+          title={"Marrón Oscuro"}
           name={"colorDeOjos"}
           id={"marronAvellana"}
           circle1={"hidden"}
